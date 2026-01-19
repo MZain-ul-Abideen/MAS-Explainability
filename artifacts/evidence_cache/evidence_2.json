@@ -1,0 +1,127 @@
+{
+  "query": "What norms apply to suppliers?",
+  "query_type": "norm",
+  "relevant_agents": [
+    {
+      "agent_id": "supplier1",
+      "inferred_role": "supplier",
+      "role_confidence": "substring",
+      "total_actions": 30,
+      "unique_actions": 15,
+      "action_summary": {
+        "Ready to supply parts": 2,
+        "Received auction announcement: auc_sk2_board for part: board": 2,
+        "Bid placed for auc_sk2_board: cost=60, time=5": 2,
+        "Received auction announcement: auc_sk2_trunks for part: trunks": 2,
+        "Bid placed for auc_sk2_trunks: cost=50, time=6": 2,
+        "Received auction announcement: auc_sk2_wheels for part: wheels": 2,
+        "Bid placed for auc_sk2_wheels: cost=70, time=4": 2,
+        "Received auction announcement: auc_sk2_rails for part: rails": 2,
+        "Bid placed for auc_sk2_rails: cost=55, time=5": 2,
+        "Received auction announcement: auc_sk2_connectivity_box for part: connectivity_box": 2
+      },
+      "applicable_norms": [
+        "n5"
+      ],
+      "compliance_status": {
+        "n5": "fulfilled"
+      },
+      "first_appearance": 26,
+      "last_appearance": 362
+    },
+    {
+      "agent_id": "supplier2",
+      "inferred_role": "supplier",
+      "role_confidence": "substring",
+      "total_actions": 34,
+      "unique_actions": 17,
+      "action_summary": {
+        "Ready to supply parts": 2,
+        "Received auction announcement: auc_sk2_board for part: board": 2,
+        "Bid placed for auc_sk2_board: cost=80, time=4": 2,
+        "Received auction announcement: auc_sk2_trunks for part: trunks": 2,
+        "Bid placed for auc_sk2_trunks: cost=45, time=7": 2,
+        "Received auction announcement: auc_sk2_wheels for part: wheels": 2,
+        "Bid placed for auc_sk2_wheels: cost=65, time=5": 2,
+        "Received auction announcement: auc_sk2_rails for part: rails": 2,
+        "Bid placed for auc_sk2_rails: cost=60, time=4": 2,
+        "Received auction announcement: auc_sk2_connectivity_box for part: connectivity_box": 2
+      },
+      "applicable_norms": [
+        "n5"
+      ],
+      "compliance_status": {
+        "n5": "fulfilled"
+      },
+      "first_appearance": 27,
+      "last_appearance": 366
+    }
+  ],
+  "relevant_norms": [
+    {
+      "norm_id": "n5",
+      "norm_type": "obligation",
+      "role": "supplier",
+      "mission": "deliver_parts",
+      "condition": null,
+      "action": null,
+      "metadata": {}
+    }
+  ],
+  "relevant_missions": [],
+  "relevant_log_entries": [],
+  "relevant_compliance": [
+    {
+      "norm_id": "n5",
+      "agent_id": "supplier1",
+      "status": "fulfilled",
+      "evidence": [
+        {
+          "entry_id": "entry_26",
+          "action": "Ready to supply parts",
+          "match_type": "keyword_overlap",
+          "matched_to": "deliver_parts",
+          "timestamp": null,
+          "sequence_number": 26
+        },
+        {
+          "entry_id": "entry_219",
+          "action": "Ready to supply parts",
+          "match_type": "keyword_overlap",
+          "matched_to": "deliver_parts",
+          "timestamp": null,
+          "sequence_number": 219
+        }
+      ],
+      "reasoning": "Found 2 action(s) fulfilling obligation 'deliver_parts'"
+    },
+    {
+      "norm_id": "n5",
+      "agent_id": "supplier2",
+      "status": "fulfilled",
+      "evidence": [
+        {
+          "entry_id": "entry_27",
+          "action": "Ready to supply parts",
+          "match_type": "keyword_overlap",
+          "matched_to": "deliver_parts",
+          "timestamp": null,
+          "sequence_number": 27
+        },
+        {
+          "entry_id": "entry_220",
+          "action": "Ready to supply parts",
+          "match_type": "keyword_overlap",
+          "matched_to": "deliver_parts",
+          "timestamp": null,
+          "sequence_number": 220
+        }
+      ],
+      "reasoning": "Found 2 action(s) fulfilling obligation 'deliver_parts'"
+    }
+  ],
+  "relevant_interactions": [],
+  "system_overview": null,
+  "retrieval_strategy": "Norm-focused retrieval",
+  "total_items_retrieved": 5
+}

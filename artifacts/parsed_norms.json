@@ -1,0 +1,95 @@
+{
+  "norms": [
+    {
+      "norm_id": "n1",
+      "norm_type": "obligation",
+      "role": "assembly_agent",
+      "mission": "manage_assembly",
+      "condition": null,
+      "action": null,
+      "metadata": {}
+    },
+    {
+      "norm_id": "n2",
+      "norm_type": "obligation",
+      "role": "customer",
+      "mission": "send_order",
+      "condition": null,
+      "action": null,
+      "metadata": {}
+    },
+    {
+      "norm_id": "n3",
+      "norm_type": "obligation",
+      "role": "assembly_agent",
+      "mission": "contract_parts",
+      "condition": null,
+      "action": null,
+      "metadata": {}
+    },
+    {
+      "norm_id": "n4",
+      "norm_type": "obligation",
+      "role": "assembly_agent",
+      "mission": "allocate_workstations",
+      "condition": null,
+      "action": null,
+      "metadata": {}
+    },
+    {
+      "norm_id": "n5",
+      "norm_type": "obligation",
+      "role": "supplier",
+      "mission": "deliver_parts",
+      "condition": null,
+      "action": null,
+      "metadata": {}
+    },
+    {
+      "norm_id": "n6",
+      "norm_type": "obligation",
+      "role": "ws_trunks",
+      "mission": "assemble_parts",
+      "condition": null,
+      "action": null,
+      "metadata": {}
+    },
+    {
+      "norm_id": "n7",
+      "norm_type": "obligation",
+      "role": "ws_wheels",
+      "mission": "assemble_parts",
+      "condition": null,
+      "action": null,
+      "metadata": {}
+    },
+    {
+      "norm_id": "n8",
+      "norm_type": "obligation",
+      "role": "ws_rails",
+      "mission": "assemble_parts",
+      "condition": null,
+      "action": null,
+      "metadata": {}
+    },
+    {
+      "norm_id": "n9",
+      "norm_type": "obligation",
+      "role": "ws_conn",
+      "mission": "assemble_parts",
+      "condition": null,
+      "action": null,
+      "metadata": {}
+    },
+    {
+      "norm_id": "n10",
+      "norm_type": "obligation",
+      "role": "ws_qc",
+      "mission": "perform_quality_control",
+      "condition": null,
+      "action": null,
+      "metadata": {}
+    }
+  ],
+  "total_count": 10
+}

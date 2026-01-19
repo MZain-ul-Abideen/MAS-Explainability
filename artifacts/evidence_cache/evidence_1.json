@@ -1,0 +1,142 @@
+{
+  "query": "Tell me about the customer agent",
+  "query_type": "agent",
+  "relevant_agents": [
+    {
+      "agent_id": "customer",
+      "inferred_role": "customer",
+      "role_confidence": "exact",
+      "total_actions": 6,
+      "unique_actions": 3,
+      "action_summary": {
+        "Sending order sk2 to assembly..": 2,
+        "Order sk2 sent to assembly": 2,
+        "Final result for sk2: Skateboard assembled successfully": 2
+      },
+      "applicable_norms": [
+        "n2"
+      ],
+      "compliance_status": {
+        "n2": "fulfilled"
+      },
+      "first_appearance": 74,
+      "last_appearance": 523
+    }
+  ],
+  "relevant_norms": [],
+  "relevant_missions": [],
+  "relevant_log_entries": [
+    {
+      "entry_id": "entry_74",
+      "agent_id": "customer",
+      "action": "Sending order sk2 to assembly..",
+      "timestamp": null,
+      "sequence_number": 74,
+      "metadata": {
+        "context": "customer",
+        "line_num": 75
+      }
+    },
+    {
+      "entry_id": "entry_75",
+      "agent_id": "customer",
+      "action": "Order sk2 sent to assembly",
+      "timestamp": null,
+      "sequence_number": 75,
+      "metadata": {
+        "context": "customer",
+        "line_num": 76
+      }
+    },
+    {
+      "entry_id": "entry_267",
+      "agent_id": "customer",
+      "action": "Sending order sk2 to assembly..",
+      "timestamp": null,
+      "sequence_number": 267,
+      "metadata": {
+        "context": "customer",
+        "line_num": 268
+      }
+    },
+    {
+      "entry_id": "entry_268",
+      "agent_id": "customer",
+      "action": "Order sk2 sent to assembly",
+      "timestamp": null,
+      "sequence_number": 268,
+      "metadata": {
+        "context": "customer",
+        "line_num": 269
+      }
+    },
+    {
+      "entry_id": "entry_454",
+      "agent_id": "customer",
+      "action": "Final result for sk2: Skateboard assembled successfully",
+      "timestamp": null,
+      "sequence_number": 454,
+      "metadata": {
+        "context": "customer",
+        "line_num": 455
+      }
+    },
+    {
+      "entry_id": "entry_523",
+      "agent_id": "customer",
+      "action": "Final result for sk2: Skateboard assembled successfully",
+      "timestamp": null,
+      "sequence_number": 523,
+      "metadata": {
+        "context": "customer",
+        "line_num": 524
+      }
+    }
+  ],
+  "relevant_compliance": [
+    {
+      "norm_id": "n2",
+      "agent_id": "customer",
+      "status": "fulfilled",
+      "evidence": [
+        {
+          "entry_id": "entry_74",
+          "action": "Sending order sk2 to assembly..",
+          "match_type": "keyword_overlap",
+          "matched_to": "send_order",
+          "timestamp": null,
+          "sequence_number": 74
+        },
+        {
+          "entry_id": "entry_75",
+          "action": "Order sk2 sent to assembly",
+          "match_type": "keyword_overlap",
+          "matched_to": "send_order",
+          "timestamp": null,
+          "sequence_number": 75
+        },
+        {
+          "entry_id": "entry_267",
+          "action": "Sending order sk2 to assembly..",
+          "match_type": "keyword_overlap",
+          "matched_to": "send_order",
+          "timestamp": null,
+          "sequence_number": 267
+        },
+        {
+          "entry_id": "entry_268",
+          "action": "Order sk2 sent to assembly",
+          "match_type": "keyword_overlap",
+          "matched_to": "send_order",
+          "timestamp": null,
+          "sequence_number": 268
+        }
+      ],
+      "reasoning": "Found 4 action(s) fulfilling obligation 'send_order'"
+    }
+  ],
+  "relevant_interactions": [],
+  "system_overview": null,
+  "retrieval_strategy": "Agent-focused retrieval for: customer",
+  "total_items_retrieved": 8
+}

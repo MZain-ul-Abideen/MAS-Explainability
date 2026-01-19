@@ -1,0 +1,630 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MAS Explainability System</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', sans-serif;
+            background: #343541;
+            min-height: 100vh;
+            color: #ececf1;
+        }
+
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            display: flex;
+            flex-direction: column;
+            height: 100vh;
+        }
+
+        .header {
+            background: #202123;
+            padding: 12px 20px;
+            border-bottom: 1px solid #2d2d39;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .header h1 {
+            font-size: 20px;
+            font-weight: 600;
+            color: #ececf1;
+        }
+
+        .stats-badge {
+            display: flex;
+            gap: 16px;
+            font-size: 14px;
+            color: #8e8ea0;
+        }
+
+        .stats-badge span {
+            display: flex;
+            align-items: center;
+            gap: 4px;
+        }
+
+        .chat-container {
+            flex: 1;
+            overflow-y: auto;
+            padding: 20px;
+        }
+
+        /* Custom scrollbar styling */
+        .chat-container::-webkit-scrollbar {
+            width: 8px;
+        }
+
+        .chat-container::-webkit-scrollbar-track {
+            background: transparent;
+        }
+
+        .chat-container::-webkit-scrollbar-thumb {
+            background: #565869;
+            border-radius: 4px;
+        }
+
+        .chat-container::-webkit-scrollbar-thumb:hover {
+            background: #6e6e80;
+        }
+
+        /* Firefox scrollbar */
+        .chat-container {
+            scrollbar-width: thin;
+            scrollbar-color: #565869 transparent;
+        }
+
+        .message {
+            margin-bottom: 24px;
+            animation: fadeIn 0.3s ease-in;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .message-header {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            margin-bottom: 8px;
+        }
+
+        .avatar {
+            width: 28px;
+            height: 28px;
+            border-radius: 4px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 16px;
+            flex-shrink: 0;
+        }
+
+        .avatar.user {
+            background: #5436da;
+        }
+
+        .avatar.assistant {
+            background: #19c37d;
+        }
+
+        .message-label {
+            font-weight: 600;
+            font-size: 16px;
+        }
+
+        .message-content {
+            margin-left: 36px;
+            line-height: 1.6;
+            font-size: 16px;
+            color: #d1d5db;
+        }
+
+        .examples-section {
+            margin: 40px 0;
+        }
+
+        .examples-title {
+            font-size: 20px;
+            font-weight: 600;
+            margin-bottom: 20px;
+            text-align: center;
+            color: #ececf1;
+        }
+
+        .examples-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 12px;
+        }
+
+        .example-card {
+            background: #40414f;
+            padding: 16px;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: all 0.2s;
+            border: 1px solid #565869;
+        }
+
+        .example-card:hover {
+            background: #4a4b5c;
+            border-color: #19c37d;
+        }
+
+        .example-category {
+            font-size: 12px;
+            color: #8e8ea0;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            margin-bottom: 8px;
+        }
+
+        .example-text {
+            font-size: 14px;
+            color: #ececf1;
+        }
+
+        .answer-box {
+            background: #444654;
+            border-radius: 8px;
+            padding: 16px;
+            margin-top: 12px;
+        }
+
+        .evidence-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+            gap: 8px;
+            margin-top: 12px;
+        }
+
+        .evidence-badge {
+            background: #40414f;
+            padding: 8px 12px;
+            border-radius: 6px;
+            text-align: center;
+            border: 1px solid #565869;
+        }
+
+        .evidence-label {
+            font-size: 11px;
+            color: #8e8ea0;
+            text-transform: capitalize;
+        }
+
+        .evidence-count {
+            font-size: 18px;
+            font-weight: 700;
+            color: #19c37d;
+            margin-top: 4px;
+        }
+
+        .meta-info {
+            display: flex;
+            gap: 12px;
+            flex-wrap: wrap;
+            margin-top: 12px;
+            font-size: 14px;
+            color: #8e8ea0;
+        }
+
+        .meta-tag {
+            background: #40414f;
+            padding: 4px 10px;
+            border-radius: 12px;
+            border: 1px solid #565869;
+        }
+
+        .input-container {
+            background: #343541;
+            padding: 16px 20px 20px;
+            border-top: 1px solid #2d2d39;
+        }
+
+        .input-wrapper {
+            background: #40414f;
+            border-radius: 12px;
+            border: 1px solid #565869;
+            display: flex;
+            align-items: flex-end;
+            transition: border-color 0.2s;
+            max-width: 100%;
+        }
+
+        .input-wrapper:focus-within {
+            border-color: #19c37d;
+        }
+
+        .query-input {
+            flex: 1;
+            background: transparent;
+            border: none;
+            padding: 14px 16px;
+            color: #ececf1;
+            font-size: 15px;
+            font-family: inherit;
+            resize: none;
+            outline: none;
+            min-height: 24px;
+            max-height: 200px;
+        }
+
+        .query-input::placeholder {
+            color: #8e8ea0;
+        }
+
+        .send-button {
+            background: #19c37d;
+            border: none;
+            color: #202123;
+            width: 36px;
+            height: 36px;
+            border-radius: 8px;
+            margin: 6px;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: all 0.2s;
+            flex-shrink: 0;
+        }
+
+        .send-button:hover:not(:disabled) {
+            background: #1a9f6a;
+        }
+
+        .send-button:disabled {
+            background: #40414f;
+            cursor: not-allowed;
+            opacity: 0.5;
+        }
+
+        .loading-indicator {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            color: #8e8ea0;
+            font-size: 14px;
+            padding: 12px 0;
+        }
+
+        .loading-dots {
+            display: flex;
+            gap: 4px;
+        }
+
+        .loading-dot {
+            width: 6px;
+            height: 6px;
+            border-radius: 50%;
+            background: #8e8ea0;
+            animation: bounce 1.4s infinite ease-in-out both;
+        }
+
+        .loading-dot:nth-child(1) {
+            animation-delay: -0.32s;
+        }
+
+        .loading-dot:nth-child(2) {
+            animation-delay: -0.16s;
+        }
+
+        @keyframes bounce {
+            0%, 80%, 100% {
+                transform: scale(0);
+            }
+            40% {
+                transform: scale(1);
+            }
+        }
+
+        .error-message {
+            background: #f04438;
+            color: white;
+            padding: 12px 16px;
+            border-radius: 8px;
+            margin: 12px 0;
+            font-size: 14px;
+        }
+
+        .warning-banner {
+            background: #f59e0b;
+            color: #1f2937;
+            padding: 12px 20px;
+            text-align: center;
+            font-size: 14px;
+            font-weight: 500;
+        }
+
+        .empty-state {
+            text-align: center;
+            padding: 60px 20px;
+            color: #8e8ea0;
+        }
+
+        .empty-state h2 {
+            font-size: 24px;
+            margin-bottom: 12px;
+            color: #ececf1;
+        }
+
+        .empty-state p {
+            font-size: 15px;
+        }
+
+        @media (max-width: 768px) {
+            .examples-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .stats-badge {
+                display: none;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>MAS Explainability</h1>
+            <div class="stats-badge" id="stats-badge">
+                <span>🤖 <span id="stat-agents">-</span> agents</span>
+                <span>📋 <span id="stat-norms">-</span> norms</span>
+                <span>⚡ <span id="stat-events">-</span> events</span>
+            </div>
+        </div>
+
+        {% if not artifacts_exist %}
+        <div class="warning-banner">
+            ⚠️ System not initialized. Please run: python main.py
+        </div>
+        {% endif %}
+
+        <div class="chat-container" id="chat-container">
+            <div class="empty-state" id="empty-state">
+                <h2>Welcome to MAS Explainability</h2>
+                <p>Ask questions about your Multi-Agent System and get natural language explanations</p>
+            </div>
+
+            <div id="examples-section" class="examples-section">
+                <div class="examples-title">Example Questions</div>
+                <div class="examples-grid" id="examples-grid"></div>
+            </div>
+        </div>
+
+        <div class="input-container">
+            <div class="input-wrapper">
+                <textarea 
+                    id="query-input" 
+                    class="query-input" 
+                    placeholder="Ask about your MAS..."
+                    rows="1"
+                    {% if not artifacts_exist %}disabled{% endif %}
+                ></textarea>
+                <button class="send-button" id="send-button" onclick="submitQuery()" {% if not artifacts_exist %}disabled{% endif %}>
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M22 2L11 13M22 2l-7 20-4-9-9-4 20-7z"/>
+                    </svg>
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        window.addEventListener('load', () => {
+            loadSystemInfo();
+            loadExamples();
+        });
+
+        const queryInput = document.getElementById('query-input');
+        
+        queryInput?.addEventListener('keydown', (e) => {
+            if (e.key === 'Enter' && !e.shiftKey) {
+                e.preventDefault();
+                submitQuery();
+            }
+        });
+
+        queryInput?.addEventListener('input', function() {
+            this.style.height = 'auto';
+            this.style.height = Math.min(this.scrollHeight, 200) + 'px';
+        });
+
+        async function loadSystemInfo() {
+            try {
+                const response = await fetch('/api/system-info');
+                const data = await response.json();
+
+                if (response.ok) {
+                    document.getElementById('stat-agents').textContent = data.total_agents;
+                    document.getElementById('stat-norms').textContent = data.total_norms;
+                    document.getElementById('stat-events').textContent = data.total_events;
+                }
+            } catch (error) {
+                console.error('Failed to load system info:', error);
+            }
+        }
+
+        async function loadExamples() {
+            try {
+                const response = await fetch('/api/examples');
+                const categories = await response.json();
+
+                const grid = document.getElementById('examples-grid');
+                grid.innerHTML = '';
+                
+                categories.forEach(category => {
+                    category.queries.forEach(query => {
+                        const card = document.createElement('div');
+                        card.className = 'example-card';
+                        card.innerHTML = `
+                            <div class="example-category">${category.category}</div>
+                            <div class="example-text">${query}</div>
+                        `;
+                        card.onclick = () => {
+                            document.getElementById('query-input').value = query;
+                            submitQuery();
+                        };
+                        grid.appendChild(card);
+                    });
+                });
+            } catch (error) {
+                console.error('Failed to load examples:', error);
+            }
+        }
+
+        async function submitQuery() {
+            const input = document.getElementById('query-input');
+            const query = input.value.trim();
+
+            if (!query) return;
+
+            // Hide examples and empty state
+            document.getElementById('examples-section').style.display = 'none';
+            document.getElementById('empty-state').style.display = 'none';
+
+            // Add user message
+            addMessage('user', query);
+
+            // Clear input
+            input.value = '';
+            input.style.height = 'auto';
+
+            // Show loading
+            const loadingId = addLoadingMessage();
+
+            try {
+                const response = await fetch('/api/query', {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify({ query })
+                });
+
+                const data = await response.json();
+                removeMessage(loadingId);
+
+                if (response.ok) {
+                    displayAnswer(data);
+                } else {
+                    displayError(data.error, data.details);
+                }
+            } catch (error) {
+                removeMessage(loadingId);
+                displayError('Network error', error.message);
+            }
+        }
+
+        function addMessage(role, content) {
+            const container = document.getElementById('chat-container');
+            const messageDiv = document.createElement('div');
+            messageDiv.className = 'message';
+            
+            const emoji = role === 'user' ? '👤' : '🤖';
+            const label = role === 'user' ? 'You' : 'Assistant';
+            const avatarClass = role === 'user' ? 'user' : 'assistant';
+            
+            messageDiv.innerHTML = `
+                <div class="message-header">
+                    <div class="avatar ${avatarClass}">${emoji}</div>
+                    <div class="message-label">${label}</div>
+                </div>
+                <div class="message-content">${content}</div>
+            `;
+            
+            container.appendChild(messageDiv);
+            container.scrollTop = container.scrollHeight;
+            
+            return messageDiv;
+        }
+
+        function addLoadingMessage() {
+            const container = document.getElementById('chat-container');
+            const loadingDiv = document.createElement('div');
+            loadingDiv.className = 'message';
+            loadingDiv.id = 'loading-message';
+            
+            loadingDiv.innerHTML = `
+                <div class="message-header">
+                    <div class="avatar assistant">🤖</div>
+                    <div class="message-label">Assistant</div>
+                </div>
+                <div class="message-content">
+                    <div class="loading-indicator">
+                        <div class="loading-dots">
+                            <div class="loading-dot"></div>
+                            <div class="loading-dot"></div>
+                            <div class="loading-dot"></div>
+                        </div>
+                        <span>Analyzing your query...</span>
+                    </div>
+                </div>
+            `;
+            
+            container.appendChild(loadingDiv);
+            container.scrollTop = container.scrollHeight;
+            
+            return 'loading-message';
+        }
+
+        function removeMessage(id) {
+            const message = document.getElementById(id);
+            if (message) message.remove();
+        }
+
+        function displayAnswer(data) {
+            let content = `<div class="answer-box">${data.answer}</div>`;
+            
+            content += `<div class="meta-info">`;
+            content += `<span class="meta-tag">📂 ${data.query_type}</span>`;
+            content += `<span class="meta-tag">📊 ${data.total_items_retrieved} items retrieved</span>`;
+            if (data.token_usage?.total_tokens) {
+                content += `<span class="meta-tag">🔢 ${data.token_usage.total_tokens} tokens</span>`;
+            }
+            content += `</div>`;
+            
+            const evidenceItems = Object.entries(data.evidence_used)
+                .filter(([_, count]) => count > 0)
+                .map(([key, count]) => `
+                    <div class="evidence-badge">
+                        <div class="evidence-label">${key.replace('_', ' ')}</div>
+                        <div class="evidence-count">${count}</div>
+                    </div>
+                `).join('');
+            
+            if (evidenceItems) {
+                content += `
+                    <div style="margin-top: 16px;">
+                        <div style="font-size: 13px; color: #8e8ea0; margin-bottom: 8px;">📚 Evidence Used</div>
+                        <div class="evidence-grid">${evidenceItems}</div>
+                    </div>
+                `;
+            }
+            
+            addMessage('assistant', content);
+        }
+
+        function displayError(error, details) {
+            const content = `
+                <div class="error-message">
+                    <strong>Error:</strong> ${error}
+                    ${details ? `<br><small>${details}</small>` : ''}
+                </div>
+            `;
+            addMessage('assistant', content);
+        }
+    </script>
+</body>
+</html>

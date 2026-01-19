@@ -1,0 +1,50 @@
+{
+  "query": "Which norms were violated?",
+  "query_type": "compliance",
+  "relevant_agents": [
+    {
+      "agent_id": "els,",
+      "inferred_role": "ws_wheels",
+      "role_confidence": "substring_reverse",
+      "total_actions": 1,
+      "unique_actions": 1,
+      "action_summary": {
+        "ignoring": 1
+      },
+      "applicable_norms": [
+        "n7"
+      ],
+      "compliance_status": {
+        "n7": "violated"
+      },
+      "first_appearance": 455,
+      "last_appearance": 455
+    }
+  ],
+  "relevant_norms": [
+    {
+      "norm_id": "n7",
+      "norm_type": "obligation",
+      "role": "ws_wheels",
+      "mission": "assemble_parts",
+      "condition": null,
+      "action": null,
+      "metadata": {}
+    }
+  ],
+  "relevant_missions": [],
+  "relevant_log_entries": [],
+  "relevant_compliance": [
+    {
+      "norm_id": "n7",
+      "agent_id": "els,",
+      "status": "violated",
+      "evidence": [],
+      "reasoning": "No actions found fulfilling obligation 'assemble_parts'"
+    }
+  ],
+  "relevant_interactions": [],
+  "system_overview": null,
+  "retrieval_strategy": "Compliance-focused retrieval",
+  "total_items_retrieved": 3
+}

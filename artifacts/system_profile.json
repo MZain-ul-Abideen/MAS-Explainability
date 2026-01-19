@@ -1,0 +1,5855 @@
+{
+  "total_agents": 20,
+  "agents": {
+    "Moise": {
+      "agent_id": "Moise",
+      "inferred_role": null,
+      "role_confidence": "unknown",
+      "total_actions": 6,
+      "unique_actions": 3,
+      "action_summary": {
+        "OrgBoard skate_org created": 2,
+        "scheme created: sk_scheme: assemble_skateboard_sch using artifact SchemeBoard": 2,
+        "group created: sk_group: skateboard_group using artifact ora4mas.nopl.GroupBoard": 2
+      },
+      "applicable_norms": [],
+      "compliance_status": {},
+      "first_appearance": 4,
+      "last_appearance": 199
+    },
+    "wa_wheels1": {
+      "agent_id": "wa_wheels1",
+      "inferred_role": null,
+      "role_confidence": "unknown",
+      "total_actions": 12,
+      "unique_actions": 6,
+      "action_summary": {
+        "Initializing..": 2,
+        "Ready for wheels assembly": 2,
+        "I don't support operation assemble_trunks, ignoring": 2,
+        "CFP for assemble_wheels -> energy=7, time=3": 2,
+        "I don't support operation assemble_rails, ignoring": 2,
+        "I don't support operation assemble_connectivity_box, ignoring": 2
+      },
+      "applicable_norms": [],
+      "compliance_status": {},
+      "first_appearance": 28,
+      "last_appearance": 474
+    },
+    "assembly": {
+      "agent_id": "assembly",
+      "inferred_role": "assembly_agent",
+      "role_confidence": "substring_reverse",
+      "total_actions": 224,
+      "unique_actions": 101,
+      "action_summary": {
+        "Available workstations: 6": 10,
+        "Available workstations: 7": 10,
+        "Winner supplier2 has reputation: 0.6": 6,
+        "Winner supplier1 has reputation: 0.8": 4,
+        "Ready to receive orders": 2,
+        "Total workstations registered: 0": 2,
+        "Available workstations: 0": 2,
+        "Workstation wa_wheels1 registered for assemble_wheels (energy=7, time=3)": 2,
+        "Total workstations registered: 1": 2,
+        "Available workstations: 1": 2
+      },
+      "applicable_norms": [
+        "n1",
+        "n3",
+        "n4"
+      ],
+      "compliance_status": {
+        "n1": "fulfilled",
+        "n3": "fulfilled",
+        "n4": "fulfilled"
+      },
+      "first_appearance": 33,
+      "last_appearance": 522
+    },
+    "wa_conn1": {
+      "agent_id": "wa_conn1",
+      "inferred_role": null,
+      "role_confidence": "unknown",
+      "total_actions": 14,
+      "unique_actions": 7,
+      "action_summary": {
+        "Initializing..": 2,
+        "Ready for connectivity box installation": 2,
+        "I don't support operation assemble_trunks, ignoring": 2,
+        "I don't support operation assemble_wheels, ignoring": 2,
+        "I don't support operation assemble_rails, ignoring": 2,
+        "CFP for assemble_connectivity_box -> energy=9, time=5": 2,
+        "Performing assemble_connectivity_box for connectivity_box": 2
+      },
+      "applicable_norms": [],
+      "compliance_status": {},
+      "first_appearance": 31,
+      "last_appearance": 514
+    },
+    "Cartago": {
+      "agent_id": "Cartago",
+      "inferred_role": null,
+      "role_confidence": "unknown",
+      "total_actions": 20,
+      "unique_actions": 10,
+      "action_summary": {
+        "Workspace plant created": 2,
+        "artifact ws_trunks2: tools.WorkstationArt(\"assemble_trunks\",5,5) at plant created": 2,
+        "artifact ws_rails1: tools.WorkstationArt(\"assemble_rails\",6,4) at plant created": 2,
+        "artifact ws_wheels2: tools.WorkstationArt(\"assemble_wheels\",4,4) at plant created": 2,
+        "artifact ws_wheels1: tools.WorkstationArt(\"assemble_wheels\",7,3) at plant created": 2,
+        "artifact auction_skate: tools.AuctionSkateArt() at plant created": 2,
+        "artifact ws_registry: tools.WorkstationRegistry() at plant created": 2,
+        "artifact ws_conn1: tools.WorkstationArt(\"assemble_connectivity_box\",9,5) at plant created": 2,
+        "artifact ws_qc1: tools.WorkstationArt(\"quality_control\",6,6) at plant created": 2,
+        "artifact ws_trunks1: tools.WorkstationArt(\"assemble_trunks\",8,4) at plant created": 2
+      },
+      "applicable_norms": [],
+      "compliance_status": {},
+      "first_appearance": 7,
+      "last_appearance": 218
+    },
+    "WorkstationRegistry": {
+      "agent_id": "WorkstationRegistry",
+      "inferred_role": null,
+      "role_confidence": "unknown",
+      "total_actions": 32,
+      "unique_actions": 16,
+      "action_summary": {
+        "Initialized": 2,
+        "Registered wa_wheels1 for operation: assemble_wheels (energy=7, time=3)": 2,
+        "Registered wa_qc1 for operation: quality_control (energy=6, time=6)": 2,
+        "Registered wa_wheels2 for operation: assemble_wheels (energy=4, time=4)": 2,
+        "Registered wa_conn1 for operation: assemble_connectivity_box (energy=9, time=5)": 2,
+        "Registered wa_rails1 for operation: assemble_rails (energy=6, time=4)": 2,
+        "Registered wa_trunks1 for operation: assemble_trunks (energy=8, time=4)": 2,
+        "Registered wa_trunks2 for operation: assemble_trunks (energy=5, time=5)": 2,
+        "wa_trunks2 is now busy": 2,
+        "wa_trunks2 is now available": 2
+      },
+      "applicable_norms": [],
+      "compliance_status": {},
+      "first_appearance": 18,
+      "last_appearance": 517
+    },
+    "supplier1": {
+      "agent_id": "supplier1",
+      "inferred_role": "supplier",
+      "role_confidence": "substring",
+      "total_actions": 30,
+      "unique_actions": 15,
+      "action_summary": {
+        "Ready to supply parts": 2,
+        "Received auction announcement: auc_sk2_board for part: board": 2,
+        "Bid placed for auc_sk2_board: cost=60, time=5": 2,
+        "Received auction announcement: auc_sk2_trunks for part: trunks": 2,
+        "Bid placed for auc_sk2_trunks: cost=50, time=6": 2,
+        "Received auction announcement: auc_sk2_wheels for part: wheels": 2,
+        "Bid placed for auc_sk2_wheels: cost=70, time=4": 2,
+        "Received auction announcement: auc_sk2_rails for part: rails": 2,
+        "Bid placed for auc_sk2_rails: cost=55, time=5": 2,
+        "Received auction announcement: auc_sk2_connectivity_box for part: connectivity_box": 2
+      },
+      "applicable_norms": [
+        "n5"
+      ],
+      "compliance_status": {
+        "n5": "fulfilled"
+      },
+      "first_appearance": 26,
+      "last_appearance": 362
+    },
+    "supplier2": {
+      "agent_id": "supplier2",
+      "inferred_role": "supplier",
+      "role_confidence": "substring",
+      "total_actions": 34,
+      "unique_actions": 17,
+      "action_summary": {
+        "Ready to supply parts": 2,
+        "Received auction announcement: auc_sk2_board for part: board": 2,
+        "Bid placed for auc_sk2_board: cost=80, time=4": 2,
+        "Received auction announcement: auc_sk2_trunks for part: trunks": 2,
+        "Bid placed for auc_sk2_trunks: cost=45, time=7": 2,
+        "Received auction announcement: auc_sk2_wheels for part: wheels": 2,
+        "Bid placed for auc_sk2_wheels: cost=65, time=5": 2,
+        "Received auction announcement: auc_sk2_rails for part: rails": 2,
+        "Bid placed for auc_sk2_rails: cost=60, time=4": 2,
+        "Received auction announcement: auc_sk2_connectivity_box for part: connectivity_box": 2
+      },
+      "applicable_norms": [
+        "n5"
+      ],
+      "compliance_status": {
+        "n5": "fulfilled"
+      },
+      "first_appearance": 27,
+      "last_appearance": 366
+    },
+    "wa_trunks1": {
+      "agent_id": "wa_trunks1",
+      "inferred_role": null,
+      "role_confidence": "unknown",
+      "total_actions": 12,
+      "unique_actions": 6,
+      "action_summary": {
+        "Initializing..": 2,
+        "Ready for trunks assembly": 2,
+        "CFP for assemble_trunks in order sk2 -> energy=8, time=4": 2,
+        "I don't support operation assemble_wheels (order sk2), ignoring CFP": 2,
+        "I don't support operation assemble_rails (order sk2), ignoring CFP": 2,
+        "I don't support operation assemble_connectivity_box (order sk2), ignoring CFP": 2
+      },
+      "applicable_norms": [],
+      "compliance_status": {},
+      "first_appearance": 35,
+      "last_appearance": 477
+    },
+    "wa_rails1": {
+      "agent_id": "wa_rails1",
+      "inferred_role": null,
+      "role_confidence": "unknown",
+      "total_actions": 14,
+      "unique_actions": 8,
+      "action_summary": {
+        "Initializing..": 2,
+        "Ready for rails assembly": 2,
+        "I don't support operation assemble_trunks, ignoring": 2,
+        "CFP for assemble_rails -> energy=6, time=4": 2,
+        "I don't support operation assemble_connectivity_box, ignoring": 2,
+        "Performing assemble_rails for rails": 2,
+        "I don't support operation assemble_wheRuntime Services (RTS) is running at 127.0.1.1:37657": 1,
+        "I don't support operation assemble_wheels, ignoring": 1
+      },
+      "applicable_norms": [],
+      "compliance_status": {},
+      "first_appearance": 34,
+      "last_appearance": 505
+    },
+    "inspector": {
+      "agent_id": "inspector",
+      "inferred_role": null,
+      "role_confidence": "unknown",
+      "total_actions": 2,
+      "unique_actions": 1,
+      "action_summary": {
+        "is running at http://127.0.1.1:3272": 2
+      },
+      "applicable_norms": [],
+      "compliance_status": {},
+      "first_appearance": 1,
+      "last_appearance": 194
+    },
+    "wa_qc1": {
+      "agent_id": "wa_qc1",
+      "inferred_role": null,
+      "role_confidence": "unknown",
+      "total_actions": 12,
+      "unique_actions": 6,
+      "action_summary": {
+        "Initializing..": 2,
+        "Ready for quality control": 2,
+        "I don't support operation assemble_trunks, ignoring": 2,
+        "I don't support operation assemble_wheels, ignoring": 2,
+        "I don't support operation assemble_rails, ignoring": 2,
+        "I don't support operation assemble_connectivity_box, ignoring": 2
+      },
+      "applicable_norms": [],
+      "compliance_status": {},
+      "first_appearance": 29,
+      "last_appearance": 476
+    },
+    "wa_trunks2": {
+      "agent_id": "wa_trunks2",
+      "inferred_role": null,
+      "role_confidence": "unknown",
+      "total_actions": 14,
+      "unique_actions": 7,
+      "action_summary": {
+        "Initializing..": 2,
+        "Ready for trunks assembly": 2,
+        "CFP for assemble_trunks in order sk2 -> energy=5, time=5": 2,
+        "I don't support operation assemble_wheels (order sk2), ignoring CFP": 2,
+        "I don't support operation assemble_rails (order sk2), ignoring CFP": 2,
+        "I don't support operation assemble_connectivity_box (order sk2), ignoring CFP": 2,
+        "Performing assemble_trunks for part trunks of order sk2": 2
+      },
+      "applicable_norms": [],
+      "compliance_status": {},
+      "first_appearance": 32,
+      "last_appearance": 487
+    },
+    "WorkstationArt": {
+      "agent_id": "WorkstationArt",
+      "inferred_role": null,
+      "role_confidence": "unknown",
+      "total_actions": 14,
+      "unique_actions": 7,
+      "action_summary": {
+        "Initialized for op=assemble_trunks energy=5 time=5": 2,
+        "Initialized for op=assemble_rails energy=6 time=4": 2,
+        "Initialized for op=assemble_wheels energy=4 time=4": 2,
+        "Initialized for op=assemble_wheels energy=7 time=3": 2,
+        "Initialized for op=assemble_connectivity_box energy=9 time=5": 2,
+        "Initialized for op=quality_control energy=6 time=6": 2,
+        "Initialized for op=assemble_trunks energy=8 time=4": 2
+      },
+      "applicable_norms": [],
+      "compliance_status": {},
+      "first_appearance": 8,
+      "last_appearance": 217
+    },
+    "els,": {
+      "agent_id": "els,",
+      "inferred_role": "ws_wheels",
+      "role_confidence": "substring_reverse",
+      "total_actions": 1,
+      "unique_actions": 1,
+      "action_summary": {
+        "ignoring": 1
+      },
+      "applicable_norms": [
+        "n7"
+      ],
+      "compliance_status": {
+        "n7": "violated"
+      },
+      "first_appearance": 455,
+      "last_appearance": 455
+    },
+    "customer": {
+      "agent_id": "customer",
+      "inferred_role": "customer",
+      "role_confidence": "exact",
+      "total_actions": 6,
+      "unique_actions": 3,
+      "action_summary": {
+        "Sending order sk2 to assembly..": 2,
+        "Order sk2 sent to assembly": 2,
+        "Final result for sk2: Skateboard assembled successfully": 2
+      },
+      "applicable_norms": [
+        "n2"
+      ],
+      "compliance_status": {
+        "n2": "fulfilled"
+      },
+      "first_appearance": 74,
+      "last_appearance": 523
+    },
+    "Server": {
+      "agent_id": "Server",
+      "inferred_role": null,
+      "role_confidence": "unknown",
+      "total_actions": 4,
+      "unique_actions": 2,
+      "action_summary": {
+        "running on http://127.0.1.1:3273": 2,
+        "running on http://127.0.1.1:3271": 2
+      },
+      "applicable_norms": [],
+      "compliance_status": {},
+      "first_appearance": 2,
+      "last_appearance": 196
+    },
+    "AuctionSkateArt": {
+      "agent_id": "AuctionSkateArt",
+      "inferred_role": null,
+      "role_confidence": "unknown",
+      "total_actions": 58,
+      "unique_actions": 29,
+      "action_summary": {
+        "Initialized": 2,
+        "Started auction auc_sk2_board for part: board": 2,
+        "Bid from supplier2 for auc_sk2_board: cost=80, time=4": 2,
+        "New best bid from supplier2 for auc_sk2_board: cost=80": 2,
+        "Bid from supplier1 for auc_sk2_board: cost=60, time=5": 2,
+        "New best bid from supplier1 for auc_sk2_board: cost=60": 2,
+        "Closed auction auc_sk2_board: winner=supplier1, cost=60, time=5": 2,
+        "Started auction auc_sk2_trunks for part: trunks": 2,
+        "Bid from supplier2 for auc_sk2_trunks: cost=45, time=7": 2,
+        "New best bid from supplier2 for auc_sk2_trunks: cost=45": 2
+      },
+      "applicable_norms": [],
+      "compliance_status": {},
+      "first_appearance": 16,
+      "last_appearance": 337
+    },
+    "(RTS)": {
+      "agent_id": "(RTS)",
+      "inferred_role": null,
+      "role_confidence": "unknown",
+      "total_actions": 1,
+      "unique_actions": 1,
+      "action_summary": {
+        "is running at 127.0.1.1:37657": 1
+      },
+      "applicable_norms": [],
+      "compliance_status": {},
+      "first_appearance": 0,
+      "last_appearance": 0
+    },
+    "wa_wheels2": {
+      "agent_id": "wa_wheels2",
+      "inferred_role": null,
+      "role_confidence": "unknown",
+      "total_actions": 14,
+      "unique_actions": 7,
+      "action_summary": {
+        "Initializing..": 2,
+        "Ready for wheels assembly": 2,
+        "I don't support operation assemble_trunks, ignoring": 2,
+        "CFP for assemble_wheels -> energy=4, time=4": 2,
+        "I don't support operation assemble_rails, ignoring": 2,
+        "I don't support operation assemble_connectivity_box, ignoring": 2,
+        "Performing assemble_wheels for wheels": 2
+      },
+      "applicable_norms": [],
+      "compliance_status": {},
+      "first_appearance": 30,
+      "last_appearance": 496
+    }
+  },
+  "total_roles": 4,
+  "roles": {
+    "assembly_agent": [
+      "assembly"
+    ],
+    "supplier": [
+      "supplier1",
+      "supplier2"
+    ],
+    "ws_wheels": [
+      "els,"
+    ],
+    "customer": [
+      "customer"
+    ]
+  },
+  "total_norms": 10,
+  "norms_by_type": {
+    "obligation": 10
+  },
+  "norms_by_role": {
+    "assembly_agent": [
+      "n1",
+      "n3",
+      "n4"
+    ],
+    "customer": [
+      "n2"
+    ],
+    "supplier": [
+      "n5"
+    ],
+    "ws_trunks": [
+      "n6"
+    ],
+    "ws_wheels": [
+      "n7"
+    ],
+    "ws_rails": [
+      "n8"
+    ],
+    "ws_conn": [
+      "n9"
+    ],
+    "ws_qc": [
+      "n10"
+    ]
+  },
+  "total_missions": 7,
+  "missions": {
+    "manage_assembly": {
+      "mission_name": "manage_assembly",
+      "required_roles": [
+        "assembly_agent"
+      ],
+      "associated_norms": [
+        "n1"
+      ],
+      "agents_assigned": [
+        "assembly"
+      ],
+      "fulfillment_status": {
+        "assembly": "fulfilled"
+      }
+    },
+    "send_order": {
+      "mission_name": "send_order",
+      "required_roles": [
+        "customer"
+      ],
+      "associated_norms": [
+        "n2"
+      ],
+      "agents_assigned": [
+        "customer"
+      ],
+      "fulfillment_status": {
+        "customer": "fulfilled"
+      }
+    },
+    "contract_parts": {
+      "mission_name": "contract_parts",
+      "required_roles": [
+        "assembly_agent"
+      ],
+      "associated_norms": [
+        "n3"
+      ],
+      "agents_assigned": [
+        "assembly"
+      ],
+      "fulfillment_status": {
+        "assembly": "fulfilled"
+      }
+    },
+    "allocate_workstations": {
+      "mission_name": "allocate_workstations",
+      "required_roles": [
+        "assembly_agent"
+      ],
+      "associated_norms": [
+        "n4"
+      ],
+      "agents_assigned": [
+        "assembly"
+      ],
+      "fulfillment_status": {
+        "assembly": "fulfilled"
+      }
+    },
+    "deliver_parts": {
+      "mission_name": "deliver_parts",
+      "required_roles": [
+        "supplier"
+      ],
+      "associated_norms": [
+        "n5"
+      ],
+      "agents_assigned": [
+        "supplier1",
+        "supplier2"
+      ],
+      "fulfillment_status": {
+        "supplier1": "fulfilled",
+        "supplier2": "fulfilled"
+      }
+    },
+    "assemble_parts": {
+      "mission_name": "assemble_parts",
+      "required_roles": [
+        "ws_trunks",
+        "ws_wheels",
+        "ws_rails",
+        "ws_conn"
+      ],
+      "associated_norms": [
+        "n6",
+        "n7",
+        "n8",
+        "n9"
+      ],
+      "agents_assigned": [
+        "els,"
+      ],
+      "fulfillment_status": {
+        "els,": "violated"
+      }
+    },
+    "perform_quality_control": {
+      "mission_name": "perform_quality_control",
+      "required_roles": [
+        "ws_qc"
+      ],
+      "associated_norms": [
+        "n10"
+      ],
+      "agents_assigned": [],
+      "fulfillment_status": {}
+    }
+  },
+  "total_events": 524,
+  "temporal_strategy": "sequence",
+  "execution_timeline": [
+    {
+      "entry_id": "entry_0",
+      "agent_id": "(RTS)",
+      "action": "is running at 127.0.1.1:37657",
+      "temporal_marker": null,
+      "metadata": {
+        "line_num": 1
+      }
+    },
+    {
+      "entry_id": "entry_1",
+      "agent_id": "inspector",
+      "action": "is running at http://127.0.1.1:3272",
+      "temporal_marker": 1,
+      "metadata": {
+        "line_num": 2
+      }
+    },
+    {
+      "entry_id": "entry_2",
+      "agent_id": "Server",
+      "action": "running on http://127.0.1.1:3273",
+      "temporal_marker": 2,
+      "metadata": {
+        "line_num": 3
+      }
+    },
+    {
+      "entry_id": "entry_3",
+      "agent_id": "Server",
+      "action": "running on http://127.0.1.1:3271",
+      "temporal_marker": 3,
+      "metadata": {
+        "line_num": 4
+      }
+    },
+    {
+      "entry_id": "entry_4",
+      "agent_id": "Moise",
+      "action": "OrgBoard skate_org created",
+      "temporal_marker": 4,
+      "metadata": {
+        "line_num": 5
+      }
+    },
+    {
+      "entry_id": "entry_5",
+      "agent_id": "Moise",
+      "action": "scheme created: sk_scheme: assemble_skateboard_sch using artifact SchemeBoard",
+      "temporal_marker": 5,
+      "metadata": {
+        "line_num": 6
+      }
+    },
+    {
+      "entry_id": "entry_6",
+      "agent_id": "Moise",
+      "action": "group created: sk_group: skateboard_group using artifact ora4mas.nopl.GroupBoard",
+      "temporal_marker": 6,
+      "metadata": {
+        "line_num": 7
+      }
+    },
+    {
+      "entry_id": "entry_7",
+      "agent_id": "Cartago",
+      "action": "Workspace plant created",
+      "temporal_marker": 7,
+      "metadata": {
+        "line_num": 8
+      }
+    },
+    {
+      "entry_id": "entry_8",
+      "agent_id": "WorkstationArt",
+      "action": "Initialized for op=assemble_trunks energy=5 time=5",
+      "temporal_marker": 8,
+      "metadata": {
+        "operation": "assemble_trunks",
+        "line_num": 9
+      }
+    },
+    {
+      "entry_id": "entry_9",
+      "agent_id": "Cartago",
+      "action": "artifact ws_trunks2: tools.WorkstationArt(\"assemble_trunks\",5,5) at plant created",
+      "temporal_marker": 9,
+      "metadata": {
+        "line_num": 10
+      }
+    },
+    {
+      "entry_id": "entry_10",
+      "agent_id": "WorkstationArt",
+      "action": "Initialized for op=assemble_rails energy=6 time=4",
+      "temporal_marker": 10,
+      "metadata": {
+        "operation": "assemble_rails",
+        "line_num": 11
+      }
+    },
+    {
+      "entry_id": "entry_11",
+      "agent_id": "Cartago",
+      "action": "artifact ws_rails1: tools.WorkstationArt(\"assemble_rails\",6,4) at plant created",
+      "temporal_marker": 11,
+      "metadata": {
+        "line_num": 12
+      }
+    },
+    {
+      "entry_id": "entry_12",
+      "agent_id": "WorkstationArt",
+      "action": "Initialized for op=assemble_wheels energy=4 time=4",
+      "temporal_marker": 12,
+      "metadata": {
+        "operation": "assemble_wheels",
+        "line_num": 13
+      }
+    },
+    {
+      "entry_id": "entry_13",
+      "agent_id": "Cartago",
+      "action": "artifact ws_wheels2: tools.WorkstationArt(\"assemble_wheels\",4,4) at plant created",
+      "temporal_marker": 13,
+      "metadata": {
+        "line_num": 14
+      }
+    },
+    {
+      "entry_id": "entry_14",
+      "agent_id": "WorkstationArt",
+      "action": "Initialized for op=assemble_wheels energy=7 time=3",
+      "temporal_marker": 14,
+      "metadata": {
+        "operation": "assemble_wheels",
+        "line_num": 15
+      }
+    },
+    {
+      "entry_id": "entry_15",
+      "agent_id": "Cartago",
+      "action": "artifact ws_wheels1: tools.WorkstationArt(\"assemble_wheels\",7,3) at plant created",
+      "temporal_marker": 15,
+      "metadata": {
+        "line_num": 16
+      }
+    },
+    {
+      "entry_id": "entry_16",
+      "agent_id": "AuctionSkateArt",
+      "action": "Initialized",
+      "temporal_marker": 16,
+      "metadata": {
+        "line_num": 17
+      }
+    },
+    {
+      "entry_id": "entry_17",
+      "agent_id": "Cartago",
+      "action": "artifact auction_skate: tools.AuctionSkateArt() at plant created",
+      "temporal_marker": 17,
+      "metadata": {
+        "line_num": 18
+      }
+    },
+    {
+      "entry_id": "entry_18",
+      "agent_id": "WorkstationRegistry",
+      "action": "Initialized",
+      "temporal_marker": 18,
+      "metadata": {
+        "line_num": 19
+      }
+    },
+    {
+      "entry_id": "entry_19",
+      "agent_id": "Cartago",
+      "action": "artifact ws_registry: tools.WorkstationRegistry() at plant created",
+      "temporal_marker": 19,
+      "metadata": {
+        "line_num": 20
+      }
+    },
+    {
+      "entry_id": "entry_20",
+      "agent_id": "WorkstationArt",
+      "action": "Initialized for op=assemble_connectivity_box energy=9 time=5",
+      "temporal_marker": 20,
+      "metadata": {
+        "operation": "assemble_connectivity_box",
+        "line_num": 21
+      }
+    },
+    {
+      "entry_id": "entry_21",
+      "agent_id": "Cartago",
+      "action": "artifact ws_conn1: tools.WorkstationArt(\"assemble_connectivity_box\",9,5) at plant created",
+      "temporal_marker": 21,
+      "metadata": {
+        "line_num": 22
+      }
+    },
+    {
+      "entry_id": "entry_22",
+      "agent_id": "WorkstationArt",
+      "action": "Initialized for op=quality_control energy=6 time=6",
+      "temporal_marker": 22,
+      "metadata": {
+        "operation": "quality_control",
+        "line_num": 23
+      }
+    },
+    {
+      "entry_id": "entry_23",
+      "agent_id": "Cartago",
+      "action": "artifact ws_qc1: tools.WorkstationArt(\"quality_control\",6,6) at plant created",
+      "temporal_marker": 23,
+      "metadata": {
+        "line_num": 24
+      }
+    },
+    {
+      "entry_id": "entry_24",
+      "agent_id": "WorkstationArt",
+      "action": "Initialized for op=assemble_trunks energy=8 time=4",
+      "temporal_marker": 24,
+      "metadata": {
+        "operation": "assemble_trunks",
+        "line_num": 25
+      }
+    },
+    {
+      "entry_id": "entry_25",
+      "agent_id": "Cartago",
+      "action": "artifact ws_trunks1: tools.WorkstationArt(\"assemble_trunks\",8,4) at plant created",
+      "temporal_marker": 25,
+      "metadata": {
+        "line_num": 26
+      }
+    },
+    {
+      "entry_id": "entry_26",
+      "agent_id": "supplier1",
+      "action": "Ready to supply parts",
+      "temporal_marker": 26,
+      "metadata": {
+        "context": "supplier",
+        "line_num": 27
+      }
+    },
+    {
+      "entry_id": "entry_27",
+      "agent_id": "supplier2",
+      "action": "Ready to supply parts",
+      "temporal_marker": 27,
+      "metadata": {
+        "context": "supplier",
+        "line_num": 28
+      }
+    },
+    {
+      "entry_id": "entry_28",
+      "agent_id": "wa_wheels1",
+      "action": "Initializing..",
+      "temporal_marker": 28,
+      "metadata": {
+        "context": "wa_wheels1",
+        "line_num": 29
+      }
+    },
+    {
+      "entry_id": "entry_29",
+      "agent_id": "wa_qc1",
+      "action": "Initializing..",
+      "temporal_marker": 29,
+      "metadata": {
+        "context": "wa_qc1",
+        "line_num": 30
+      }
+    },
+    {
+      "entry_id": "entry_30",
+      "agent_id": "wa_wheels2",
+      "action": "Initializing..",
+      "temporal_marker": 30,
+      "metadata": {
+        "context": "wa_wheels2",
+        "line_num": 31
+      }
+    },
+    {
+      "entry_id": "entry_31",
+      "agent_id": "wa_conn1",
+      "action": "Initializing..",
+      "temporal_marker": 31,
+      "metadata": {
+        "context": "wa_conn1",
+        "line_num": 32
+      }
+    },
+    {
+      "entry_id": "entry_32",
+      "agent_id": "wa_trunks2",
+      "action": "Initializing..",
+      "temporal_marker": 32,
+      "metadata": {
+        "context": "wa_trunks2",
+        "line_num": 33
+      }
+    },
+    {
+      "entry_id": "entry_33",
+      "agent_id": "assembly",
+      "action": "Ready to receive orders",
+      "temporal_marker": 33,
+      "metadata": {
+        "context": "assembly",
+        "line_num": 34
+      }
+    },
+    {
+      "entry_id": "entry_34",
+      "agent_id": "wa_rails1",
+      "action": "Initializing..",
+      "temporal_marker": 34,
+      "metadata": {
+        "context": "wa_rails1",
+        "line_num": 35
+      }
+    },
+    {
+      "entry_id": "entry_35",
+      "agent_id": "wa_trunks1",
+      "action": "Initializing..",
+      "temporal_marker": 35,
+      "metadata": {
+        "context": "wa_trunks1",
+        "line_num": 36
+      }
+    },
+    {
+      "entry_id": "entry_36",
+      "agent_id": "assembly",
+      "action": "Total workstations registered: 0",
+      "temporal_marker": 36,
+      "metadata": {
+        "context": "assembly",
+        "line_num": 37
+      }
+    },
+    {
+      "entry_id": "entry_37",
+      "agent_id": "assembly",
+      "action": "Available workstations: 0",
+      "temporal_marker": 37,
+      "metadata": {
+        "context": "assembly",
+        "line_num": 38
+      }
+    },
+    {
+      "entry_id": "entry_38",
+      "agent_id": "assembly",
+      "action": "Workstation wa_wheels1 registered for assemble_wheels (energy=7, time=3)",
+      "temporal_marker": 38,
+      "metadata": {
+        "energy": "7",
+        "time": "3",
+        "context": "assembly",
+        "line_num": 39
+      }
+    },
+    {
+      "entry_id": "entry_39",
+      "agent_id": "WorkstationRegistry",
+      "action": "Registered wa_wheels1 for operation: assemble_wheels (energy=7, time=3)",
+      "temporal_marker": 39,
+      "metadata": {
+        "energy": "7",
+        "time": "3",
+        "operation": "assemble_wheels",
+        "line_num": 40
+      }
+    },
+    {
+      "entry_id": "entry_40",
+      "agent_id": "WorkstationRegistry",
+      "action": "Registered wa_qc1 for operation: quality_control (energy=6, time=6)",
+      "temporal_marker": 40,
+      "metadata": {
+        "energy": "6",
+        "time": "6",
+        "operation": "quality_control",
+        "line_num": 41
+      }
+    },
+    {
+      "entry_id": "entry_41",
+      "agent_id": "assembly",
+      "action": "Total workstations registered: 1",
+      "temporal_marker": 41,
+      "metadata": {
+        "context": "assembly",
+        "line_num": 42
+      }
+    },
+    {
+      "entry_id": "entry_42",
+      "agent_id": "WorkstationRegistry",
+      "action": "Registered wa_wheels2 for operation: assemble_wheels (energy=4, time=4)",
+      "temporal_marker": 42,
+      "metadata": {
+        "energy": "4",
+        "time": "4",
+        "operation": "assemble_wheels",
+        "line_num": 43
+      }
+    },
+    {
+      "entry_id": "entry_43",
+      "agent_id": "wa_wheels1",
+      "action": "Ready for wheels assembly",
+      "temporal_marker": 43,
+      "metadata": {
+        "context": "wa_wheels1",
+        "line_num": 44
+      }
+    },
+    {
+      "entry_id": "entry_44",
+      "agent_id": "wa_wheels2",
+      "action": "Ready for wheels assembly",
+      "temporal_marker": 44,
+      "metadata": {
+        "context": "wa_wheels2",
+        "line_num": 45
+      }
+    },
+    {
+      "entry_id": "entry_45",
+      "agent_id": "WorkstationRegistry",
+      "action": "Registered wa_conn1 for operation: assemble_connectivity_box (energy=9, time=5)",
+      "temporal_marker": 45,
+      "metadata": {
+        "energy": "9",
+        "time": "5",
+        "operation": "assemble_connectivity_box",
+        "line_num": 46
+      }
+    },
+    {
+      "entry_id": "entry_46",
+      "agent_id": "wa_qc1",
+      "action": "Ready for quality control",
+      "temporal_marker": 46,
+      "metadata": {
+        "context": "wa_qc1",
+        "line_num": 47
+      }
+    },
+    {
+      "entry_id": "entry_47",
+      "agent_id": "WorkstationRegistry",
+      "action": "Registered wa_rails1 for operation: assemble_rails (energy=6, time=4)",
+      "temporal_marker": 47,
+      "metadata": {
+        "energy": "6",
+        "time": "4",
+        "operation": "assemble_rails",
+        "line_num": 48
+      }
+    },
+    {
+      "entry_id": "entry_48",
+      "agent_id": "wa_conn1",
+      "action": "Ready for connectivity box installation",
+      "temporal_marker": 48,
+      "metadata": {
+        "context": "wa_conn1",
+        "line_num": 49
+      }
+    },
+    {
+      "entry_id": "entry_49",
+      "agent_id": "WorkstationRegistry",
+      "action": "Registered wa_trunks1 for operation: assemble_trunks (energy=8, time=4)",
+      "temporal_marker": 49,
+      "metadata": {
+        "energy": "8",
+        "time": "4",
+        "operation": "assemble_trunks",
+        "line_num": 50
+      }
+    },
+    {
+      "entry_id": "entry_50",
+      "agent_id": "wa_rails1",
+      "action": "Ready for rails assembly",
+      "temporal_marker": 50,
+      "metadata": {
+        "context": "wa_rails1",
+        "line_num": 51
+      }
+    },
+    {
+      "entry_id": "entry_51",
+      "agent_id": "wa_trunks1",
+      "action": "Ready for trunks assembly",
+      "temporal_marker": 51,
+      "metadata": {
+        "context": "wa_trunks1",
+        "line_num": 52
+      }
+    },
+    {
+      "entry_id": "entry_52",
+      "agent_id": "assembly",
+      "action": "Available workstations: 1",
+      "temporal_marker": 52,
+      "metadata": {
+        "context": "assembly",
+        "line_num": 53
+      }
+    },
+    {
+      "entry_id": "entry_53",
+      "agent_id": "assembly",
+      "action": "Subscribed to workstation registry updates",
+      "temporal_marker": 53,
+      "metadata": {
+        "context": "assembly",
+        "line_num": 54
+      }
+    },
+    {
+      "entry_id": "entry_54",
+      "agent_id": "assembly",
+      "action": "Workstation wa_qc1 registered for quality_control (energy=6, time=6)",
+      "temporal_marker": 54,
+      "metadata": {
+        "energy": "6",
+        "time": "6",
+        "context": "assembly",
+        "line_num": 55
+      }
+    },
+    {
+      "entry_id": "entry_55",
+      "agent_id": "assembly",
+      "action": "Total workstations registered: 2",
+      "temporal_marker": 55,
+      "metadata": {
+        "context": "assembly",
+        "line_num": 56
+      }
+    },
+    {
+      "entry_id": "entry_56",
+      "agent_id": "assembly",
+      "action": "Available workstations: 2",
+      "temporal_marker": 56,
+      "metadata": {
+        "context": "assembly",
+        "line_num": 57
+      }
+    },
+    {
+      "entry_id": "entry_57",
+      "agent_id": "assembly",
+      "action": "Workstation wa_wheels2 registered for assemble_wheels (energy=4, time=4)",
+      "temporal_marker": 57,
+      "metadata": {
+        "energy": "4",
+        "time": "4",
+        "context": "assembly",
+        "line_num": 58
+      }
+    },
+    {
+      "entry_id": "entry_58",
+      "agent_id": "assembly",
+      "action": "Total workstations registered: 3",
+      "temporal_marker": 58,
+      "metadata": {
+        "context": "assembly",
+        "line_num": 59
+      }
+    },
+    {
+      "entry_id": "entry_59",
+      "agent_id": "assembly",
+      "action": "Available workstations: 3",
+      "temporal_marker": 59,
+      "metadata": {
+        "context": "assembly",
+        "line_num": 60
+      }
+    },
+    {
+      "entry_id": "entry_60",
+      "agent_id": "assembly",
+      "action": "Workstation wa_conn1 registered for assemble_connectivity_box (energy=9, time=5)",
+      "temporal_marker": 60,
+      "metadata": {
+        "energy": "9",
+        "time": "5",
+        "context": "assembly",
+        "line_num": 61
+      }
+    },
+    {
+      "entry_id": "entry_61",
+      "agent_id": "assembly",
+      "action": "Total workstations registered: 4",
+      "temporal_marker": 61,
+      "metadata": {
+        "context": "assembly",
+        "line_num": 62
+      }
+    },
+    {
+      "entry_id": "entry_62",
+      "agent_id": "assembly",
+      "action": "Available workstations: 4",
+      "temporal_marker": 62,
+      "metadata": {
+        "context": "assembly",
+        "line_num": 63
+      }
+    },
+    {
+      "entry_id": "entry_63",
+      "agent_id": "assembly",
+      "action": "Workstation wa_rails1 registered for assemble_rails (energy=6, time=4)",
+      "temporal_marker": 63,
+      "metadata": {
+        "energy": "6",
+        "time": "4",
+        "context": "assembly",
+        "line_num": 64
+      }
+    },
+    {
+      "entry_id": "entry_64",
+      "agent_id": "assembly",
+      "action": "Total workstations registered: 5",
+      "temporal_marker": 64,
+      "metadata": {
+        "context": "assembly",
+        "line_num": 65
+      }
+    },
+    {
+      "entry_id": "entry_65",
+      "agent_id": "assembly",
+      "action": "Available workstations: 5",
+      "temporal_marker": 65,
+      "metadata": {
+        "context": "assembly",
+        "line_num": 66
+      }
+    },
+    {
+      "entry_id": "entry_66",
+      "agent_id": "assembly",
+      "action": "Workstation wa_trunks1 registered for assemble_trunks (energy=8, time=4)",
+      "temporal_marker": 66,
+      "metadata": {
+        "energy": "8",
+        "time": "4",
+        "context": "assembly",
+        "line_num": 67
+      }
+    },
+    {
+      "entry_id": "entry_67",
+      "agent_id": "assembly",
+      "action": "Total workstations registered: 6",
+      "temporal_marker": 67,
+      "metadata": {
+        "context": "assembly",
+        "line_num": 68
+      }
+    },
+    {
+      "entry_id": "entry_68",
+      "agent_id": "assembly",
+      "action": "Available workstations: 6",
+      "temporal_marker": 68,
+      "metadata": {
+        "context": "assembly",
+        "line_num": 69
+      }
+    },
+    {
+      "entry_id": "entry_69",
+      "agent_id": "WorkstationRegistry",
+      "action": "Registered wa_trunks2 for operation: assemble_trunks (energy=5, time=5)",
+      "temporal_marker": 69,
+      "metadata": {
+        "energy": "5",
+        "time": "5",
+        "operation": "assemble_trunks",
+        "line_num": 70
+      }
+    },
+    {
+      "entry_id": "entry_70",
+      "agent_id": "wa_trunks2",
+      "action": "Ready for trunks assembly",
+      "temporal_marker": 70,
+      "metadata": {
+        "context": "wa_trunks2",
+        "line_num": 71
+      }
+    },
+    {
+      "entry_id": "entry_71",
+      "agent_id": "assembly",
+      "action": "Workstation wa_trunks2 registered for assemble_trunks (energy=5, time=5)",
+      "temporal_marker": 71,
+      "metadata": {
+        "energy": "5",
+        "time": "5",
+        "context": "assembly",
+        "line_num": 72
+      }
+    },
+    {
+      "entry_id": "entry_72",
+      "agent_id": "assembly",
+      "action": "Total workstations registered: 7",
+      "temporal_marker": 72,
+      "metadata": {
+        "context": "assembly",
+        "line_num": 73
+      }
+    },
+    {
+      "entry_id": "entry_73",
+      "agent_id": "assembly",
+      "action": "Available workstations: 7",
+      "temporal_marker": 73,
+      "metadata": {
+        "context": "assembly",
+        "line_num": 74
+      }
+    },
+    {
+      "entry_id": "entry_74",
+      "agent_id": "customer",
+      "action": "Sending order sk2 to assembly..",
+      "temporal_marker": 74,
+      "metadata": {
+        "context": "customer",
+        "line_num": 75
+      }
+    },
+    {
+      "entry_id": "entry_75",
+      "agent_id": "customer",
+      "action": "Order sk2 sent to assembly",
+      "temporal_marker": 75,
+      "metadata": {
+        "context": "customer",
+        "line_num": 76
+      }
+    },
+    {
+      "entry_id": "entry_76",
+      "agent_id": "assembly",
+      "action": "Received order sk2",
+      "temporal_marker": 76,
+      "metadata": {
+        "context": "assembly",
+        "line_num": 77
+      }
+    },
+    {
+      "entry_id": "entry_77",
+      "agent_id": "assembly",
+      "action": "Parts: [board,trunks,wheels,rails,connectivity_box]",
+      "temporal_marker": 77,
+      "metadata": {
+        "line_num": 78
+      }
+    },
+    {
+      "entry_id": "entry_78",
+      "agent_id": "assembly",
+      "action": "Options: options([])",
+      "temporal_marker": 78,
+      "metadata": {
+        "line_num": 79
+      }
+    },
+    {
+      "entry_id": "entry_79",
+      "agent_id": "assembly",
+      "action": "Preferences: preferences(max_cost(300),max_time(10),max_energy(low))",
+      "temporal_marker": 79,
+      "metadata": {
+        "line_num": 80
+      }
+    },
+    {
+      "entry_id": "entry_80",
+      "agent_id": "assembly",
+      "action": "(AUCTION) Opening auction auc_sk2_board for part board",
+      "temporal_marker": 80,
+      "metadata": {
+        "context": "assembly",
+        "line_num": 81
+      }
+    },
+    {
+      "entry_id": "entry_81",
+      "agent_id": "AuctionSkateArt",
+      "action": "Started auction auc_sk2_board for part: board",
+      "temporal_marker": 81,
+      "metadata": {
+        "line_num": 82
+      }
+    },
+    {
+      "entry_id": "entry_82",
+      "agent_id": "supplier2",
+      "action": "Received auction announcement: auc_sk2_board for part: board",
+      "temporal_marker": 82,
+      "metadata": {
+        "context": "supplier",
+        "line_num": 83
+      }
+    },
+    {
+      "entry_id": "entry_83",
+      "agent_id": "supplier1",
+      "action": "Received auction announcement: auc_sk2_board for part: board",
+      "temporal_marker": 83,
+      "metadata": {
+        "context": "supplier",
+        "line_num": 84
+      }
+    },
+    {
+      "entry_id": "entry_84",
+      "agent_id": "AuctionSkateArt",
+      "action": "Bid from supplier2 for auc_sk2_board: cost=80, time=4",
+      "temporal_marker": 84,
+      "metadata": {
+        "line_num": 85
+      }
+    },
+    {
+      "entry_id": "entry_85",
+      "agent_id": "AuctionSkateArt",
+      "action": "New best bid from supplier2 for auc_sk2_board: cost=80",
+      "temporal_marker": 85,
+      "metadata": {
+        "line_num": 86
+      }
+    },
+    {
+      "entry_id": "entry_86",
+      "agent_id": "AuctionSkateArt",
+      "action": "Bid from supplier1 for auc_sk2_board: cost=60, time=5",
+      "temporal_marker": 86,
+      "metadata": {
+        "line_num": 87
+      }
+    },
+    {
+      "entry_id": "entry_87",
+      "agent_id": "AuctionSkateArt",
+      "action": "New best bid from supplier1 for auc_sk2_board: cost=60",
+      "temporal_marker": 87,
+      "metadata": {
+        "line_num": 88
+      }
+    },
+    {
+      "entry_id": "entry_88",
+      "agent_id": "supplier2",
+      "action": "Bid placed for auc_sk2_board: cost=80, time=4",
+      "temporal_marker": 88,
+      "metadata": {
+        "context": "supplier",
+        "line_num": 89
+      }
+    },
+    {
+      "entry_id": "entry_89",
+      "agent_id": "supplier1",
+      "action": "Bid placed for auc_sk2_board: cost=60, time=5",
+      "temporal_marker": 89,
+      "metadata": {
+        "context": "supplier",
+        "line_num": 90
+      }
+    },
+    {
+      "entry_id": "entry_90",
+      "agent_id": "AuctionSkateArt",
+      "action": "Closed auction auc_sk2_board: winner=supplier1, cost=60, time=5",
+      "temporal_marker": 90,
+      "metadata": {
+        "line_num": 91
+      }
+    },
+    {
+      "entry_id": "entry_91",
+      "agent_id": "assembly",
+      "action": "(AUCTION) Closed auc_sk2_board winner=supplier1 cost=60 time=5",
+      "temporal_marker": 91,
+      "metadata": {
+        "context": "assembly",
+        "line_num": 92
+      }
+    },
+    {
+      "entry_id": "entry_92",
+      "agent_id": "assembly",
+      "action": "Winner supplier1 has reputation: 0.8",
+      "temporal_marker": 92,
+      "metadata": {
+        "context": "assembly",
+        "line_num": 93
+      }
+    },
+    {
+      "entry_id": "entry_93",
+      "agent_id": "assembly",
+      "action": "(AUCTION) Opening auction auc_sk2_trunks for part trunks",
+      "temporal_marker": 93,
+      "metadata": {
+        "context": "assembly",
+        "line_num": 94
+      }
+    },
+    {
+      "entry_id": "entry_94",
+      "agent_id": "assembly",
+      "action": "Contracted supplier1 for part board (cost=60, reputation=0.8)",
+      "temporal_marker": 94,
+      "metadata": {
+        "cost": "60",
+        "reputation": "0.8",
+        "context": "assembly",
+        "line_num": 95
+      }
+    },
+    {
+      "entry_id": "entry_95",
+      "agent_id": "AuctionSkateArt",
+      "action": "Started auction auc_sk2_trunks for part: trunks",
+      "temporal_marker": 95,
+      "metadata": {
+        "line_num": 96
+      }
+    },
+    {
+      "entry_id": "entry_96",
+      "agent_id": "supplier2",
+      "action": "Received auction announcement: auc_sk2_trunks for part: trunks",
+      "temporal_marker": 96,
+      "metadata": {
+        "context": "supplier",
+        "line_num": 97
+      }
+    },
+    {
+      "entry_id": "entry_97",
+      "agent_id": "AuctionSkateArt",
+      "action": "Bid from supplier2 for auc_sk2_trunks: cost=45, time=7",
+      "temporal_marker": 97,
+      "metadata": {
+        "line_num": 98
+      }
+    },
+    {
+      "entry_id": "entry_98",
+      "agent_id": "AuctionSkateArt",
+      "action": "New best bid from supplier2 for auc_sk2_trunks: cost=45",
+      "temporal_marker": 98,
+      "metadata": {
+        "line_num": 99
+      }
+    },
+    {
+      "entry_id": "entry_99",
+      "agent_id": "supplier2",
+      "action": "Bid placed for auc_sk2_trunks: cost=45, time=7",
+      "temporal_marker": 99,
+      "metadata": {
+        "context": "supplier",
+        "line_num": 100
+      }
+    },
+    {
+      "entry_id": "entry_100",
+      "agent_id": "supplier1",
+      "action": "Received auction announcement: auc_sk2_trunks for part: trunks",
+      "temporal_marker": 100,
+      "metadata": {
+        "context": "supplier",
+        "line_num": 101
+      }
+    },
+    {
+      "entry_id": "entry_101",
+      "agent_id": "AuctionSkateArt",
+      "action": "Bid from supplier1 for auc_sk2_trunks: cost=50, time=6",
+      "temporal_marker": 101,
+      "metadata": {
+        "line_num": 102
+      }
+    },
+    {
+      "entry_id": "entry_102",
+      "agent_id": "supplier1",
+      "action": "Bid placed for auc_sk2_trunks: cost=50, time=6",
+      "temporal_marker": 102,
+      "metadata": {
+        "context": "supplier",
+        "line_num": 103
+      }
+    },
+    {
+      "entry_id": "entry_103",
+      "agent_id": "AuctionSkateArt",
+      "action": "Closed auction auc_sk2_trunks: winner=supplier2, cost=45, time=7",
+      "temporal_marker": 103,
+      "metadata": {
+        "line_num": 104
+      }
+    },
+    {
+      "entry_id": "entry_104",
+      "agent_id": "assembly",
+      "action": "(AUCTION) Closed auc_sk2_trunks winner=supplier2 cost=45 time=7",
+      "temporal_marker": 104,
+      "metadata": {
+        "context": "assembly",
+        "line_num": 105
+      }
+    },
+    {
+      "entry_id": "entry_105",
+      "agent_id": "assembly",
+      "action": "Winner supplier2 has reputation: 0.6",
+      "temporal_marker": 105,
+      "metadata": {
+        "context": "assembly",
+        "line_num": 106
+      }
+    },
+    {
+      "entry_id": "entry_106",
+      "agent_id": "assembly",
+      "action": "(AUCTION) Opening auction auc_sk2_wheels for part wheels",
+      "temporal_marker": 106,
+      "metadata": {
+        "context": "assembly",
+        "line_num": 107
+      }
+    },
+    {
+      "entry_id": "entry_107",
+      "agent_id": "assembly",
+      "action": "Contracted supplier2 for part trunks (cost=45, reputation=0.6)",
+      "temporal_marker": 107,
+      "metadata": {
+        "cost": "45",
+        "reputation": "0.6",
+        "context": "assembly",
+        "line_num": 108
+      }
+    },
+    {
+      "entry_id": "entry_108",
+      "agent_id": "AuctionSkateArt",
+      "action": "Started auction auc_sk2_wheels for part: wheels",
+      "temporal_marker": 108,
+      "metadata": {
+        "line_num": 109
+      }
+    },
+    {
+      "entry_id": "entry_109",
+      "agent_id": "supplier2",
+      "action": "Received auction announcement: auc_sk2_wheels for part: wheels",
+      "temporal_marker": 109,
+      "metadata": {
+        "context": "supplier",
+        "line_num": 110
+      }
+    },
+    {
+      "entry_id": "entry_110",
+      "agent_id": "supplier1",
+      "action": "Received auction announcement: auc_sk2_wheels for part: wheels",
+      "temporal_marker": 110,
+      "metadata": {
+        "context": "supplier",
+        "line_num": 111
+      }
+    },
+    {
+      "entry_id": "entry_111",
+      "agent_id": "AuctionSkateArt",
+      "action": "Bid from supplier2 for auc_sk2_wheels: cost=65, time=5",
+      "temporal_marker": 111,
+      "metadata": {
+        "line_num": 112
+      }
+    },
+    {
+      "entry_id": "entry_112",
+      "agent_id": "AuctionSkateArt",
+      "action": "New best bid from supplier2 for auc_sk2_wheels: cost=65",
+      "temporal_marker": 112,
+      "metadata": {
+        "line_num": 113
+      }
+    },
+    {
+      "entry_id": "entry_113",
+      "agent_id": "AuctionSkateArt",
+      "action": "Bid from supplier1 for auc_sk2_wheels: cost=70, time=4",
+      "temporal_marker": 113,
+      "metadata": {
+        "line_num": 114
+      }
+    },
+    {
+      "entry_id": "entry_114",
+      "agent_id": "supplier2",
+      "action": "Bid placed for auc_sk2_wheels: cost=65, time=5",
+      "temporal_marker": 114,
+      "metadata": {
+        "context": "supplier",
+        "line_num": 115
+      }
+    },
+    {
+      "entry_id": "entry_115",
+      "agent_id": "supplier1",
+      "action": "Bid placed for auc_sk2_wheels: cost=70, time=4",
+      "temporal_marker": 115,
+      "metadata": {
+        "context": "supplier",
+        "line_num": 116
+      }
+    },
+    {
+      "entry_id": "entry_116",
+      "agent_id": "AuctionSkateArt",
+      "action": "Closed auction auc_sk2_wheels: winner=supplier2, cost=65, time=5",
+      "temporal_marker": 116,
+      "metadata": {
+        "line_num": 117
+      }
+    },
+    {
+      "entry_id": "entry_117",
+      "agent_id": "assembly",
+      "action": "(AUCTION) Closed auc_sk2_wheels winner=supplier2 cost=65 time=5",
+      "temporal_marker": 117,
+      "metadata": {
+        "context": "assembly",
+        "line_num": 118
+      }
+    },
+    {
+      "entry_id": "entry_118",
+      "agent_id": "assembly",
+      "action": "Winner supplier2 has reputation: 0.6",
+      "temporal_marker": 118,
+      "metadata": {
+        "context": "assembly",
+        "line_num": 119
+      }
+    },
+    {
+      "entry_id": "entry_119",
+      "agent_id": "assembly",
+      "action": "(AUCTION) Opening auction auc_sk2_rails for part rails",
+      "temporal_marker": 119,
+      "metadata": {
+        "context": "assembly",
+        "line_num": 120
+      }
+    },
+    {
+      "entry_id": "entry_120",
+      "agent_id": "assembly",
+      "action": "Contracted supplier2 for part wheels (cost=65, reputation=0.6)",
+      "temporal_marker": 120,
+      "metadata": {
+        "cost": "65",
+        "reputation": "0.6",
+        "context": "assembly",
+        "line_num": 121
+      }
+    },
+    {
+      "entry_id": "entry_121",
+      "agent_id": "AuctionSkateArt",
+      "action": "Started auction auc_sk2_rails for part: rails",
+      "temporal_marker": 121,
+      "metadata": {
+        "line_num": 122
+      }
+    },
+    {
+      "entry_id": "entry_122",
+      "agent_id": "supplier2",
+      "action": "Received auction announcement: auc_sk2_rails for part: rails",
+      "temporal_marker": 122,
+      "metadata": {
+        "context": "supplier",
+        "line_num": 123
+      }
+    },
+    {
+      "entry_id": "entry_123",
+      "agent_id": "supplier1",
+      "action": "Received auction announcement: auc_sk2_rails for part: rails",
+      "temporal_marker": 123,
+      "metadata": {
+        "context": "supplier",
+        "line_num": 124
+      }
+    },
+    {
+      "entry_id": "entry_124",
+      "agent_id": "AuctionSkateArt",
+      "action": "Bid from supplier2 for auc_sk2_rails: cost=60, time=4",
+      "temporal_marker": 124,
+      "metadata": {
+        "line_num": 125
+      }
+    },
+    {
+      "entry_id": "entry_125",
+      "agent_id": "AuctionSkateArt",
+      "action": "New best bid from supplier2 for auc_sk2_rails: cost=60",
+      "temporal_marker": 125,
+      "metadata": {
+        "line_num": 126
+      }
+    },
+    {
+      "entry_id": "entry_126",
+      "agent_id": "AuctionSkateArt",
+      "action": "Bid from supplier1 for auc_sk2_rails: cost=55, time=5",
+      "temporal_marker": 126,
+      "metadata": {
+        "line_num": 127
+      }
+    },
+    {
+      "entry_id": "entry_127",
+      "agent_id": "AuctionSkateArt",
+      "action": "New best bid from supplier1 for auc_sk2_rails: cost=55",
+      "temporal_marker": 127,
+      "metadata": {
+        "line_num": 128
+      }
+    },
+    {
+      "entry_id": "entry_128",
+      "agent_id": "supplier2",
+      "action": "Bid placed for auc_sk2_rails: cost=60, time=4",
+      "temporal_marker": 128,
+      "metadata": {
+        "context": "supplier",
+        "line_num": 129
+      }
+    },
+    {
+      "entry_id": "entry_129",
+      "agent_id": "supplier1",
+      "action": "Bid placed for auc_sk2_rails: cost=55, time=5",
+      "temporal_marker": 129,
+      "metadata": {
+        "context": "supplier",
+        "line_num": 130
+      }
+    },
+    {
+      "entry_id": "entry_130",
+      "agent_id": "AuctionSkateArt",
+      "action": "Closed auction auc_sk2_rails: winner=supplier1, cost=55, time=5",
+      "temporal_marker": 130,
+      "metadata": {
+        "line_num": 131
+      }
+    },
+    {
+      "entry_id": "entry_131",
+      "agent_id": "assembly",
+      "action": "(AUCTION) Closed auc_sk2_rails winner=supplier1 cost=55 time=5",
+      "temporal_marker": 131,
+      "metadata": {
+        "context": "assembly",
+        "line_num": 132
+      }
+    },
+    {
+      "entry_id": "entry_132",
+      "agent_id": "assembly",
+      "action": "Winner supplier1 has reputation: 0.8",
+      "temporal_marker": 132,
+      "metadata": {
+        "context": "assembly",
+        "line_num": 133
+      }
+    },
+    {
+      "entry_id": "entry_133",
+      "agent_id": "assembly",
+      "action": "(AUCTION) Opening auction auc_sk2_connectivity_box for part connectivity_box",
+      "temporal_marker": 133,
+      "metadata": {
+        "context": "assembly",
+        "line_num": 134
+      }
+    },
+    {
+      "entry_id": "entry_134",
+      "agent_id": "assembly",
+      "action": "Contracted supplier1 for part rails (cost=55, reputation=0.8)",
+      "temporal_marker": 134,
+      "metadata": {
+        "cost": "55",
+        "reputation": "0.8",
+        "context": "assembly",
+        "line_num": 135
+      }
+    },
+    {
+      "entry_id": "entry_135",
+      "agent_id": "AuctionSkateArt",
+      "action": "Started auction auc_sk2_connectivity_box for part: connectivity_box",
+      "temporal_marker": 135,
+      "metadata": {
+        "line_num": 136
+      }
+    },
+    {
+      "entry_id": "entry_136",
+      "agent_id": "supplier1",
+      "action": "Received auction announcement: auc_sk2_connectivity_box for part: connectivity_box",
+      "temporal_marker": 136,
+      "metadata": {
+        "context": "supplier",
+        "line_num": 137
+      }
+    },
+    {
+      "entry_id": "entry_137",
+      "agent_id": "supplier2",
+      "action": "Received auction announcement: auc_sk2_connectivity_box for part: connectivity_box",
+      "temporal_marker": 137,
+      "metadata": {
+        "context": "supplier",
+        "line_num": 138
+      }
+    },
+    {
+      "entry_id": "entry_138",
+      "agent_id": "AuctionSkateArt",
+      "action": "Bid from supplier1 for auc_sk2_connectivity_box: cost=80, time=6",
+      "temporal_marker": 138,
+      "metadata": {
+        "line_num": 139
+      }
+    },
+    {
+      "entry_id": "entry_139",
+      "agent_id": "AuctionSkateArt",
+      "action": "New best bid from supplier1 for auc_sk2_connectivity_box: cost=80",
+      "temporal_marker": 139,
+      "metadata": {
+        "line_num": 140
+      }
+    },
+    {
+      "entry_id": "entry_140",
+      "agent_id": "AuctionSkateArt",
+      "action": "Bid from supplier2 for auc_sk2_connectivity_box: cost=75, time=7",
+      "temporal_marker": 140,
+      "metadata": {
+        "line_num": 141
+      }
+    },
+    {
+      "entry_id": "entry_141",
+      "agent_id": "AuctionSkateArt",
+      "action": "New best bid from supplier2 for auc_sk2_connectivity_box: cost=75",
+      "temporal_marker": 141,
+      "metadata": {
+        "line_num": 142
+      }
+    },
+    {
+      "entry_id": "entry_142",
+      "agent_id": "supplier1",
+      "action": "Bid placed for auc_sk2_connectivity_box: cost=80, time=6",
+      "temporal_marker": 142,
+      "metadata": {
+        "context": "supplier",
+        "line_num": 143
+      }
+    },
+    {
+      "entry_id": "entry_143",
+      "agent_id": "supplier2",
+      "action": "Bid placed for auc_sk2_connectivity_box: cost=75, time=7",
+      "temporal_marker": 143,
+      "metadata": {
+        "context": "supplier",
+        "line_num": 144
+      }
+    },
+    {
+      "entry_id": "entry_144",
+      "agent_id": "AuctionSkateArt",
+      "action": "Closed auction auc_sk2_connectivity_box: winner=supplier2, cost=75, time=7",
+      "temporal_marker": 144,
+      "metadata": {
+        "line_num": 145
+      }
+    },
+    {
+      "entry_id": "entry_145",
+      "agent_id": "assembly",
+      "action": "(AUCTION) Closed auc_sk2_connectivity_box winner=supplier2 cost=75 time=7",
+      "temporal_marker": 145,
+      "metadata": {
+        "context": "assembly",
+        "line_num": 146
+      }
+    },
+    {
+      "entry_id": "entry_146",
+      "agent_id": "assembly",
+      "action": "Winner supplier2 has reputation: 0.6",
+      "temporal_marker": 146,
+      "metadata": {
+        "context": "assembly",
+        "line_num": 147
+      }
+    },
+    {
+      "entry_id": "entry_147",
+      "agent_id": "assembly",
+      "action": "Contracted supplier2 for part connectivity_box (cost=75, reputation=0.6)",
+      "temporal_marker": 147,
+      "metadata": {
+        "cost": "75",
+        "reputation": "0.6",
+        "context": "assembly",
+        "line_num": 148
+      }
+    },
+    {
+      "entry_id": "entry_148",
+      "agent_id": "assembly",
+      "action": "Waiting auction result for board (auc_sk2_board)..",
+      "temporal_marker": 148,
+      "metadata": {
+        "context": "assembly",
+        "line_num": 149
+      }
+    },
+    {
+      "entry_id": "entry_149",
+      "agent_id": "assembly",
+      "action": "Waiting auction result for trunks (auc_sk2_trunks)..",
+      "temporal_marker": 149,
+      "metadata": {
+        "context": "assembly",
+        "line_num": 150
+      }
+    },
+    {
+      "entry_id": "entry_150",
+      "agent_id": "assembly",
+      "action": "Waiting auction result for wheels (auc_sk2_wheels)..",
+      "temporal_marker": 150,
+      "metadata": {
+        "context": "assembly",
+        "line_num": 151
+      }
+    },
+    {
+      "entry_id": "entry_151",
+      "agent_id": "assembly",
+      "action": "Waiting auction result for rails (auc_sk2_rails)..",
+      "temporal_marker": 151,
+      "metadata": {
+        "context": "assembly",
+        "line_num": 152
+      }
+    },
+    {
+      "entry_id": "entry_152",
+      "agent_id": "assembly",
+      "action": "Waiting auction result for connectivity_box (auc_sk2_connectivity_box)..",
+      "temporal_marker": 152,
+      "metadata": {
+        "context": "assembly",
+        "line_num": 153
+      }
+    },
+    {
+      "entry_id": "entry_153",
+      "agent_id": "assembly",
+      "action": "All auctions closed for sk2",
+      "temporal_marker": 153,
+      "metadata": {
+        "context": "assembly",
+        "line_num": 154
+      }
+    },
+    {
+      "entry_id": "entry_154",
+      "agent_id": "assembly",
+      "action": "Requesting all deliveries for sk2",
+      "temporal_marker": 154,
+      "metadata": {
+        "context": "assembly",
+        "line_num": 155
+      }
+    },
+    {
+      "entry_id": "entry_155",
+      "agent_id": "assembly",
+      "action": "Requesting delivery of board from supplier1",
+      "temporal_marker": 155,
+      "metadata": {
+        "context": "assembly",
+        "line_num": 156
+      }
+    },
+    {
+      "entry_id": "entry_156",
+      "agent_id": "assembly",
+      "action": "Requesting delivery of trunks from supplier2",
+      "temporal_marker": 156,
+      "metadata": {
+        "context": "assembly",
+        "line_num": 157
+      }
+    },
+    {
+      "entry_id": "entry_157",
+      "agent_id": "supplier1",
+      "action": "Delivering part board for order sk2..",
+      "temporal_marker": 157,
+      "metadata": {
+        "context": "supplier",
+        "line_num": 158
+      }
+    },
+    {
+      "entry_id": "entry_158",
+      "agent_id": "supplier2",
+      "action": "Delivering part trunks for order sk2..",
+      "temporal_marker": 158,
+      "metadata": {
+        "context": "supplier",
+        "line_num": 159
+      }
+    },
+    {
+      "entry_id": "entry_159",
+      "agent_id": "assembly",
+      "action": "Requesting delivery of wheels from supplier2",
+      "temporal_marker": 159,
+      "metadata": {
+        "context": "assembly",
+        "line_num": 160
+      }
+    },
+    {
+      "entry_id": "entry_160",
+      "agent_id": "supplier2",
+      "action": "Delivering part wheels for order sk2..",
+      "temporal_marker": 160,
+      "metadata": {
+        "context": "supplier",
+        "line_num": 161
+      }
+    },
+    {
+      "entry_id": "entry_161",
+      "agent_id": "assembly",
+      "action": "Requesting delivery of rails from supplier1",
+      "temporal_marker": 161,
+      "metadata": {
+        "context": "assembly",
+        "line_num": 162
+      }
+    },
+    {
+      "entry_id": "entry_162",
+      "agent_id": "assembly",
+      "action": "Requesting delivery of connectivity_box from supplier2",
+      "temporal_marker": 162,
+      "metadata": {
+        "context": "assembly",
+        "line_num": 163
+      }
+    },
+    {
+      "entry_id": "entry_163",
+      "agent_id": "supplier1",
+      "action": "Delivering part rails for order sk2..",
+      "temporal_marker": 163,
+      "metadata": {
+        "context": "supplier",
+        "line_num": 164
+      }
+    },
+    {
+      "entry_id": "entry_164",
+      "agent_id": "supplier2",
+      "action": "Delivering part connectivity_box for order sk2..",
+      "temporal_marker": 164,
+      "metadata": {
+        "context": "supplier",
+        "line_num": 165
+      }
+    },
+    {
+      "entry_id": "entry_165",
+      "agent_id": "supplier2",
+      "action": "Part wheels delivered for order sk2",
+      "temporal_marker": 165,
+      "metadata": {
+        "context": "supplier",
+        "line_num": 166
+      }
+    },
+    {
+      "entry_id": "entry_166",
+      "agent_id": "supplier1",
+      "action": "Part board delivered for order sk2",
+      "temporal_marker": 166,
+      "metadata": {
+        "context": "supplier",
+        "line_num": 167
+      }
+    },
+    {
+      "entry_id": "entry_167",
+      "agent_id": "assembly",
+      "action": "Part board delivered by supplier1",
+      "temporal_marker": 167,
+      "metadata": {
+        "context": "assembly",
+        "line_num": 168
+      }
+    },
+    {
+      "entry_id": "entry_168",
+      "agent_id": "assembly",
+      "action": "Part wheels delivered by supplier2",
+      "temporal_marker": 168,
+      "metadata": {
+        "context": "assembly",
+        "line_num": 169
+      }
+    },
+    {
+      "entry_id": "entry_169",
+      "agent_id": "supplier1",
+      "action": "Part rails delivered for order sk2",
+      "temporal_marker": 169,
+      "metadata": {
+        "context": "supplier",
+        "line_num": 170
+      }
+    },
+    {
+      "entry_id": "entry_170",
+      "agent_id": "assembly",
+      "action": "Part rails delivered by supplier1",
+      "temporal_marker": 170,
+      "metadata": {
+        "context": "assembly",
+        "line_num": 171
+      }
+    },
+    {
+      "entry_id": "entry_171",
+      "agent_id": "supplier2",
+      "action": "Part trunks delivered for order sk2",
+      "temporal_marker": 171,
+      "metadata": {
+        "context": "supplier",
+        "line_num": 172
+      }
+    },
+    {
+      "entry_id": "entry_172",
+      "agent_id": "assembly",
+      "action": "Part trunks delivered by supplier2",
+      "temporal_marker": 172,
+      "metadata": {
+        "context": "assembly",
+        "line_num": 173
+      }
+    },
+    {
+      "entry_id": "entry_173",
+      "agent_id": "supplier2",
+      "action": "Part connectivity_box delivered for order sk2",
+      "temporal_marker": 173,
+      "metadata": {
+        "context": "supplier",
+        "line_num": 174
+      }
+    },
+    {
+      "entry_id": "entry_174",
+      "agent_id": "assembly",
+      "action": "Part connectivity_box delivered by supplier2",
+      "temporal_marker": 174,
+      "metadata": {
+        "context": "assembly",
+        "line_num": 175
+      }
+    },
+    {
+      "entry_id": "entry_175",
+      "agent_id": "assembly",
+      "action": "All parts delivered for order sk2",
+      "temporal_marker": 175,
+      "metadata": {
+        "context": "assembly",
+        "line_num": 176
+      }
+    },
+    {
+      "entry_id": "entry_176",
+      "agent_id": "assembly",
+      "action": "Starting workstation allocation for sk2",
+      "temporal_marker": 176,
+      "metadata": {
+        "context": "assembly",
+        "line_num": 177
+      }
+    },
+    {
+      "entry_id": "entry_177",
+      "agent_id": "assembly",
+      "action": "Part board needs no assembly operation",
+      "temporal_marker": 177,
+      "metadata": {
+        "context": "assembly",
+        "line_num": 178
+      }
+    },
+    {
+      "entry_id": "entry_178",
+      "agent_id": "assembly",
+      "action": "Sending CFP for operation assemble_trunks (part trunks)",
+      "temporal_marker": 178,
+      "metadata": {
+        "context": "assembly",
+        "line_num": 179
+      }
+    },
+    {
+      "entry_id": "entry_179",
+      "agent_id": "wa_rails1",
+      "action": "I don't support operation assemble_trunks, ignoring",
+      "temporal_marker": 179,
+      "metadata": {
+        "context": "wa_rails1",
+        "line_num": 180
+      }
+    },
+    {
+      "entry_id": "entry_180",
+      "agent_id": "wa_wheels1",
+      "action": "I don't support operation assemble_trunks, ignoring",
+      "temporal_marker": 180,
+      "metadata": {
+        "context": "wa_wheels1",
+        "line_num": 181
+      }
+    },
+    {
+      "entry_id": "entry_181",
+      "agent_id": "wa_trunks1",
+      "action": "CFP for assemble_trunks in order sk2 -> energy=8, time=4",
+      "temporal_marker": 181,
+      "metadata": {
+        "context": "wa_trunks1",
+        "line_num": 182
+      }
+    },
+    {
+      "entry_id": "entry_182",
+      "agent_id": "wa_conn1",
+      "action": "I don't support operation assemble_trunks, ignoring",
+      "temporal_marker": 182,
+      "metadata": {
+        "context": "wa_conn1",
+        "line_num": 183
+      }
+    },
+    {
+      "entry_id": "entry_183",
+      "agent_id": "wa_wheels2",
+      "action": "I don't support operation assemble_trunks, ignoring",
+      "temporal_marker": 183,
+      "metadata": {
+        "context": "wa_wheels2",
+        "line_num": 184
+      }
+    },
+    {
+      "entry_id": "entry_184",
+      "agent_id": "wa_qc1",
+      "action": "I don't support operation assemble_trunks, ignoring",
+      "temporal_marker": 184,
+      "metadata": {
+        "context": "wa_qc1",
+        "line_num": 185
+      }
+    },
+    {
+      "entry_id": "entry_185",
+      "agent_id": "wa_trunks2",
+      "action": "CFP for assemble_trunks in order sk2 -> energy=5, time=5",
+      "temporal_marker": 185,
+      "metadata": {
+        "context": "wa_trunks2",
+        "line_num": 186
+      }
+    },
+    {
+      "entry_id": "entry_186",
+      "agent_id": "assembly",
+      "action": "Proposal from wa_trunks1 for assemble_trunks: energy=8, time=4",
+      "temporal_marker": 186,
+      "metadata": {
+        "context": "assembly",
+        "line_num": 187
+      }
+    },
+    {
+      "entry_id": "entry_187",
+      "agent_id": "assembly",
+      "action": "Proposal from wa_trunks2 for assemble_trunks: energy=5, time=5",
+      "temporal_marker": 187,
+      "metadata": {
+        "context": "assembly",
+        "line_num": 188
+      }
+    },
+    {
+      "entry_id": "entry_188",
+      "agent_id": "assembly",
+      "action": "Selected wa_trunks2 for assemble_trunks (part trunks): energy=5",
+      "temporal_marker": 188,
+      "metadata": {
+        "context": "assembly",
+        "line_num": 189
+      }
+    },
+    {
+      "entry_id": "entry_189",
+      "agent_id": "assembly",
+      "action": "Sending CFP for operation assemble_wheels (part wheels)",
+      "temporal_marker": 189,
+      "metadata": {
+        "context": "assembly",
+        "line_num": 190
+      }
+    },
+    {
+      "entry_id": "entry_190",
+      "agent_id": "wa_trunks2",
+      "action": "I don't support operation assemble_wheels (order sk2), ignoring CFP",
+      "temporal_marker": 190,
+      "metadata": {
+        "context": "wa_trunks2",
+        "line_num": 191
+      }
+    },
+    {
+      "entry_id": "entry_191",
+      "agent_id": "wa_conn1",
+      "action": "I don't support operation assemble_wheels, ignoring",
+      "temporal_marker": 191,
+      "metadata": {
+        "context": "wa_conn1",
+        "line_num": 192
+      }
+    },
+    {
+      "entry_id": "entry_192",
+      "agent_id": "wa_wheels2",
+      "action": "CFP for assemble_wheels -> energy=4, time=4",
+      "temporal_marker": 192,
+      "metadata": {
+        "context": "wa_wheels2",
+        "line_num": 193
+      }
+    },
+    {
+      "entry_id": "entry_193",
+      "agent_id": "wa_rails1",
+      "action": "I don't support operation assemble_wheRuntime Services (RTS) is running at 127.0.1.1:37657",
+      "temporal_marker": 193,
+      "metadata": {
+        "context": "wa_rails1",
+        "line_num": 194
+      }
+    },
+    {
+      "entry_id": "entry_194",
+      "agent_id": "inspector",
+      "action": "is running at http://127.0.1.1:3272",
+      "temporal_marker": 194,
+      "metadata": {
+        "line_num": 195
+      }
+    },
+    {
+      "entry_id": "entry_195",
+      "agent_id": "Server",
+      "action": "running on http://127.0.1.1:3273",
+      "temporal_marker": 195,
+      "metadata": {
+        "line_num": 196
+      }
+    },
+    {
+      "entry_id": "entry_196",
+      "agent_id": "Server",
+      "action": "running on http://127.0.1.1:3271",
+      "temporal_marker": 196,
+      "metadata": {
+        "line_num": 197
+      }
+    },
+    {
+      "entry_id": "entry_197",
+      "agent_id": "Moise",
+      "action": "OrgBoard skate_org created",
+      "temporal_marker": 197,
+      "metadata": {
+        "line_num": 198
+      }
+    },
+    {
+      "entry_id": "entry_198",
+      "agent_id": "Moise",
+      "action": "scheme created: sk_scheme: assemble_skateboard_sch using artifact SchemeBoard",
+      "temporal_marker": 198,
+      "metadata": {
+        "line_num": 199
+      }
+    },
+    {
+      "entry_id": "entry_199",
+      "agent_id": "Moise",
+      "action": "group created: sk_group: skateboard_group using artifact ora4mas.nopl.GroupBoard",
+      "temporal_marker": 199,
+      "metadata": {
+        "line_num": 200
+      }
+    },
+    {
+      "entry_id": "entry_200",
+      "agent_id": "Cartago",
+      "action": "Workspace plant created",
+      "temporal_marker": 200,
+      "metadata": {
+        "line_num": 201
+      }
+    },
+    {
+      "entry_id": "entry_201",
+      "agent_id": "WorkstationArt",
+      "action": "Initialized for op=assemble_trunks energy=5 time=5",
+      "temporal_marker": 201,
+      "metadata": {
+        "operation": "assemble_trunks",
+        "line_num": 202
+      }
+    },
+    {
+      "entry_id": "entry_202",
+      "agent_id": "Cartago",
+      "action": "artifact ws_trunks2: tools.WorkstationArt(\"assemble_trunks\",5,5) at plant created",
+      "temporal_marker": 202,
+      "metadata": {
+        "line_num": 203
+      }
+    },
+    {
+      "entry_id": "entry_203",
+      "agent_id": "WorkstationArt",
+      "action": "Initialized for op=assemble_rails energy=6 time=4",
+      "temporal_marker": 203,
+      "metadata": {
+        "operation": "assemble_rails",
+        "line_num": 204
+      }
+    },
+    {
+      "entry_id": "entry_204",
+      "agent_id": "Cartago",
+      "action": "artifact ws_rails1: tools.WorkstationArt(\"assemble_rails\",6,4) at plant created",
+      "temporal_marker": 204,
+      "metadata": {
+        "line_num": 205
+      }
+    },
+    {
+      "entry_id": "entry_205",
+      "agent_id": "WorkstationArt",
+      "action": "Initialized for op=assemble_wheels energy=4 time=4",
+      "temporal_marker": 205,
+      "metadata": {
+        "operation": "assemble_wheels",
+        "line_num": 206
+      }
+    },
+    {
+      "entry_id": "entry_206",
+      "agent_id": "Cartago",
+      "action": "artifact ws_wheels2: tools.WorkstationArt(\"assemble_wheels\",4,4) at plant created",
+      "temporal_marker": 206,
+      "metadata": {
+        "line_num": 207
+      }
+    },
+    {
+      "entry_id": "entry_207",
+      "agent_id": "WorkstationArt",
+      "action": "Initialized for op=assemble_wheels energy=7 time=3",
+      "temporal_marker": 207,
+      "metadata": {
+        "operation": "assemble_wheels",
+        "line_num": 208
+      }
+    },
+    {
+      "entry_id": "entry_208",
+      "agent_id": "Cartago",
+      "action": "artifact ws_wheels1: tools.WorkstationArt(\"assemble_wheels\",7,3) at plant created",
+      "temporal_marker": 208,
+      "metadata": {
+        "line_num": 209
+      }
+    },
+    {
+      "entry_id": "entry_209",
+      "agent_id": "AuctionSkateArt",
+      "action": "Initialized",
+      "temporal_marker": 209,
+      "metadata": {
+        "line_num": 210
+      }
+    },
+    {
+      "entry_id": "entry_210",
+      "agent_id": "Cartago",
+      "action": "artifact auction_skate: tools.AuctionSkateArt() at plant created",
+      "temporal_marker": 210,
+      "metadata": {
+        "line_num": 211
+      }
+    },
+    {
+      "entry_id": "entry_211",
+      "agent_id": "WorkstationRegistry",
+      "action": "Initialized",
+      "temporal_marker": 211,
+      "metadata": {
+        "line_num": 212
+      }
+    },
+    {
+      "entry_id": "entry_212",
+      "agent_id": "Cartago",
+      "action": "artifact ws_registry: tools.WorkstationRegistry() at plant created",
+      "temporal_marker": 212,
+      "metadata": {
+        "line_num": 213
+      }
+    },
+    {
+      "entry_id": "entry_213",
+      "agent_id": "WorkstationArt",
+      "action": "Initialized for op=assemble_connectivity_box energy=9 time=5",
+      "temporal_marker": 213,
+      "metadata": {
+        "operation": "assemble_connectivity_box",
+        "line_num": 214
+      }
+    },
+    {
+      "entry_id": "entry_214",
+      "agent_id": "Cartago",
+      "action": "artifact ws_conn1: tools.WorkstationArt(\"assemble_connectivity_box\",9,5) at plant created",
+      "temporal_marker": 214,
+      "metadata": {
+        "line_num": 215
+      }
+    },
+    {
+      "entry_id": "entry_215",
+      "agent_id": "WorkstationArt",
+      "action": "Initialized for op=quality_control energy=6 time=6",
+      "temporal_marker": 215,
+      "metadata": {
+        "operation": "quality_control",
+        "line_num": 216
+      }
+    },
+    {
+      "entry_id": "entry_216",
+      "agent_id": "Cartago",
+      "action": "artifact ws_qc1: tools.WorkstationArt(\"quality_control\",6,6) at plant created",
+      "temporal_marker": 216,
+      "metadata": {
+        "line_num": 217
+      }
+    },
+    {
+      "entry_id": "entry_217",
+      "agent_id": "WorkstationArt",
+      "action": "Initialized for op=assemble_trunks energy=8 time=4",
+      "temporal_marker": 217,
+      "metadata": {
+        "operation": "assemble_trunks",
+        "line_num": 218
+      }
+    },
+    {
+      "entry_id": "entry_218",
+      "agent_id": "Cartago",
+      "action": "artifact ws_trunks1: tools.WorkstationArt(\"assemble_trunks\",8,4) at plant created",
+      "temporal_marker": 218,
+      "metadata": {
+        "line_num": 219
+      }
+    },
+    {
+      "entry_id": "entry_219",
+      "agent_id": "supplier1",
+      "action": "Ready to supply parts",
+      "temporal_marker": 219,
+      "metadata": {
+        "context": "supplier",
+        "line_num": 220
+      }
+    },
+    {
+      "entry_id": "entry_220",
+      "agent_id": "supplier2",
+      "action": "Ready to supply parts",
+      "temporal_marker": 220,
+      "metadata": {
+        "context": "supplier",
+        "line_num": 221
+      }
+    },
+    {
+      "entry_id": "entry_221",
+      "agent_id": "wa_wheels1",
+      "action": "Initializing..",
+      "temporal_marker": 221,
+      "metadata": {
+        "context": "wa_wheels1",
+        "line_num": 222
+      }
+    },
+    {
+      "entry_id": "entry_222",
+      "agent_id": "wa_qc1",
+      "action": "Initializing..",
+      "temporal_marker": 222,
+      "metadata": {
+        "context": "wa_qc1",
+        "line_num": 223
+      }
+    },
+    {
+      "entry_id": "entry_223",
+      "agent_id": "wa_wheels2",
+      "action": "Initializing..",
+      "temporal_marker": 223,
+      "metadata": {
+        "context": "wa_wheels2",
+        "line_num": 224
+      }
+    },
+    {
+      "entry_id": "entry_224",
+      "agent_id": "wa_conn1",
+      "action": "Initializing..",
+      "temporal_marker": 224,
+      "metadata": {
+        "context": "wa_conn1",
+        "line_num": 225
+      }
+    },
+    {
+      "entry_id": "entry_225",
+      "agent_id": "wa_trunks2",
+      "action": "Initializing..",
+      "temporal_marker": 225,
+      "metadata": {
+        "context": "wa_trunks2",
+        "line_num": 226
+      }
+    },
+    {
+      "entry_id": "entry_226",
+      "agent_id": "assembly",
+      "action": "Ready to receive orders",
+      "temporal_marker": 226,
+      "metadata": {
+        "context": "assembly",
+        "line_num": 227
+      }
+    },
+    {
+      "entry_id": "entry_227",
+      "agent_id": "wa_rails1",
+      "action": "Initializing..",
+      "temporal_marker": 227,
+      "metadata": {
+        "context": "wa_rails1",
+        "line_num": 228
+      }
+    },
+    {
+      "entry_id": "entry_228",
+      "agent_id": "wa_trunks1",
+      "action": "Initializing..",
+      "temporal_marker": 228,
+      "metadata": {
+        "context": "wa_trunks1",
+        "line_num": 229
+      }
+    },
+    {
+      "entry_id": "entry_229",
+      "agent_id": "assembly",
+      "action": "Total workstations registered: 0",
+      "temporal_marker": 229,
+      "metadata": {
+        "context": "assembly",
+        "line_num": 230
+      }
+    },
+    {
+      "entry_id": "entry_230",
+      "agent_id": "assembly",
+      "action": "Available workstations: 0",
+      "temporal_marker": 230,
+      "metadata": {
+        "context": "assembly",
+        "line_num": 231
+      }
+    },
+    {
+      "entry_id": "entry_231",
+      "agent_id": "assembly",
+      "action": "Workstation wa_wheels1 registered for assemble_wheels (energy=7, time=3)",
+      "temporal_marker": 231,
+      "metadata": {
+        "energy": "7",
+        "time": "3",
+        "context": "assembly",
+        "line_num": 232
+      }
+    },
+    {
+      "entry_id": "entry_232",
+      "agent_id": "WorkstationRegistry",
+      "action": "Registered wa_wheels1 for operation: assemble_wheels (energy=7, time=3)",
+      "temporal_marker": 232,
+      "metadata": {
+        "energy": "7",
+        "time": "3",
+        "operation": "assemble_wheels",
+        "line_num": 233
+      }
+    },
+    {
+      "entry_id": "entry_233",
+      "agent_id": "WorkstationRegistry",
+      "action": "Registered wa_qc1 for operation: quality_control (energy=6, time=6)",
+      "temporal_marker": 233,
+      "metadata": {
+        "energy": "6",
+        "time": "6",
+        "operation": "quality_control",
+        "line_num": 234
+      }
+    },
+    {
+      "entry_id": "entry_234",
+      "agent_id": "assembly",
+      "action": "Total workstations registered: 1",
+      "temporal_marker": 234,
+      "metadata": {
+        "context": "assembly",
+        "line_num": 235
+      }
+    },
+    {
+      "entry_id": "entry_235",
+      "agent_id": "WorkstationRegistry",
+      "action": "Registered wa_wheels2 for operation: assemble_wheels (energy=4, time=4)",
+      "temporal_marker": 235,
+      "metadata": {
+        "energy": "4",
+        "time": "4",
+        "operation": "assemble_wheels",
+        "line_num": 236
+      }
+    },
+    {
+      "entry_id": "entry_236",
+      "agent_id": "wa_wheels1",
+      "action": "Ready for wheels assembly",
+      "temporal_marker": 236,
+      "metadata": {
+        "context": "wa_wheels1",
+        "line_num": 237
+      }
+    },
+    {
+      "entry_id": "entry_237",
+      "agent_id": "wa_wheels2",
+      "action": "Ready for wheels assembly",
+      "temporal_marker": 237,
+      "metadata": {
+        "context": "wa_wheels2",
+        "line_num": 238
+      }
+    },
+    {
+      "entry_id": "entry_238",
+      "agent_id": "WorkstationRegistry",
+      "action": "Registered wa_conn1 for operation: assemble_connectivity_box (energy=9, time=5)",
+      "temporal_marker": 238,
+      "metadata": {
+        "energy": "9",
+        "time": "5",
+        "operation": "assemble_connectivity_box",
+        "line_num": 239
+      }
+    },
+    {
+      "entry_id": "entry_239",
+      "agent_id": "wa_qc1",
+      "action": "Ready for quality control",
+      "temporal_marker": 239,
+      "metadata": {
+        "context": "wa_qc1",
+        "line_num": 240
+      }
+    },
+    {
+      "entry_id": "entry_240",
+      "agent_id": "WorkstationRegistry",
+      "action": "Registered wa_rails1 for operation: assemble_rails (energy=6, time=4)",
+      "temporal_marker": 240,
+      "metadata": {
+        "energy": "6",
+        "time": "4",
+        "operation": "assemble_rails",
+        "line_num": 241
+      }
+    },
+    {
+      "entry_id": "entry_241",
+      "agent_id": "wa_conn1",
+      "action": "Ready for connectivity box installation",
+      "temporal_marker": 241,
+      "metadata": {
+        "context": "wa_conn1",
+        "line_num": 242
+      }
+    },
+    {
+      "entry_id": "entry_242",
+      "agent_id": "WorkstationRegistry",
+      "action": "Registered wa_trunks1 for operation: assemble_trunks (energy=8, time=4)",
+      "temporal_marker": 242,
+      "metadata": {
+        "energy": "8",
+        "time": "4",
+        "operation": "assemble_trunks",
+        "line_num": 243
+      }
+    },
+    {
+      "entry_id": "entry_243",
+      "agent_id": "wa_rails1",
+      "action": "Ready for rails assembly",
+      "temporal_marker": 243,
+      "metadata": {
+        "context": "wa_rails1",
+        "line_num": 244
+      }
+    },
+    {
+      "entry_id": "entry_244",
+      "agent_id": "wa_trunks1",
+      "action": "Ready for trunks assembly",
+      "temporal_marker": 244,
+      "metadata": {
+        "context": "wa_trunks1",
+        "line_num": 245
+      }
+    },
+    {
+      "entry_id": "entry_245",
+      "agent_id": "assembly",
+      "action": "Available workstations: 1",
+      "temporal_marker": 245,
+      "metadata": {
+        "context": "assembly",
+        "line_num": 246
+      }
+    },
+    {
+      "entry_id": "entry_246",
+      "agent_id": "assembly",
+      "action": "Subscribed to workstation registry updates",
+      "temporal_marker": 246,
+      "metadata": {
+        "context": "assembly",
+        "line_num": 247
+      }
+    },
+    {
+      "entry_id": "entry_247",
+      "agent_id": "assembly",
+      "action": "Workstation wa_qc1 registered for quality_control (energy=6, time=6)",
+      "temporal_marker": 247,
+      "metadata": {
+        "energy": "6",
+        "time": "6",
+        "context": "assembly",
+        "line_num": 248
+      }
+    },
+    {
+      "entry_id": "entry_248",
+      "agent_id": "assembly",
+      "action": "Total workstations registered: 2",
+      "temporal_marker": 248,
+      "metadata": {
+        "context": "assembly",
+        "line_num": 249
+      }
+    },
+    {
+      "entry_id": "entry_249",
+      "agent_id": "assembly",
+      "action": "Available workstations: 2",
+      "temporal_marker": 249,
+      "metadata": {
+        "context": "assembly",
+        "line_num": 250
+      }
+    },
+    {
+      "entry_id": "entry_250",
+      "agent_id": "assembly",
+      "action": "Workstation wa_wheels2 registered for assemble_wheels (energy=4, time=4)",
+      "temporal_marker": 250,
+      "metadata": {
+        "energy": "4",
+        "time": "4",
+        "context": "assembly",
+        "line_num": 251
+      }
+    },
+    {
+      "entry_id": "entry_251",
+      "agent_id": "assembly",
+      "action": "Total workstations registered: 3",
+      "temporal_marker": 251,
+      "metadata": {
+        "context": "assembly",
+        "line_num": 252
+      }
+    },
+    {
+      "entry_id": "entry_252",
+      "agent_id": "assembly",
+      "action": "Available workstations: 3",
+      "temporal_marker": 252,
+      "metadata": {
+        "context": "assembly",
+        "line_num": 253
+      }
+    },
+    {
+      "entry_id": "entry_253",
+      "agent_id": "assembly",
+      "action": "Workstation wa_conn1 registered for assemble_connectivity_box (energy=9, time=5)",
+      "temporal_marker": 253,
+      "metadata": {
+        "energy": "9",
+        "time": "5",
+        "context": "assembly",
+        "line_num": 254
+      }
+    },
+    {
+      "entry_id": "entry_254",
+      "agent_id": "assembly",
+      "action": "Total workstations registered: 4",
+      "temporal_marker": 254,
+      "metadata": {
+        "context": "assembly",
+        "line_num": 255
+      }
+    },
+    {
+      "entry_id": "entry_255",
+      "agent_id": "assembly",
+      "action": "Available workstations: 4",
+      "temporal_marker": 255,
+      "metadata": {
+        "context": "assembly",
+        "line_num": 256
+      }
+    },
+    {
+      "entry_id": "entry_256",
+      "agent_id": "assembly",
+      "action": "Workstation wa_rails1 registered for assemble_rails (energy=6, time=4)",
+      "temporal_marker": 256,
+      "metadata": {
+        "energy": "6",
+        "time": "4",
+        "context": "assembly",
+        "line_num": 257
+      }
+    },
+    {
+      "entry_id": "entry_257",
+      "agent_id": "assembly",
+      "action": "Total workstations registered: 5",
+      "temporal_marker": 257,
+      "metadata": {
+        "context": "assembly",
+        "line_num": 258
+      }
+    },
+    {
+      "entry_id": "entry_258",
+      "agent_id": "assembly",
+      "action": "Available workstations: 5",
+      "temporal_marker": 258,
+      "metadata": {
+        "context": "assembly",
+        "line_num": 259
+      }
+    },
+    {
+      "entry_id": "entry_259",
+      "agent_id": "assembly",
+      "action": "Workstation wa_trunks1 registered for assemble_trunks (energy=8, time=4)",
+      "temporal_marker": 259,
+      "metadata": {
+        "energy": "8",
+        "time": "4",
+        "context": "assembly",
+        "line_num": 260
+      }
+    },
+    {
+      "entry_id": "entry_260",
+      "agent_id": "assembly",
+      "action": "Total workstations registered: 6",
+      "temporal_marker": 260,
+      "metadata": {
+        "context": "assembly",
+        "line_num": 261
+      }
+    },
+    {
+      "entry_id": "entry_261",
+      "agent_id": "assembly",
+      "action": "Available workstations: 6",
+      "temporal_marker": 261,
+      "metadata": {
+        "context": "assembly",
+        "line_num": 262
+      }
+    },
+    {
+      "entry_id": "entry_262",
+      "agent_id": "WorkstationRegistry",
+      "action": "Registered wa_trunks2 for operation: assemble_trunks (energy=5, time=5)",
+      "temporal_marker": 262,
+      "metadata": {
+        "energy": "5",
+        "time": "5",
+        "operation": "assemble_trunks",
+        "line_num": 263
+      }
+    },
+    {
+      "entry_id": "entry_263",
+      "agent_id": "wa_trunks2",
+      "action": "Ready for trunks assembly",
+      "temporal_marker": 263,
+      "metadata": {
+        "context": "wa_trunks2",
+        "line_num": 264
+      }
+    },
+    {
+      "entry_id": "entry_264",
+      "agent_id": "assembly",
+      "action": "Workstation wa_trunks2 registered for assemble_trunks (energy=5, time=5)",
+      "temporal_marker": 264,
+      "metadata": {
+        "energy": "5",
+        "time": "5",
+        "context": "assembly",
+        "line_num": 265
+      }
+    },
+    {
+      "entry_id": "entry_265",
+      "agent_id": "assembly",
+      "action": "Total workstations registered: 7",
+      "temporal_marker": 265,
+      "metadata": {
+        "context": "assembly",
+        "line_num": 266
+      }
+    },
+    {
+      "entry_id": "entry_266",
+      "agent_id": "assembly",
+      "action": "Available workstations: 7",
+      "temporal_marker": 266,
+      "metadata": {
+        "context": "assembly",
+        "line_num": 267
+      }
+    },
+    {
+      "entry_id": "entry_267",
+      "agent_id": "customer",
+      "action": "Sending order sk2 to assembly..",
+      "temporal_marker": 267,
+      "metadata": {
+        "context": "customer",
+        "line_num": 268
+      }
+    },
+    {
+      "entry_id": "entry_268",
+      "agent_id": "customer",
+      "action": "Order sk2 sent to assembly",
+      "temporal_marker": 268,
+      "metadata": {
+        "context": "customer",
+        "line_num": 269
+      }
+    },
+    {
+      "entry_id": "entry_269",
+      "agent_id": "assembly",
+      "action": "Received order sk2",
+      "temporal_marker": 269,
+      "metadata": {
+        "context": "assembly",
+        "line_num": 270
+      }
+    },
+    {
+      "entry_id": "entry_270",
+      "agent_id": "assembly",
+      "action": "Parts: [board,trunks,wheels,rails,connectivity_box]",
+      "temporal_marker": 270,
+      "metadata": {
+        "line_num": 271
+      }
+    },
+    {
+      "entry_id": "entry_271",
+      "agent_id": "assembly",
+      "action": "Options: options([])",
+      "temporal_marker": 271,
+      "metadata": {
+        "line_num": 272
+      }
+    },
+    {
+      "entry_id": "entry_272",
+      "agent_id": "assembly",
+      "action": "Preferences: preferences(max_cost(300),max_time(10),max_energy(low))",
+      "temporal_marker": 272,
+      "metadata": {
+        "line_num": 273
+      }
+    },
+    {
+      "entry_id": "entry_273",
+      "agent_id": "assembly",
+      "action": "(AUCTION) Opening auction auc_sk2_board for part board",
+      "temporal_marker": 273,
+      "metadata": {
+        "context": "assembly",
+        "line_num": 274
+      }
+    },
+    {
+      "entry_id": "entry_274",
+      "agent_id": "AuctionSkateArt",
+      "action": "Started auction auc_sk2_board for part: board",
+      "temporal_marker": 274,
+      "metadata": {
+        "line_num": 275
+      }
+    },
+    {
+      "entry_id": "entry_275",
+      "agent_id": "supplier2",
+      "action": "Received auction announcement: auc_sk2_board for part: board",
+      "temporal_marker": 275,
+      "metadata": {
+        "context": "supplier",
+        "line_num": 276
+      }
+    },
+    {
+      "entry_id": "entry_276",
+      "agent_id": "supplier1",
+      "action": "Received auction announcement: auc_sk2_board for part: board",
+      "temporal_marker": 276,
+      "metadata": {
+        "context": "supplier",
+        "line_num": 277
+      }
+    },
+    {
+      "entry_id": "entry_277",
+      "agent_id": "AuctionSkateArt",
+      "action": "Bid from supplier2 for auc_sk2_board: cost=80, time=4",
+      "temporal_marker": 277,
+      "metadata": {
+        "line_num": 278
+      }
+    },
+    {
+      "entry_id": "entry_278",
+      "agent_id": "AuctionSkateArt",
+      "action": "New best bid from supplier2 for auc_sk2_board: cost=80",
+      "temporal_marker": 278,
+      "metadata": {
+        "line_num": 279
+      }
+    },
+    {
+      "entry_id": "entry_279",
+      "agent_id": "AuctionSkateArt",
+      "action": "Bid from supplier1 for auc_sk2_board: cost=60, time=5",
+      "temporal_marker": 279,
+      "metadata": {
+        "line_num": 280
+      }
+    },
+    {
+      "entry_id": "entry_280",
+      "agent_id": "AuctionSkateArt",
+      "action": "New best bid from supplier1 for auc_sk2_board: cost=60",
+      "temporal_marker": 280,
+      "metadata": {
+        "line_num": 281
+      }
+    },
+    {
+      "entry_id": "entry_281",
+      "agent_id": "supplier2",
+      "action": "Bid placed for auc_sk2_board: cost=80, time=4",
+      "temporal_marker": 281,
+      "metadata": {
+        "context": "supplier",
+        "line_num": 282
+      }
+    },
+    {
+      "entry_id": "entry_282",
+      "agent_id": "supplier1",
+      "action": "Bid placed for auc_sk2_board: cost=60, time=5",
+      "temporal_marker": 282,
+      "metadata": {
+        "context": "supplier",
+        "line_num": 283
+      }
+    },
+    {
+      "entry_id": "entry_283",
+      "agent_id": "AuctionSkateArt",
+      "action": "Closed auction auc_sk2_board: winner=supplier1, cost=60, time=5",
+      "temporal_marker": 283,
+      "metadata": {
+        "line_num": 284
+      }
+    },
+    {
+      "entry_id": "entry_284",
+      "agent_id": "assembly",
+      "action": "(AUCTION) Closed auc_sk2_board winner=supplier1 cost=60 time=5",
+      "temporal_marker": 284,
+      "metadata": {
+        "context": "assembly",
+        "line_num": 285
+      }
+    },
+    {
+      "entry_id": "entry_285",
+      "agent_id": "assembly",
+      "action": "Winner supplier1 has reputation: 0.8",
+      "temporal_marker": 285,
+      "metadata": {
+        "context": "assembly",
+        "line_num": 286
+      }
+    },
+    {
+      "entry_id": "entry_286",
+      "agent_id": "assembly",
+      "action": "(AUCTION) Opening auction auc_sk2_trunks for part trunks",
+      "temporal_marker": 286,
+      "metadata": {
+        "context": "assembly",
+        "line_num": 287
+      }
+    },
+    {
+      "entry_id": "entry_287",
+      "agent_id": "assembly",
+      "action": "Contracted supplier1 for part board (cost=60, reputation=0.8)",
+      "temporal_marker": 287,
+      "metadata": {
+        "cost": "60",
+        "reputation": "0.8",
+        "context": "assembly",
+        "line_num": 288
+      }
+    },
+    {
+      "entry_id": "entry_288",
+      "agent_id": "AuctionSkateArt",
+      "action": "Started auction auc_sk2_trunks for part: trunks",
+      "temporal_marker": 288,
+      "metadata": {
+        "line_num": 289
+      }
+    },
+    {
+      "entry_id": "entry_289",
+      "agent_id": "supplier2",
+      "action": "Received auction announcement: auc_sk2_trunks for part: trunks",
+      "temporal_marker": 289,
+      "metadata": {
+        "context": "supplier",
+        "line_num": 290
+      }
+    },
+    {
+      "entry_id": "entry_290",
+      "agent_id": "AuctionSkateArt",
+      "action": "Bid from supplier2 for auc_sk2_trunks: cost=45, time=7",
+      "temporal_marker": 290,
+      "metadata": {
+        "line_num": 291
+      }
+    },
+    {
+      "entry_id": "entry_291",
+      "agent_id": "AuctionSkateArt",
+      "action": "New best bid from supplier2 for auc_sk2_trunks: cost=45",
+      "temporal_marker": 291,
+      "metadata": {
+        "line_num": 292
+      }
+    },
+    {
+      "entry_id": "entry_292",
+      "agent_id": "supplier2",
+      "action": "Bid placed for auc_sk2_trunks: cost=45, time=7",
+      "temporal_marker": 292,
+      "metadata": {
+        "context": "supplier",
+        "line_num": 293
+      }
+    },
+    {
+      "entry_id": "entry_293",
+      "agent_id": "supplier1",
+      "action": "Received auction announcement: auc_sk2_trunks for part: trunks",
+      "temporal_marker": 293,
+      "metadata": {
+        "context": "supplier",
+        "line_num": 294
+      }
+    },
+    {
+      "entry_id": "entry_294",
+      "agent_id": "AuctionSkateArt",
+      "action": "Bid from supplier1 for auc_sk2_trunks: cost=50, time=6",
+      "temporal_marker": 294,
+      "metadata": {
+        "line_num": 295
+      }
+    },
+    {
+      "entry_id": "entry_295",
+      "agent_id": "supplier1",
+      "action": "Bid placed for auc_sk2_trunks: cost=50, time=6",
+      "temporal_marker": 295,
+      "metadata": {
+        "context": "supplier",
+        "line_num": 296
+      }
+    },
+    {
+      "entry_id": "entry_296",
+      "agent_id": "AuctionSkateArt",
+      "action": "Closed auction auc_sk2_trunks: winner=supplier2, cost=45, time=7",
+      "temporal_marker": 296,
+      "metadata": {
+        "line_num": 297
+      }
+    },
+    {
+      "entry_id": "entry_297",
+      "agent_id": "assembly",
+      "action": "(AUCTION) Closed auc_sk2_trunks winner=supplier2 cost=45 time=7",
+      "temporal_marker": 297,
+      "metadata": {
+        "context": "assembly",
+        "line_num": 298
+      }
+    },
+    {
+      "entry_id": "entry_298",
+      "agent_id": "assembly",
+      "action": "Winner supplier2 has reputation: 0.6",
+      "temporal_marker": 298,
+      "metadata": {
+        "context": "assembly",
+        "line_num": 299
+      }
+    },
+    {
+      "entry_id": "entry_299",
+      "agent_id": "assembly",
+      "action": "(AUCTION) Opening auction auc_sk2_wheels for part wheels",
+      "temporal_marker": 299,
+      "metadata": {
+        "context": "assembly",
+        "line_num": 300
+      }
+    },
+    {
+      "entry_id": "entry_300",
+      "agent_id": "assembly",
+      "action": "Contracted supplier2 for part trunks (cost=45, reputation=0.6)",
+      "temporal_marker": 300,
+      "metadata": {
+        "cost": "45",
+        "reputation": "0.6",
+        "context": "assembly",
+        "line_num": 301
+      }
+    },
+    {
+      "entry_id": "entry_301",
+      "agent_id": "AuctionSkateArt",
+      "action": "Started auction auc_sk2_wheels for part: wheels",
+      "temporal_marker": 301,
+      "metadata": {
+        "line_num": 302
+      }
+    },
+    {
+      "entry_id": "entry_302",
+      "agent_id": "supplier2",
+      "action": "Received auction announcement: auc_sk2_wheels for part: wheels",
+      "temporal_marker": 302,
+      "metadata": {
+        "context": "supplier",
+        "line_num": 303
+      }
+    },
+    {
+      "entry_id": "entry_303",
+      "agent_id": "supplier1",
+      "action": "Received auction announcement: auc_sk2_wheels for part: wheels",
+      "temporal_marker": 303,
+      "metadata": {
+        "context": "supplier",
+        "line_num": 304
+      }
+    },
+    {
+      "entry_id": "entry_304",
+      "agent_id": "AuctionSkateArt",
+      "action": "Bid from supplier2 for auc_sk2_wheels: cost=65, time=5",
+      "temporal_marker": 304,
+      "metadata": {
+        "line_num": 305
+      }
+    },
+    {
+      "entry_id": "entry_305",
+      "agent_id": "AuctionSkateArt",
+      "action": "New best bid from supplier2 for auc_sk2_wheels: cost=65",
+      "temporal_marker": 305,
+      "metadata": {
+        "line_num": 306
+      }
+    },
+    {
+      "entry_id": "entry_306",
+      "agent_id": "AuctionSkateArt",
+      "action": "Bid from supplier1 for auc_sk2_wheels: cost=70, time=4",
+      "temporal_marker": 306,
+      "metadata": {
+        "line_num": 307
+      }
+    },
+    {
+      "entry_id": "entry_307",
+      "agent_id": "supplier2",
+      "action": "Bid placed for auc_sk2_wheels: cost=65, time=5",
+      "temporal_marker": 307,
+      "metadata": {
+        "context": "supplier",
+        "line_num": 308
+      }
+    },
+    {
+      "entry_id": "entry_308",
+      "agent_id": "supplier1",
+      "action": "Bid placed for auc_sk2_wheels: cost=70, time=4",
+      "temporal_marker": 308,
+      "metadata": {
+        "context": "supplier",
+        "line_num": 309
+      }
+    },
+    {
+      "entry_id": "entry_309",
+      "agent_id": "AuctionSkateArt",
+      "action": "Closed auction auc_sk2_wheels: winner=supplier2, cost=65, time=5",
+      "temporal_marker": 309,
+      "metadata": {
+        "line_num": 310
+      }
+    },
+    {
+      "entry_id": "entry_310",
+      "agent_id": "assembly",
+      "action": "(AUCTION) Closed auc_sk2_wheels winner=supplier2 cost=65 time=5",
+      "temporal_marker": 310,
+      "metadata": {
+        "context": "assembly",
+        "line_num": 311
+      }
+    },
+    {
+      "entry_id": "entry_311",
+      "agent_id": "assembly",
+      "action": "Winner supplier2 has reputation: 0.6",
+      "temporal_marker": 311,
+      "metadata": {
+        "context": "assembly",
+        "line_num": 312
+      }
+    },
+    {
+      "entry_id": "entry_312",
+      "agent_id": "assembly",
+      "action": "(AUCTION) Opening auction auc_sk2_rails for part rails",
+      "temporal_marker": 312,
+      "metadata": {
+        "context": "assembly",
+        "line_num": 313
+      }
+    },
+    {
+      "entry_id": "entry_313",
+      "agent_id": "assembly",
+      "action": "Contracted supplier2 for part wheels (cost=65, reputation=0.6)",
+      "temporal_marker": 313,
+      "metadata": {
+        "cost": "65",
+        "reputation": "0.6",
+        "context": "assembly",
+        "line_num": 314
+      }
+    },
+    {
+      "entry_id": "entry_314",
+      "agent_id": "AuctionSkateArt",
+      "action": "Started auction auc_sk2_rails for part: rails",
+      "temporal_marker": 314,
+      "metadata": {
+        "line_num": 315
+      }
+    },
+    {
+      "entry_id": "entry_315",
+      "agent_id": "supplier2",
+      "action": "Received auction announcement: auc_sk2_rails for part: rails",
+      "temporal_marker": 315,
+      "metadata": {
+        "context": "supplier",
+        "line_num": 316
+      }
+    },
+    {
+      "entry_id": "entry_316",
+      "agent_id": "supplier1",
+      "action": "Received auction announcement: auc_sk2_rails for part: rails",
+      "temporal_marker": 316,
+      "metadata": {
+        "context": "supplier",
+        "line_num": 317
+      }
+    },
+    {
+      "entry_id": "entry_317",
+      "agent_id": "AuctionSkateArt",
+      "action": "Bid from supplier2 for auc_sk2_rails: cost=60, time=4",
+      "temporal_marker": 317,
+      "metadata": {
+        "line_num": 318
+      }
+    },
+    {
+      "entry_id": "entry_318",
+      "agent_id": "AuctionSkateArt",
+      "action": "New best bid from supplier2 for auc_sk2_rails: cost=60",
+      "temporal_marker": 318,
+      "metadata": {
+        "line_num": 319
+      }
+    },
+    {
+      "entry_id": "entry_319",
+      "agent_id": "AuctionSkateArt",
+      "action": "Bid from supplier1 for auc_sk2_rails: cost=55, time=5",
+      "temporal_marker": 319,
+      "metadata": {
+        "line_num": 320
+      }
+    },
+    {
+      "entry_id": "entry_320",
+      "agent_id": "AuctionSkateArt",
+      "action": "New best bid from supplier1 for auc_sk2_rails: cost=55",
+      "temporal_marker": 320,
+      "metadata": {
+        "line_num": 321
+      }
+    },
+    {
+      "entry_id": "entry_321",
+      "agent_id": "supplier2",
+      "action": "Bid placed for auc_sk2_rails: cost=60, time=4",
+      "temporal_marker": 321,
+      "metadata": {
+        "context": "supplier",
+        "line_num": 322
+      }
+    },
+    {
+      "entry_id": "entry_322",
+      "agent_id": "supplier1",
+      "action": "Bid placed for auc_sk2_rails: cost=55, time=5",
+      "temporal_marker": 322,
+      "metadata": {
+        "context": "supplier",
+        "line_num": 323
+      }
+    },
+    {
+      "entry_id": "entry_323",
+      "agent_id": "AuctionSkateArt",
+      "action": "Closed auction auc_sk2_rails: winner=supplier1, cost=55, time=5",
+      "temporal_marker": 323,
+      "metadata": {
+        "line_num": 324
+      }
+    },
+    {
+      "entry_id": "entry_324",
+      "agent_id": "assembly",
+      "action": "(AUCTION) Closed auc_sk2_rails winner=supplier1 cost=55 time=5",
+      "temporal_marker": 324,
+      "metadata": {
+        "context": "assembly",
+        "line_num": 325
+      }
+    },
+    {
+      "entry_id": "entry_325",
+      "agent_id": "assembly",
+      "action": "Winner supplier1 has reputation: 0.8",
+      "temporal_marker": 325,
+      "metadata": {
+        "context": "assembly",
+        "line_num": 326
+      }
+    },
+    {
+      "entry_id": "entry_326",
+      "agent_id": "assembly",
+      "action": "(AUCTION) Opening auction auc_sk2_connectivity_box for part connectivity_box",
+      "temporal_marker": 326,
+      "metadata": {
+        "context": "assembly",
+        "line_num": 327
+      }
+    },
+    {
+      "entry_id": "entry_327",
+      "agent_id": "assembly",
+      "action": "Contracted supplier1 for part rails (cost=55, reputation=0.8)",
+      "temporal_marker": 327,
+      "metadata": {
+        "cost": "55",
+        "reputation": "0.8",
+        "context": "assembly",
+        "line_num": 328
+      }
+    },
+    {
+      "entry_id": "entry_328",
+      "agent_id": "AuctionSkateArt",
+      "action": "Started auction auc_sk2_connectivity_box for part: connectivity_box",
+      "temporal_marker": 328,
+      "metadata": {
+        "line_num": 329
+      }
+    },
+    {
+      "entry_id": "entry_329",
+      "agent_id": "supplier1",
+      "action": "Received auction announcement: auc_sk2_connectivity_box for part: connectivity_box",
+      "temporal_marker": 329,
+      "metadata": {
+        "context": "supplier",
+        "line_num": 330
+      }
+    },
+    {
+      "entry_id": "entry_330",
+      "agent_id": "supplier2",
+      "action": "Received auction announcement: auc_sk2_connectivity_box for part: connectivity_box",
+      "temporal_marker": 330,
+      "metadata": {
+        "context": "supplier",
+        "line_num": 331
+      }
+    },
+    {
+      "entry_id": "entry_331",
+      "agent_id": "AuctionSkateArt",
+      "action": "Bid from supplier1 for auc_sk2_connectivity_box: cost=80, time=6",
+      "temporal_marker": 331,
+      "metadata": {
+        "line_num": 332
+      }
+    },
+    {
+      "entry_id": "entry_332",
+      "agent_id": "AuctionSkateArt",
+      "action": "New best bid from supplier1 for auc_sk2_connectivity_box: cost=80",
+      "temporal_marker": 332,
+      "metadata": {
+        "line_num": 333
+      }
+    },
+    {
+      "entry_id": "entry_333",
+      "agent_id": "AuctionSkateArt",
+      "action": "Bid from supplier2 for auc_sk2_connectivity_box: cost=75, time=7",
+      "temporal_marker": 333,
+      "metadata": {
+        "line_num": 334
+      }
+    },
+    {
+      "entry_id": "entry_334",
+      "agent_id": "AuctionSkateArt",
+      "action": "New best bid from supplier2 for auc_sk2_connectivity_box: cost=75",
+      "temporal_marker": 334,
+      "metadata": {
+        "line_num": 335
+      }
+    },
+    {
+      "entry_id": "entry_335",
+      "agent_id": "supplier1",
+      "action": "Bid placed for auc_sk2_connectivity_box: cost=80, time=6",
+      "temporal_marker": 335,
+      "metadata": {
+        "context": "supplier",
+        "line_num": 336
+      }
+    },
+    {
+      "entry_id": "entry_336",
+      "agent_id": "supplier2",
+      "action": "Bid placed for auc_sk2_connectivity_box: cost=75, time=7",
+      "temporal_marker": 336,
+      "metadata": {
+        "context": "supplier",
+        "line_num": 337
+      }
+    },
+    {
+      "entry_id": "entry_337",
+      "agent_id": "AuctionSkateArt",
+      "action": "Closed auction auc_sk2_connectivity_box: winner=supplier2, cost=75, time=7",
+      "temporal_marker": 337,
+      "metadata": {
+        "line_num": 338
+      }
+    },
+    {
+      "entry_id": "entry_338",
+      "agent_id": "assembly",
+      "action": "(AUCTION) Closed auc_sk2_connectivity_box winner=supplier2 cost=75 time=7",
+      "temporal_marker": 338,
+      "metadata": {
+        "context": "assembly",
+        "line_num": 339
+      }
+    },
+    {
+      "entry_id": "entry_339",
+      "agent_id": "assembly",
+      "action": "Winner supplier2 has reputation: 0.6",
+      "temporal_marker": 339,
+      "metadata": {
+        "context": "assembly",
+        "line_num": 340
+      }
+    },
+    {
+      "entry_id": "entry_340",
+      "agent_id": "assembly",
+      "action": "Contracted supplier2 for part connectivity_box (cost=75, reputation=0.6)",
+      "temporal_marker": 340,
+      "metadata": {
+        "cost": "75",
+        "reputation": "0.6",
+        "context": "assembly",
+        "line_num": 341
+      }
+    },
+    {
+      "entry_id": "entry_341",
+      "agent_id": "assembly",
+      "action": "Waiting auction result for board (auc_sk2_board)..",
+      "temporal_marker": 341,
+      "metadata": {
+        "context": "assembly",
+        "line_num": 342
+      }
+    },
+    {
+      "entry_id": "entry_342",
+      "agent_id": "assembly",
+      "action": "Waiting auction result for trunks (auc_sk2_trunks)..",
+      "temporal_marker": 342,
+      "metadata": {
+        "context": "assembly",
+        "line_num": 343
+      }
+    },
+    {
+      "entry_id": "entry_343",
+      "agent_id": "assembly",
+      "action": "Waiting auction result for wheels (auc_sk2_wheels)..",
+      "temporal_marker": 343,
+      "metadata": {
+        "context": "assembly",
+        "line_num": 344
+      }
+    },
+    {
+      "entry_id": "entry_344",
+      "agent_id": "assembly",
+      "action": "Waiting auction result for rails (auc_sk2_rails)..",
+      "temporal_marker": 344,
+      "metadata": {
+        "context": "assembly",
+        "line_num": 345
+      }
+    },
+    {
+      "entry_id": "entry_345",
+      "agent_id": "assembly",
+      "action": "Waiting auction result for connectivity_box (auc_sk2_connectivity_box)..",
+      "temporal_marker": 345,
+      "metadata": {
+        "context": "assembly",
+        "line_num": 346
+      }
+    },
+    {
+      "entry_id": "entry_346",
+      "agent_id": "assembly",
+      "action": "All auctions closed for sk2",
+      "temporal_marker": 346,
+      "metadata": {
+        "context": "assembly",
+        "line_num": 347
+      }
+    },
+    {
+      "entry_id": "entry_347",
+      "agent_id": "assembly",
+      "action": "Requesting all deliveries for sk2",
+      "temporal_marker": 347,
+      "metadata": {
+        "context": "assembly",
+        "line_num": 348
+      }
+    },
+    {
+      "entry_id": "entry_348",
+      "agent_id": "assembly",
+      "action": "Requesting delivery of board from supplier1",
+      "temporal_marker": 348,
+      "metadata": {
+        "context": "assembly",
+        "line_num": 349
+      }
+    },
+    {
+      "entry_id": "entry_349",
+      "agent_id": "assembly",
+      "action": "Requesting delivery of trunks from supplier2",
+      "temporal_marker": 349,
+      "metadata": {
+        "context": "assembly",
+        "line_num": 350
+      }
+    },
+    {
+      "entry_id": "entry_350",
+      "agent_id": "supplier1",
+      "action": "Delivering part board for order sk2..",
+      "temporal_marker": 350,
+      "metadata": {
+        "context": "supplier",
+        "line_num": 351
+      }
+    },
+    {
+      "entry_id": "entry_351",
+      "agent_id": "supplier2",
+      "action": "Delivering part trunks for order sk2..",
+      "temporal_marker": 351,
+      "metadata": {
+        "context": "supplier",
+        "line_num": 352
+      }
+    },
+    {
+      "entry_id": "entry_352",
+      "agent_id": "assembly",
+      "action": "Requesting delivery of wheels from supplier2",
+      "temporal_marker": 352,
+      "metadata": {
+        "context": "assembly",
+        "line_num": 353
+      }
+    },
+    {
+      "entry_id": "entry_353",
+      "agent_id": "supplier2",
+      "action": "Delivering part wheels for order sk2..",
+      "temporal_marker": 353,
+      "metadata": {
+        "context": "supplier",
+        "line_num": 354
+      }
+    },
+    {
+      "entry_id": "entry_354",
+      "agent_id": "assembly",
+      "action": "Requesting delivery of rails from supplier1",
+      "temporal_marker": 354,
+      "metadata": {
+        "context": "assembly",
+        "line_num": 355
+      }
+    },
+    {
+      "entry_id": "entry_355",
+      "agent_id": "assembly",
+      "action": "Requesting delivery of connectivity_box from supplier2",
+      "temporal_marker": 355,
+      "metadata": {
+        "context": "assembly",
+        "line_num": 356
+      }
+    },
+    {
+      "entry_id": "entry_356",
+      "agent_id": "supplier1",
+      "action": "Delivering part rails for order sk2..",
+      "temporal_marker": 356,
+      "metadata": {
+        "context": "supplier",
+        "line_num": 357
+      }
+    },
+    {
+      "entry_id": "entry_357",
+      "agent_id": "supplier2",
+      "action": "Delivering part connectivity_box for order sk2..",
+      "temporal_marker": 357,
+      "metadata": {
+        "context": "supplier",
+        "line_num": 358
+      }
+    },
+    {
+      "entry_id": "entry_358",
+      "agent_id": "supplier2",
+      "action": "Part wheels delivered for order sk2",
+      "temporal_marker": 358,
+      "metadata": {
+        "context": "supplier",
+        "line_num": 359
+      }
+    },
+    {
+      "entry_id": "entry_359",
+      "agent_id": "supplier1",
+      "action": "Part board delivered for order sk2",
+      "temporal_marker": 359,
+      "metadata": {
+        "context": "supplier",
+        "line_num": 360
+      }
+    },
+    {
+      "entry_id": "entry_360",
+      "agent_id": "assembly",
+      "action": "Part board delivered by supplier1",
+      "temporal_marker": 360,
+      "metadata": {
+        "context": "assembly",
+        "line_num": 361
+      }
+    },
+    {
+      "entry_id": "entry_361",
+      "agent_id": "assembly",
+      "action": "Part wheels delivered by supplier2",
+      "temporal_marker": 361,
+      "metadata": {
+        "context": "assembly",
+        "line_num": 362
+      }
+    },
+    {
+      "entry_id": "entry_362",
+      "agent_id": "supplier1",
+      "action": "Part rails delivered for order sk2",
+      "temporal_marker": 362,
+      "metadata": {
+        "context": "supplier",
+        "line_num": 363
+      }
+    },
+    {
+      "entry_id": "entry_363",
+      "agent_id": "assembly",
+      "action": "Part rails delivered by supplier1",
+      "temporal_marker": 363,
+      "metadata": {
+        "context": "assembly",
+        "line_num": 364
+      }
+    },
+    {
+      "entry_id": "entry_364",
+      "agent_id": "supplier2",
+      "action": "Part trunks delivered for order sk2",
+      "temporal_marker": 364,
+      "metadata": {
+        "context": "supplier",
+        "line_num": 365
+      }
+    },
+    {
+      "entry_id": "entry_365",
+      "agent_id": "assembly",
+      "action": "Part trunks delivered by supplier2",
+      "temporal_marker": 365,
+      "metadata": {
+        "context": "assembly",
+        "line_num": 366
+      }
+    },
+    {
+      "entry_id": "entry_366",
+      "agent_id": "supplier2",
+      "action": "Part connectivity_box delivered for order sk2",
+      "temporal_marker": 366,
+      "metadata": {
+        "context": "supplier",
+        "line_num": 367
+      }
+    },
+    {
+      "entry_id": "entry_367",
+      "agent_id": "assembly",
+      "action": "Part connectivity_box delivered by supplier2",
+      "temporal_marker": 367,
+      "metadata": {
+        "context": "assembly",
+        "line_num": 368
+      }
+    },
+    {
+      "entry_id": "entry_368",
+      "agent_id": "assembly",
+      "action": "All parts delivered for order sk2",
+      "temporal_marker": 368,
+      "metadata": {
+        "context": "assembly",
+        "line_num": 369
+      }
+    },
+    {
+      "entry_id": "entry_369",
+      "agent_id": "assembly",
+      "action": "Starting workstation allocation for sk2",
+      "temporal_marker": 369,
+      "metadata": {
+        "context": "assembly",
+        "line_num": 370
+      }
+    },
+    {
+      "entry_id": "entry_370",
+      "agent_id": "assembly",
+      "action": "Part board needs no assembly operation",
+      "temporal_marker": 370,
+      "metadata": {
+        "context": "assembly",
+        "line_num": 371
+      }
+    },
+    {
+      "entry_id": "entry_371",
+      "agent_id": "assembly",
+      "action": "Sending CFP for operation assemble_trunks (part trunks)",
+      "temporal_marker": 371,
+      "metadata": {
+        "context": "assembly",
+        "line_num": 372
+      }
+    },
+    {
+      "entry_id": "entry_372",
+      "agent_id": "wa_rails1",
+      "action": "I don't support operation assemble_trunks, ignoring",
+      "temporal_marker": 372,
+      "metadata": {
+        "context": "wa_rails1",
+        "line_num": 373
+      }
+    },
+    {
+      "entry_id": "entry_373",
+      "agent_id": "wa_wheels1",
+      "action": "I don't support operation assemble_trunks, ignoring",
+      "temporal_marker": 373,
+      "metadata": {
+        "context": "wa_wheels1",
+        "line_num": 374
+      }
+    },
+    {
+      "entry_id": "entry_374",
+      "agent_id": "wa_trunks1",
+      "action": "CFP for assemble_trunks in order sk2 -> energy=8, time=4",
+      "temporal_marker": 374,
+      "metadata": {
+        "context": "wa_trunks1",
+        "line_num": 375
+      }
+    },
+    {
+      "entry_id": "entry_375",
+      "agent_id": "wa_conn1",
+      "action": "I don't support operation assemble_trunks, ignoring",
+      "temporal_marker": 375,
+      "metadata": {
+        "context": "wa_conn1",
+        "line_num": 376
+      }
+    },
+    {
+      "entry_id": "entry_376",
+      "agent_id": "wa_wheels2",
+      "action": "I don't support operation assemble_trunks, ignoring",
+      "temporal_marker": 376,
+      "metadata": {
+        "context": "wa_wheels2",
+        "line_num": 377
+      }
+    },
+    {
+      "entry_id": "entry_377",
+      "agent_id": "wa_qc1",
+      "action": "I don't support operation assemble_trunks, ignoring",
+      "temporal_marker": 377,
+      "metadata": {
+        "context": "wa_qc1",
+        "line_num": 378
+      }
+    },
+    {
+      "entry_id": "entry_378",
+      "agent_id": "wa_trunks2",
+      "action": "CFP for assemble_trunks in order sk2 -> energy=5, time=5",
+      "temporal_marker": 378,
+      "metadata": {
+        "context": "wa_trunks2",
+        "line_num": 379
+      }
+    },
+    {
+      "entry_id": "entry_379",
+      "agent_id": "assembly",
+      "action": "Proposal from wa_trunks1 for assemble_trunks: energy=8, time=4",
+      "temporal_marker": 379,
+      "metadata": {
+        "context": "assembly",
+        "line_num": 380
+      }
+    },
+    {
+      "entry_id": "entry_380",
+      "agent_id": "assembly",
+      "action": "Proposal from wa_trunks2 for assemble_trunks: energy=5, time=5",
+      "temporal_marker": 380,
+      "metadata": {
+        "context": "assembly",
+        "line_num": 381
+      }
+    },
+    {
+      "entry_id": "entry_381",
+      "agent_id": "assembly",
+      "action": "Selected wa_trunks2 for assemble_trunks (part trunks): energy=5",
+      "temporal_marker": 381,
+      "metadata": {
+        "context": "assembly",
+        "line_num": 382
+      }
+    },
+    {
+      "entry_id": "entry_382",
+      "agent_id": "assembly",
+      "action": "Sending CFP for operation assemble_wheels (part wheels)",
+      "temporal_marker": 382,
+      "metadata": {
+        "context": "assembly",
+        "line_num": 383
+      }
+    },
+    {
+      "entry_id": "entry_383",
+      "agent_id": "wa_trunks2",
+      "action": "I don't support operation assemble_wheels (order sk2), ignoring CFP",
+      "temporal_marker": 383,
+      "metadata": {
+        "context": "wa_trunks2",
+        "line_num": 384
+      }
+    },
+    {
+      "entry_id": "entry_384",
+      "agent_id": "wa_conn1",
+      "action": "I don't support operation assemble_wheels, ignoring",
+      "temporal_marker": 384,
+      "metadata": {
+        "context": "wa_conn1",
+        "line_num": 385
+      }
+    },
+    {
+      "entry_id": "entry_385",
+      "agent_id": "wa_wheels2",
+      "action": "CFP for assemble_wheels -> energy=4, time=4",
+      "temporal_marker": 385,
+      "metadata": {
+        "context": "wa_wheels2",
+        "line_num": 386
+      }
+    },
+    {
+      "entry_id": "entry_386",
+      "agent_id": "wa_rails1",
+      "action": "I don't support operation assemble_wheels, ignoring",
+      "temporal_marker": 386,
+      "metadata": {
+        "context": "wa_rails1",
+        "line_num": 387
+      }
+    },
+    {
+      "entry_id": "entry_387",
+      "agent_id": "wa_qc1",
+      "action": "I don't support operation assemble_wheels, ignoring",
+      "temporal_marker": 387,
+      "metadata": {
+        "context": "wa_qc1",
+        "line_num": 388
+      }
+    },
+    {
+      "entry_id": "entry_388",
+      "agent_id": "wa_wheels1",
+      "action": "CFP for assemble_wheels -> energy=7, time=3",
+      "temporal_marker": 388,
+      "metadata": {
+        "context": "wa_wheels1",
+        "line_num": 389
+      }
+    },
+    {
+      "entry_id": "entry_389",
+      "agent_id": "wa_trunks1",
+      "action": "I don't support operation assemble_wheels (order sk2), ignoring CFP",
+      "temporal_marker": 389,
+      "metadata": {
+        "context": "wa_trunks1",
+        "line_num": 390
+      }
+    },
+    {
+      "entry_id": "entry_390",
+      "agent_id": "assembly",
+      "action": "Proposal from wa_wheels2 for assemble_wheels: energy=4, time=4",
+      "temporal_marker": 390,
+      "metadata": {
+        "context": "assembly",
+        "line_num": 391
+      }
+    },
+    {
+      "entry_id": "entry_391",
+      "agent_id": "assembly",
+      "action": "Proposal from wa_wheels1 for assemble_wheels: energy=7, time=3",
+      "temporal_marker": 391,
+      "metadata": {
+        "context": "assembly",
+        "line_num": 392
+      }
+    },
+    {
+      "entry_id": "entry_392",
+      "agent_id": "assembly",
+      "action": "Selected wa_wheels2 for assemble_wheels (part wheels): energy=4",
+      "temporal_marker": 392,
+      "metadata": {
+        "context": "assembly",
+        "line_num": 393
+      }
+    },
+    {
+      "entry_id": "entry_393",
+      "agent_id": "assembly",
+      "action": "Sending CFP for operation assemble_rails (part rails)",
+      "temporal_marker": 393,
+      "metadata": {
+        "context": "assembly",
+        "line_num": 394
+      }
+    },
+    {
+      "entry_id": "entry_394",
+      "agent_id": "wa_trunks2",
+      "action": "I don't support operation assemble_rails (order sk2), ignoring CFP",
+      "temporal_marker": 394,
+      "metadata": {
+        "context": "wa_trunks2",
+        "line_num": 395
+      }
+    },
+    {
+      "entry_id": "entry_395",
+      "agent_id": "wa_trunks1",
+      "action": "I don't support operation assemble_rails (order sk2), ignoring CFP",
+      "temporal_marker": 395,
+      "metadata": {
+        "context": "wa_trunks1",
+        "line_num": 396
+      }
+    },
+    {
+      "entry_id": "entry_396",
+      "agent_id": "wa_qc1",
+      "action": "I don't support operation assemble_rails, ignoring",
+      "temporal_marker": 396,
+      "metadata": {
+        "context": "wa_qc1",
+        "line_num": 397
+      }
+    },
+    {
+      "entry_id": "entry_397",
+      "agent_id": "wa_wheels2",
+      "action": "I don't support operation assemble_rails, ignoring",
+      "temporal_marker": 397,
+      "metadata": {
+        "context": "wa_wheels2",
+        "line_num": 398
+      }
+    },
+    {
+      "entry_id": "entry_398",
+      "agent_id": "wa_conn1",
+      "action": "I don't support operation assemble_rails, ignoring",
+      "temporal_marker": 398,
+      "metadata": {
+        "context": "wa_conn1",
+        "line_num": 399
+      }
+    },
+    {
+      "entry_id": "entry_399",
+      "agent_id": "wa_rails1",
+      "action": "CFP for assemble_rails -> energy=6, time=4",
+      "temporal_marker": 399,
+      "metadata": {
+        "context": "wa_rails1",
+        "line_num": 400
+      }
+    },
+    {
+      "entry_id": "entry_400",
+      "agent_id": "wa_wheels1",
+      "action": "I don't support operation assemble_rails, ignoring",
+      "temporal_marker": 400,
+      "metadata": {
+        "context": "wa_wheels1",
+        "line_num": 401
+      }
+    },
+    {
+      "entry_id": "entry_401",
+      "agent_id": "assembly",
+      "action": "Proposal from wa_rails1 for assemble_rails: energy=6, time=4",
+      "temporal_marker": 401,
+      "metadata": {
+        "context": "assembly",
+        "line_num": 402
+      }
+    },
+    {
+      "entry_id": "entry_402",
+      "agent_id": "assembly",
+      "action": "Selected wa_rails1 for assemble_rails (part rails): energy=6",
+      "temporal_marker": 402,
+      "metadata": {
+        "context": "assembly",
+        "line_num": 403
+      }
+    },
+    {
+      "entry_id": "entry_403",
+      "agent_id": "assembly",
+      "action": "Sending CFP for operation assemble_connectivity_box (part connectivity_box)",
+      "temporal_marker": 403,
+      "metadata": {
+        "context": "assembly",
+        "line_num": 404
+      }
+    },
+    {
+      "entry_id": "entry_404",
+      "agent_id": "wa_trunks2",
+      "action": "I don't support operation assemble_connectivity_box (order sk2), ignoring CFP",
+      "temporal_marker": 404,
+      "metadata": {
+        "context": "wa_trunks2",
+        "line_num": 405
+      }
+    },
+    {
+      "entry_id": "entry_405",
+      "agent_id": "wa_wheels1",
+      "action": "I don't support operation assemble_connectivity_box, ignoring",
+      "temporal_marker": 405,
+      "metadata": {
+        "context": "wa_wheels1",
+        "line_num": 406
+      }
+    },
+    {
+      "entry_id": "entry_406",
+      "agent_id": "wa_rails1",
+      "action": "I don't support operation assemble_connectivity_box, ignoring",
+      "temporal_marker": 406,
+      "metadata": {
+        "context": "wa_rails1",
+        "line_num": 407
+      }
+    },
+    {
+      "entry_id": "entry_407",
+      "agent_id": "wa_qc1",
+      "action": "I don't support operation assemble_connectivity_box, ignoring",
+      "temporal_marker": 407,
+      "metadata": {
+        "context": "wa_qc1",
+        "line_num": 408
+      }
+    },
+    {
+      "entry_id": "entry_408",
+      "agent_id": "wa_trunks1",
+      "action": "I don't support operation assemble_connectivity_box (order sk2), ignoring CFP",
+      "temporal_marker": 408,
+      "metadata": {
+        "context": "wa_trunks1",
+        "line_num": 409
+      }
+    },
+    {
+      "entry_id": "entry_409",
+      "agent_id": "wa_wheels2",
+      "action": "I don't support operation assemble_connectivity_box, ignoring",
+      "temporal_marker": 409,
+      "metadata": {
+        "context": "wa_wheels2",
+        "line_num": 410
+      }
+    },
+    {
+      "entry_id": "entry_410",
+      "agent_id": "wa_conn1",
+      "action": "CFP for assemble_connectivity_box -> energy=9, time=5",
+      "temporal_marker": 410,
+      "metadata": {
+        "context": "wa_conn1",
+        "line_num": 411
+      }
+    },
+    {
+      "entry_id": "entry_411",
+      "agent_id": "assembly",
+      "action": "Proposal from wa_conn1 for assemble_connectivity_box: energy=9, time=5",
+      "temporal_marker": 411,
+      "metadata": {
+        "context": "assembly",
+        "line_num": 412
+      }
+    },
+    {
+      "entry_id": "entry_412",
+      "agent_id": "assembly",
+      "action": "Selected wa_conn1 for assemble_connectivity_box (part connectivity_box): energy=9",
+      "temporal_marker": 412,
+      "metadata": {
+        "context": "assembly",
+        "line_num": 413
+      }
+    },
+    {
+      "entry_id": "entry_413",
+      "agent_id": "assembly",
+      "action": "All workstations allocated for order sk2",
+      "temporal_marker": 413,
+      "metadata": {
+        "context": "assembly",
+        "line_num": 414
+      }
+    },
+    {
+      "entry_id": "entry_414",
+      "agent_id": "assembly",
+      "action": "Starting assembly of skateboard sk2",
+      "temporal_marker": 414,
+      "metadata": {
+        "context": "assembly",
+        "line_num": 415
+      }
+    },
+    {
+      "entry_id": "entry_415",
+      "agent_id": "assembly",
+      "action": "Part board needs no assembly operation, skipping",
+      "temporal_marker": 415,
+      "metadata": {
+        "context": "assembly",
+        "line_num": 416
+      }
+    },
+    {
+      "entry_id": "entry_416",
+      "agent_id": "assembly",
+      "action": "Running operation assemble_trunks for part trunks on wa_trunks2",
+      "temporal_marker": 416,
+      "metadata": {
+        "context": "assembly",
+        "line_num": 417
+      }
+    },
+    {
+      "entry_id": "entry_417",
+      "agent_id": "WorkstationRegistry",
+      "action": "wa_trunks2 is now busy",
+      "temporal_marker": 417,
+      "metadata": {
+        "line_num": 418
+      }
+    },
+    {
+      "entry_id": "entry_418",
+      "agent_id": "wa_trunks2",
+      "action": "Performing assemble_trunks for part trunks of order sk2",
+      "temporal_marker": 418,
+      "metadata": {
+        "context": "wa_trunks2",
+        "line_num": 419
+      }
+    },
+    {
+      "entry_id": "entry_419",
+      "agent_id": "assembly",
+      "action": "Workstation wa_trunks2 (assemble_trunks) is now BUSY",
+      "temporal_marker": 419,
+      "metadata": {
+        "context": "assembly",
+        "line_num": 420
+      }
+    },
+    {
+      "entry_id": "entry_420",
+      "agent_id": "assembly",
+      "action": "Available workstations: 6",
+      "temporal_marker": 420,
+      "metadata": {
+        "context": "assembly",
+        "line_num": 421
+      }
+    },
+    {
+      "entry_id": "entry_421",
+      "agent_id": "WorkstationRegistry",
+      "action": "wa_trunks2 is now available",
+      "temporal_marker": 421,
+      "metadata": {
+        "line_num": 422
+      }
+    },
+    {
+      "entry_id": "entry_422",
+      "agent_id": "assembly",
+      "action": "Workstation wa_trunks2 (assemble_trunks) is now AVAILABLE",
+      "temporal_marker": 422,
+      "metadata": {
+        "context": "assembly",
+        "line_num": 423
+      }
+    },
+    {
+      "entry_id": "entry_423",
+      "agent_id": "assembly",
+      "action": "Available workstations: 7",
+      "temporal_marker": 423,
+      "metadata": {
+        "context": "assembly",
+        "line_num": 424
+      }
+    },
+    {
+      "entry_id": "entry_424",
+      "agent_id": "assembly",
+      "action": "Operation assemble_trunks for part trunks finished on wa_trunks2 (order sk2)",
+      "temporal_marker": 424,
+      "metadata": {
+        "context": "assembly",
+        "line_num": 425
+      }
+    },
+    {
+      "entry_id": "entry_425",
+      "agent_id": "assembly",
+      "action": "Running operation assemble_wheels for part wheels on wa_wheels2",
+      "temporal_marker": 425,
+      "metadata": {
+        "context": "assembly",
+        "line_num": 426
+      }
+    },
+    {
+      "entry_id": "entry_426",
+      "agent_id": "WorkstationRegistry",
+      "action": "wa_wheels2 is now busy",
+      "temporal_marker": 426,
+      "metadata": {
+        "line_num": 427
+      }
+    },
+    {
+      "entry_id": "entry_427",
+      "agent_id": "wa_wheels2",
+      "action": "Performing assemble_wheels for wheels",
+      "temporal_marker": 427,
+      "metadata": {
+        "context": "wa_wheels2",
+        "line_num": 428
+      }
+    },
+    {
+      "entry_id": "entry_428",
+      "agent_id": "assembly",
+      "action": "Workstation wa_wheels2 (assemble_wheels) is now BUSY",
+      "temporal_marker": 428,
+      "metadata": {
+        "context": "assembly",
+        "line_num": 429
+      }
+    },
+    {
+      "entry_id": "entry_429",
+      "agent_id": "assembly",
+      "action": "Available workstations: 6",
+      "temporal_marker": 429,
+      "metadata": {
+        "context": "assembly",
+        "line_num": 430
+      }
+    },
+    {
+      "entry_id": "entry_430",
+      "agent_id": "WorkstationRegistry",
+      "action": "wa_wheels2 is now available",
+      "temporal_marker": 430,
+      "metadata": {
+        "line_num": 431
+      }
+    },
+    {
+      "entry_id": "entry_431",
+      "agent_id": "assembly",
+      "action": "Operation assemble_wheels for part wheels finished on wa_wheels2 (order sk2)",
+      "temporal_marker": 431,
+      "metadata": {
+        "context": "assembly",
+        "line_num": 432
+      }
+    },
+    {
+      "entry_id": "entry_432",
+      "agent_id": "assembly",
+      "action": "Available workstations: 7",
+      "temporal_marker": 432,
+      "metadata": {
+        "context": "assembly",
+        "line_num": 433
+      }
+    },
+    {
+      "entry_id": "entry_433",
+      "agent_id": "assembly",
+      "action": "Workstation wa_wheels2 (assemble_wheels) is now AVAILABLE",
+      "temporal_marker": 433,
+      "metadata": {
+        "context": "assembly",
+        "line_num": 434
+      }
+    },
+    {
+      "entry_id": "entry_434",
+      "agent_id": "assembly",
+      "action": "Running operation assemble_rails for part rails on wa_rails1",
+      "temporal_marker": 434,
+      "metadata": {
+        "context": "assembly",
+        "line_num": 435
+      }
+    },
+    {
+      "entry_id": "entry_435",
+      "agent_id": "WorkstationRegistry",
+      "action": "wa_rails1 is now busy",
+      "temporal_marker": 435,
+      "metadata": {
+        "line_num": 436
+      }
+    },
+    {
+      "entry_id": "entry_436",
+      "agent_id": "wa_rails1",
+      "action": "Performing assemble_rails for rails",
+      "temporal_marker": 436,
+      "metadata": {
+        "context": "wa_rails1",
+        "line_num": 437
+      }
+    },
+    {
+      "entry_id": "entry_437",
+      "agent_id": "assembly",
+      "action": "Workstation wa_rails1 (assemble_rails) is now BUSY",
+      "temporal_marker": 437,
+      "metadata": {
+        "context": "assembly",
+        "line_num": 438
+      }
+    },
+    {
+      "entry_id": "entry_438",
+      "agent_id": "assembly",
+      "action": "Available workstations: 6",
+      "temporal_marker": 438,
+      "metadata": {
+        "context": "assembly",
+        "line_num": 439
+      }
+    },
+    {
+      "entry_id": "entry_439",
+      "agent_id": "WorkstationRegistry",
+      "action": "wa_rails1 is now available",
+      "temporal_marker": 439,
+      "metadata": {
+        "line_num": 440
+      }
+    },
+    {
+      "entry_id": "entry_440",
+      "agent_id": "assembly",
+      "action": "Operation assemble_rails for part rails finished on wa_rails1 (order sk2)",
+      "temporal_marker": 440,
+      "metadata": {
+        "context": "assembly",
+        "line_num": 441
+      }
+    },
+    {
+      "entry_id": "entry_441",
+      "agent_id": "assembly",
+      "action": "Available workstations: 7",
+      "temporal_marker": 441,
+      "metadata": {
+        "context": "assembly",
+        "line_num": 442
+      }
+    },
+    {
+      "entry_id": "entry_442",
+      "agent_id": "assembly",
+      "action": "Workstation wa_rails1 (assemble_rails) is now AVAILABLE",
+      "temporal_marker": 442,
+      "metadata": {
+        "context": "assembly",
+        "line_num": 443
+      }
+    },
+    {
+      "entry_id": "entry_443",
+      "agent_id": "assembly",
+      "action": "Running operation assemble_connectivity_box for part connectivity_box on wa_conn1",
+      "temporal_marker": 443,
+      "metadata": {
+        "context": "assembly",
+        "line_num": 444
+      }
+    },
+    {
+      "entry_id": "entry_444",
+      "agent_id": "WorkstationRegistry",
+      "action": "wa_conn1 is now busy",
+      "temporal_marker": 444,
+      "metadata": {
+        "line_num": 445
+      }
+    },
+    {
+      "entry_id": "entry_445",
+      "agent_id": "wa_conn1",
+      "action": "Performing assemble_connectivity_box for connectivity_box",
+      "temporal_marker": 445,
+      "metadata": {
+        "context": "wa_conn1",
+        "line_num": 446
+      }
+    },
+    {
+      "entry_id": "entry_446",
+      "agent_id": "assembly",
+      "action": "Workstation wa_conn1 (assemble_connectivity_box) is now BUSY",
+      "temporal_marker": 446,
+      "metadata": {
+        "context": "assembly",
+        "line_num": 447
+      }
+    },
+    {
+      "entry_id": "entry_447",
+      "agent_id": "assembly",
+      "action": "Available workstations: 6",
+      "temporal_marker": 447,
+      "metadata": {
+        "context": "assembly",
+        "line_num": 448
+      }
+    },
+    {
+      "entry_id": "entry_448",
+      "agent_id": "WorkstationRegistry",
+      "action": "wa_conn1 is now available",
+      "temporal_marker": 448,
+      "metadata": {
+        "line_num": 449
+      }
+    },
+    {
+      "entry_id": "entry_449",
+      "agent_id": "assembly",
+      "action": "Operation assemble_connectivity_box for part connectivity_box finished on wa_conn1 (order sk2)",
+      "temporal_marker": 449,
+      "metadata": {
+        "context": "assembly",
+        "line_num": 450
+      }
+    },
+    {
+      "entry_id": "entry_450",
+      "agent_id": "assembly",
+      "action": "Available workstations: 7",
+      "temporal_marker": 450,
+      "metadata": {
+        "context": "assembly",
+        "line_num": 451
+      }
+    },
+    {
+      "entry_id": "entry_451",
+      "agent_id": "assembly",
+      "action": "Workstation wa_conn1 (assemble_connectivity_box) is now AVAILABLE",
+      "temporal_marker": 451,
+      "metadata": {
+        "context": "assembly",
+        "line_num": 452
+      }
+    },
+    {
+      "entry_id": "entry_452",
+      "agent_id": "assembly",
+      "action": "Skateboard sk2 fully assembled",
+      "temporal_marker": 452,
+      "metadata": {
+        "context": "assembly",
+        "line_num": 453
+      }
+    },
+    {
+      "entry_id": "entry_453",
+      "agent_id": "assembly",
+      "action": "Sent result to customer for order sk2",
+      "temporal_marker": 453,
+      "metadata": {
+        "context": "assembly",
+        "line_num": 454
+      }
+    },
+    {
+      "entry_id": "entry_454",
+      "agent_id": "customer",
+      "action": "Final result for sk2: Skateboard assembled successfully",
+      "temporal_marker": 454,
+      "metadata": {
+        "context": "customer",
+        "line_num": 455
+      }
+    },
+    {
+      "entry_id": "entry_455",
+      "agent_id": "els,",
+      "action": "ignoring",
+      "temporal_marker": 455,
+      "metadata": {
+        "line_num": 456
+      }
+    },
+    {
+      "entry_id": "entry_456",
+      "agent_id": "wa_qc1",
+      "action": "I don't support operation assemble_wheels, ignoring",
+      "temporal_marker": 456,
+      "metadata": {
+        "context": "wa_qc1",
+        "line_num": 457
+      }
+    },
+    {
+      "entry_id": "entry_457",
+      "agent_id": "wa_wheels1",
+      "action": "CFP for assemble_wheels -> energy=7, time=3",
+      "temporal_marker": 457,
+      "metadata": {
+        "context": "wa_wheels1",
+        "line_num": 458
+      }
+    },
+    {
+      "entry_id": "entry_458",
+      "agent_id": "wa_trunks1",
+      "action": "I don't support operation assemble_wheels (order sk2), ignoring CFP",
+      "temporal_marker": 458,
+      "metadata": {
+        "context": "wa_trunks1",
+        "line_num": 459
+      }
+    },
+    {
+      "entry_id": "entry_459",
+      "agent_id": "assembly",
+      "action": "Proposal from wa_wheels2 for assemble_wheels: energy=4, time=4",
+      "temporal_marker": 459,
+      "metadata": {
+        "context": "assembly",
+        "line_num": 460
+      }
+    },
+    {
+      "entry_id": "entry_460",
+      "agent_id": "assembly",
+      "action": "Proposal from wa_wheels1 for assemble_wheels: energy=7, time=3",
+      "temporal_marker": 460,
+      "metadata": {
+        "context": "assembly",
+        "line_num": 461
+      }
+    },
+    {
+      "entry_id": "entry_461",
+      "agent_id": "assembly",
+      "action": "Selected wa_wheels2 for assemble_wheels (part wheels): energy=4",
+      "temporal_marker": 461,
+      "metadata": {
+        "context": "assembly",
+        "line_num": 462
+      }
+    },
+    {
+      "entry_id": "entry_462",
+      "agent_id": "assembly",
+      "action": "Sending CFP for operation assemble_rails (part rails)",
+      "temporal_marker": 462,
+      "metadata": {
+        "context": "assembly",
+        "line_num": 463
+      }
+    },
+    {
+      "entry_id": "entry_463",
+      "agent_id": "wa_trunks2",
+      "action": "I don't support operation assemble_rails (order sk2), ignoring CFP",
+      "temporal_marker": 463,
+      "metadata": {
+        "context": "wa_trunks2",
+        "line_num": 464
+      }
+    },
+    {
+      "entry_id": "entry_464",
+      "agent_id": "wa_trunks1",
+      "action": "I don't support operation assemble_rails (order sk2), ignoring CFP",
+      "temporal_marker": 464,
+      "metadata": {
+        "context": "wa_trunks1",
+        "line_num": 465
+      }
+    },
+    {
+      "entry_id": "entry_465",
+      "agent_id": "wa_qc1",
+      "action": "I don't support operation assemble_rails, ignoring",
+      "temporal_marker": 465,
+      "metadata": {
+        "context": "wa_qc1",
+        "line_num": 466
+      }
+    },
+    {
+      "entry_id": "entry_466",
+      "agent_id": "wa_wheels2",
+      "action": "I don't support operation assemble_rails, ignoring",
+      "temporal_marker": 466,
+      "metadata": {
+        "context": "wa_wheels2",
+        "line_num": 467
+      }
+    },
+    {
+      "entry_id": "entry_467",
+      "agent_id": "wa_conn1",
+      "action": "I don't support operation assemble_rails, ignoring",
+      "temporal_marker": 467,
+      "metadata": {
+        "context": "wa_conn1",
+        "line_num": 468
+      }
+    },
+    {
+      "entry_id": "entry_468",
+      "agent_id": "wa_rails1",
+      "action": "CFP for assemble_rails -> energy=6, time=4",
+      "temporal_marker": 468,
+      "metadata": {
+        "context": "wa_rails1",
+        "line_num": 469
+      }
+    },
+    {
+      "entry_id": "entry_469",
+      "agent_id": "wa_wheels1",
+      "action": "I don't support operation assemble_rails, ignoring",
+      "temporal_marker": 469,
+      "metadata": {
+        "context": "wa_wheels1",
+        "line_num": 470
+      }
+    },
+    {
+      "entry_id": "entry_470",
+      "agent_id": "assembly",
+      "action": "Proposal from wa_rails1 for assemble_rails: energy=6, time=4",
+      "temporal_marker": 470,
+      "metadata": {
+        "context": "assembly",
+        "line_num": 471
+      }
+    },
+    {
+      "entry_id": "entry_471",
+      "agent_id": "assembly",
+      "action": "Selected wa_rails1 for assemble_rails (part rails): energy=6",
+      "temporal_marker": 471,
+      "metadata": {
+        "context": "assembly",
+        "line_num": 472
+      }
+    },
+    {
+      "entry_id": "entry_472",
+      "agent_id": "assembly",
+      "action": "Sending CFP for operation assemble_connectivity_box (part connectivity_box)",
+      "temporal_marker": 472,
+      "metadata": {
+        "context": "assembly",
+        "line_num": 473
+      }
+    },
+    {
+      "entry_id": "entry_473",
+      "agent_id": "wa_trunks2",
+      "action": "I don't support operation assemble_connectivity_box (order sk2), ignoring CFP",
+      "temporal_marker": 473,
+      "metadata": {
+        "context": "wa_trunks2",
+        "line_num": 474
+      }
+    },
+    {
+      "entry_id": "entry_474",
+      "agent_id": "wa_wheels1",
+      "action": "I don't support operation assemble_connectivity_box, ignoring",
+      "temporal_marker": 474,
+      "metadata": {
+        "context": "wa_wheels1",
+        "line_num": 475
+      }
+    },
+    {
+      "entry_id": "entry_475",
+      "agent_id": "wa_rails1",
+      "action": "I don't support operation assemble_connectivity_box, ignoring",
+      "temporal_marker": 475,
+      "metadata": {
+        "context": "wa_rails1",
+        "line_num": 476
+      }
+    },
+    {
+      "entry_id": "entry_476",
+      "agent_id": "wa_qc1",
+      "action": "I don't support operation assemble_connectivity_box, ignoring",
+      "temporal_marker": 476,
+      "metadata": {
+        "context": "wa_qc1",
+        "line_num": 477
+      }
+    },
+    {
+      "entry_id": "entry_477",
+      "agent_id": "wa_trunks1",
+      "action": "I don't support operation assemble_connectivity_box (order sk2), ignoring CFP",
+      "temporal_marker": 477,
+      "metadata": {
+        "context": "wa_trunks1",
+        "line_num": 478
+      }
+    },
+    {
+      "entry_id": "entry_478",
+      "agent_id": "wa_wheels2",
+      "action": "I don't support operation assemble_connectivity_box, ignoring",
+      "temporal_marker": 478,
+      "metadata": {
+        "context": "wa_wheels2",
+        "line_num": 479
+      }
+    },
+    {
+      "entry_id": "entry_479",
+      "agent_id": "wa_conn1",
+      "action": "CFP for assemble_connectivity_box -> energy=9, time=5",
+      "temporal_marker": 479,
+      "metadata": {
+        "context": "wa_conn1",
+        "line_num": 480
+      }
+    },
+    {
+      "entry_id": "entry_480",
+      "agent_id": "assembly",
+      "action": "Proposal from wa_conn1 for assemble_connectivity_box: energy=9, time=5",
+      "temporal_marker": 480,
+      "metadata": {
+        "context": "assembly",
+        "line_num": 481
+      }
+    },
+    {
+      "entry_id": "entry_481",
+      "agent_id": "assembly",
+      "action": "Selected wa_conn1 for assemble_connectivity_box (part connectivity_box): energy=9",
+      "temporal_marker": 481,
+      "metadata": {
+        "context": "assembly",
+        "line_num": 482
+      }
+    },
+    {
+      "entry_id": "entry_482",
+      "agent_id": "assembly",
+      "action": "All workstations allocated for order sk2",
+      "temporal_marker": 482,
+      "metadata": {
+        "context": "assembly",
+        "line_num": 483
+      }
+    },
+    {
+      "entry_id": "entry_483",
+      "agent_id": "assembly",
+      "action": "Starting assembly of skateboard sk2",
+      "temporal_marker": 483,
+      "metadata": {
+        "context": "assembly",
+        "line_num": 484
+      }
+    },
+    {
+      "entry_id": "entry_484",
+      "agent_id": "assembly",
+      "action": "Part board needs no assembly operation, skipping",
+      "temporal_marker": 484,
+      "metadata": {
+        "context": "assembly",
+        "line_num": 485
+      }
+    },
+    {
+      "entry_id": "entry_485",
+      "agent_id": "assembly",
+      "action": "Running operation assemble_trunks for part trunks on wa_trunks2",
+      "temporal_marker": 485,
+      "metadata": {
+        "context": "assembly",
+        "line_num": 486
+      }
+    },
+    {
+      "entry_id": "entry_486",
+      "agent_id": "WorkstationRegistry",
+      "action": "wa_trunks2 is now busy",
+      "temporal_marker": 486,
+      "metadata": {
+        "line_num": 487
+      }
+    },
+    {
+      "entry_id": "entry_487",
+      "agent_id": "wa_trunks2",
+      "action": "Performing assemble_trunks for part trunks of order sk2",
+      "temporal_marker": 487,
+      "metadata": {
+        "context": "wa_trunks2",
+        "line_num": 488
+      }
+    },
+    {
+      "entry_id": "entry_488",
+      "agent_id": "assembly",
+      "action": "Workstation wa_trunks2 (assemble_trunks) is now BUSY",
+      "temporal_marker": 488,
+      "metadata": {
+        "context": "assembly",
+        "line_num": 489
+      }
+    },
+    {
+      "entry_id": "entry_489",
+      "agent_id": "assembly",
+      "action": "Available workstations: 6",
+      "temporal_marker": 489,
+      "metadata": {
+        "context": "assembly",
+        "line_num": 490
+      }
+    },
+    {
+      "entry_id": "entry_490",
+      "agent_id": "WorkstationRegistry",
+      "action": "wa_trunks2 is now available",
+      "temporal_marker": 490,
+      "metadata": {
+        "line_num": 491
+      }
+    },
+    {
+      "entry_id": "entry_491",
+      "agent_id": "assembly",
+      "action": "Workstation wa_trunks2 (assemble_trunks) is now AVAILABLE",
+      "temporal_marker": 491,
+      "metadata": {
+        "context": "assembly",
+        "line_num": 492
+      }
+    },
+    {
+      "entry_id": "entry_492",
+      "agent_id": "assembly",
+      "action": "Available workstations: 7",
+      "temporal_marker": 492,
+      "metadata": {
+        "context": "assembly",
+        "line_num": 493
+      }
+    },
+    {
+      "entry_id": "entry_493",
+      "agent_id": "assembly",
+      "action": "Operation assemble_trunks for part trunks finished on wa_trunks2 (order sk2)",
+      "temporal_marker": 493,
+      "metadata": {
+        "context": "assembly",
+        "line_num": 494
+      }
+    },
+    {
+      "entry_id": "entry_494",
+      "agent_id": "assembly",
+      "action": "Running operation assemble_wheels for part wheels on wa_wheels2",
+      "temporal_marker": 494,
+      "metadata": {
+        "context": "assembly",
+        "line_num": 495
+      }
+    },
+    {
+      "entry_id": "entry_495",
+      "agent_id": "WorkstationRegistry",
+      "action": "wa_wheels2 is now busy",
+      "temporal_marker": 495,
+      "metadata": {
+        "line_num": 496
+      }
+    },
+    {
+      "entry_id": "entry_496",
+      "agent_id": "wa_wheels2",
+      "action": "Performing assemble_wheels for wheels",
+      "temporal_marker": 496,
+      "metadata": {
+        "context": "wa_wheels2",
+        "line_num": 497
+      }
+    },
+    {
+      "entry_id": "entry_497",
+      "agent_id": "assembly",
+      "action": "Workstation wa_wheels2 (assemble_wheels) is now BUSY",
+      "temporal_marker": 497,
+      "metadata": {
+        "context": "assembly",
+        "line_num": 498
+      }
+    },
+    {
+      "entry_id": "entry_498",
+      "agent_id": "assembly",
+      "action": "Available workstations: 6",
+      "temporal_marker": 498,
+      "metadata": {
+        "context": "assembly",
+        "line_num": 499
+      }
+    },
+    {
+      "entry_id": "entry_499",
+      "agent_id": "WorkstationRegistry",
+      "action": "wa_wheels2 is now available",
+      "temporal_marker": 499,
+      "metadata": {
+        "line_num": 500
+      }
+    },
+    {
+      "entry_id": "entry_500",
+      "agent_id": "assembly",
+      "action": "Operation assemble_wheels for part wheels finished on wa_wheels2 (order sk2)",
+      "temporal_marker": 500,
+      "metadata": {
+        "context": "assembly",
+        "line_num": 501
+      }
+    },
+    {
+      "entry_id": "entry_501",
+      "agent_id": "assembly",
+      "action": "Available workstations: 7",
+      "temporal_marker": 501,
+      "metadata": {
+        "context": "assembly",
+        "line_num": 502
+      }
+    },
+    {
+      "entry_id": "entry_502",
+      "agent_id": "assembly",
+      "action": "Workstation wa_wheels2 (assemble_wheels) is now AVAILABLE",
+      "temporal_marker": 502,
+      "metadata": {
+        "context": "assembly",
+        "line_num": 503
+      }
+    },
+    {
+      "entry_id": "entry_503",
+      "agent_id": "assembly",
+      "action": "Running operation assemble_rails for part rails on wa_rails1",
+      "temporal_marker": 503,
+      "metadata": {
+        "context": "assembly",
+        "line_num": 504
+      }
+    },
+    {
+      "entry_id": "entry_504",
+      "agent_id": "WorkstationRegistry",
+      "action": "wa_rails1 is now busy",
+      "temporal_marker": 504,
+      "metadata": {
+        "line_num": 505
+      }
+    },
+    {
+      "entry_id": "entry_505",
+      "agent_id": "wa_rails1",
+      "action": "Performing assemble_rails for rails",
+      "temporal_marker": 505,
+      "metadata": {
+        "context": "wa_rails1",
+        "line_num": 506
+      }
+    },
+    {
+      "entry_id": "entry_506",
+      "agent_id": "assembly",
+      "action": "Workstation wa_rails1 (assemble_rails) is now BUSY",
+      "temporal_marker": 506,
+      "metadata": {
+        "context": "assembly",
+        "line_num": 507
+      }
+    },
+    {
+      "entry_id": "entry_507",
+      "agent_id": "assembly",
+      "action": "Available workstations: 6",
+      "temporal_marker": 507,
+      "metadata": {
+        "context": "assembly",
+        "line_num": 508
+      }
+    },
+    {
+      "entry_id": "entry_508",
+      "agent_id": "WorkstationRegistry",
+      "action": "wa_rails1 is now available",
+      "temporal_marker": 508,
+      "metadata": {
+        "line_num": 509
+      }
+    },
+    {
+      "entry_id": "entry_509",
+      "agent_id": "assembly",
+      "action": "Operation assemble_rails for part rails finished on wa_rails1 (order sk2)",
+      "temporal_marker": 509,
+      "metadata": {
+        "context": "assembly",
+        "line_num": 510
+      }
+    },
+    {
+      "entry_id": "entry_510",
+      "agent_id": "assembly",
+      "action": "Available workstations: 7",
+      "temporal_marker": 510,
+      "metadata": {
+        "context": "assembly",
+        "line_num": 511
+      }
+    },
+    {
+      "entry_id": "entry_511",
+      "agent_id": "assembly",
+      "action": "Workstation wa_rails1 (assemble_rails) is now AVAILABLE",
+      "temporal_marker": 511,
+      "metadata": {
+        "context": "assembly",
+        "line_num": 512
+      }
+    },
+    {
+      "entry_id": "entry_512",
+      "agent_id": "assembly",
+      "action": "Running operation assemble_connectivity_box for part connectivity_box on wa_conn1",
+      "temporal_marker": 512,
+      "metadata": {
+        "context": "assembly",
+        "line_num": 513
+      }
+    },
+    {
+      "entry_id": "entry_513",
+      "agent_id": "WorkstationRegistry",
+      "action": "wa_conn1 is now busy",
+      "temporal_marker": 513,
+      "metadata": {
+        "line_num": 514
+      }
+    },
+    {
+      "entry_id": "entry_514",
+      "agent_id": "wa_conn1",
+      "action": "Performing assemble_connectivity_box for connectivity_box",
+      "temporal_marker": 514,
+      "metadata": {
+        "context": "wa_conn1",
+        "line_num": 515
+      }
+    },
+    {
+      "entry_id": "entry_515",
+      "agent_id": "assembly",
+      "action": "Workstation wa_conn1 (assemble_connectivity_box) is now BUSY",
+      "temporal_marker": 515,
+      "metadata": {
+        "context": "assembly",
+        "line_num": 516
+      }
+    },
+    {
+      "entry_id": "entry_516",
+      "agent_id": "assembly",
+      "action": "Available workstations: 6",
+      "temporal_marker": 516,
+      "metadata": {
+        "context": "assembly",
+        "line_num": 517
+      }
+    },
+    {
+      "entry_id": "entry_517",
+      "agent_id": "WorkstationRegistry",
+      "action": "wa_conn1 is now available",
+      "temporal_marker": 517,
+      "metadata": {
+        "line_num": 518
+      }
+    },
+    {
+      "entry_id": "entry_518",
+      "agent_id": "assembly",
+      "action": "Operation assemble_connectivity_box for part connectivity_box finished on wa_conn1 (order sk2)",
+      "temporal_marker": 518,
+      "metadata": {
+        "context": "assembly",
+        "line_num": 519
+      }
+    },
+    {
+      "entry_id": "entry_519",
+      "agent_id": "assembly",
+      "action": "Available workstations: 7",
+      "temporal_marker": 519,
+      "metadata": {
+        "context": "assembly",
+        "line_num": 520
+      }
+    },
+    {
+      "entry_id": "entry_520",
+      "agent_id": "assembly",
+      "action": "Workstation wa_conn1 (assemble_connectivity_box) is now AVAILABLE",
+      "temporal_marker": 520,
+      "metadata": {
+        "context": "assembly",
+        "line_num": 521
+      }
+    },
+    {
+      "entry_id": "entry_521",
+      "agent_id": "assembly",
+      "action": "Skateboard sk2 fully assembled",
+      "temporal_marker": 521,
+      "metadata": {
+        "context": "assembly",
+        "line_num": 522
+      }
+    },
+    {
+      "entry_id": "entry_522",
+      "agent_id": "assembly",
+      "action": "Sent result to customer for order sk2",
+      "temporal_marker": 522,
+      "metadata": {
+        "context": "assembly",
+        "line_num": 523
+      }
+    },
+    {
+      "entry_id": "entry_523",
+      "agent_id": "customer",
+      "action": "Final result for sk2: Skateboard assembled successfully",
+      "temporal_marker": 523,
+      "metadata": {
+        "context": "customer",
+        "line_num": 524
+      }
+    }
+  ],
+  "compliance_summary": {
+    "not_applicable": 193,
+    "fulfilled": 6,
+    "violated": 1
+  },
+  "interactions": [
+    {
+      "source_agent": "WorkstationRegistry",
+      "target_agent": "wa_wheels1",
+      "interaction_type": "registration",
+      "frequency": 2,
+      "evidence": [
+        "entry_39",
+        "entry_232"
+      ]
+    },
+    {
+      "source_agent": "WorkstationRegistry",
+      "target_agent": "wa_qc1",
+      "interaction_type": "registration",
+      "frequency": 2,
+      "evidence": [
+        "entry_40",
+        "entry_233"
+      ]
+    },
+    {
+      "source_agent": "WorkstationRegistry",
+      "target_agent": "wa_wheels2",
+      "interaction_type": "registration",
+      "frequency": 2,
+      "evidence": [
+        "entry_42",
+        "entry_235"
+      ]
+    },
+    {
+      "source_agent": "WorkstationRegistry",
+      "target_agent": "wa_conn1",
+      "interaction_type": "registration",
+      "frequency": 2,
+      "evidence": [
+        "entry_45",
+        "entry_238"
+      ]
+    },
+    {
+      "source_agent": "WorkstationRegistry",
+      "target_agent": "wa_rails1",
+      "interaction_type": "registration",
+      "frequency": 2,
+      "evidence": [
+        "entry_47",
+        "entry_240"
+      ]
+    },
+    {
+      "source_agent": "WorkstationRegistry",
+      "target_agent": "wa_trunks1",
+      "interaction_type": "registration",
+      "frequency": 2,
+      "evidence": [
+        "entry_49",
+        "entry_242"
+      ]
+    },
+    {
+      "source_agent": "WorkstationRegistry",
+      "target_agent": "wa_trunks2",
+      "interaction_type": "registration",
+      "frequency": 2,
+      "evidence": [
+        "entry_69",
+        "entry_262"
+      ]
+    }
+  ]
+}

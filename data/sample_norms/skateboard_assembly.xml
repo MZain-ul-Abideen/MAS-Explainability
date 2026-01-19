@@ -1,0 +1,202 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?xml-stylesheet href="http://moise.sourceforge.net/xml/os.xsl" type="text/xsl" ?>
+
+<organisational-specification
+    id="skateboard_assembly"
+    os-version="0.8"
+
+    xmlns='http://moise.sourceforge.net/os'
+    xmlns:xsi='http://www.w3.org/2001/XMLSchema-instance'
+    xsi:schemaLocation='http://moise.sourceforge.net/os
+                        http://moise.sourceforge.net/xml/os.xsd' >
+
+  <!-- ==============================
+       1) STRUCTURAL SPECIFICATION
+       ============================== -->
+  <structural-specification>
+
+    <!-- Roles in your current MAS:
+         - customer       -> customer.asl
+         - assembly_agent -> assembly.asl
+         - supplier       -> supplier1, supplier2
+         - workstation_*  -> wa_trunks*, wa_wheels*, wa_rails1, wa_conn1, wa_qc1
+    -->
+    <role-definitions>
+      <role id="customer" />
+      <role id="assembly_agent" />
+
+      <!-- Suppliers -->
+      <role id="supplier" />
+
+      <!-- Workstations -->
+      <role id="ws_trunks" />
+      <role id="ws_wheels" />
+      <role id="ws_rails" />
+      <role id="ws_conn" />
+      <role id="ws_qc" />
+    </role-definitions>
+
+    <!-- One main group representing a skateboard assembly project -->
+    <group-specification id="skateboard_group">
+
+      <roles>
+        <!-- 1 customer, 1 assembly agent -->
+        <role id="customer"        min="1" max="1" />
+        <role id="assembly_agent"  min="1" max="1" />
+
+        <!-- Suppliers: at least 1, at most many -->
+        <role id="supplier"        min="1" max="5" />
+
+        <!-- Workstations: you already have multiple instances of some -->
+        <role id="ws_trunks"       min="1" max="3" />
+        <role id="ws_wheels"       min="1" max="3" />
+        <role id="ws_rails"        min="0" max="2" />
+        <role id="ws_conn"         min="0" max="2" />
+        <role id="ws_qc"           min="1" max="2" />
+      </roles>
+
+      <!-- Simple links: assembly_agent "manages" and communicates with others -->
+      <links>
+        <link from="customer"        type="communication" to="assembly_agent" scope="intra-group" />
+        <link from="assembly_agent"  type="communication" to="customer"       scope="intra-group" />
+
+        <link from="assembly_agent"  type="authority"     to="supplier"       scope="intra-group" />
+        <link from="assembly_agent"  type="authority"     to="ws_trunks"      scope="intra-group" />
+        <link from="assembly_agent"  type="authority"     to="ws_wheels"      scope="intra-group" />
+        <link from="assembly_agent"  type="authority"     to="ws_rails"       scope="intra-group" />
+        <link from="assembly_agent"  type="authority"     to="ws_conn"        scope="intra-group" />
+        <link from="assembly_agent"  type="authority"     to="ws_qc"          scope="intra-group" />
+      </links>
+
+      <!-- All technical roles compatible inside the group -->
+      <formation-constraints>
+        <compatibility from="supplier"       to="supplier"       scope="intra-group" />
+        <compatibility from="ws_trunks"      to="ws_trunks"      scope="intra-group" />
+        <compatibility from="ws_wheels"      to="ws_wheels"      scope="intra-group" />
+        <compatibility from="ws_rails"       to="ws_rails"       scope="intra-group" />
+        <compatibility from="ws_conn"        to="ws_conn"        scope="intra-group" />
+        <compatibility from="ws_qc"          to="ws_qc"          scope="intra-group" />
+        <compatibility from="supplier"       to="ws_trunks"      scope="intra-group" />
+        <compatibility from="supplier"       to="ws_wheels"      scope="intra-group" />
+        <compatibility from="supplier"       to="ws_rails"       scope="intra-group" />
+        <compatibility from="supplier"       to="ws_conn"        scope="intra-group" />
+        <compatibility from="supplier"       to="ws_qc"          scope="intra-group" />
+      </formation-constraints>
+
+    </group-specification>
+  </structural-specification>
+
+  <!-- ==============================
+       2) FUNCTIONAL SPECIFICATION
+       ============================== -->
+  <functional-specification>
+
+    <!-- One main scheme = your process for 1 skateboard -->
+    <scheme id="assemble_skateboard_sch">
+
+      <!-- Top-level goal: skateboard assembled (end of your handle_order plan) -->
+      <goal id="skateboard_assembled">
+        <plan operator="sequence">
+          <!-- These steps mirror what assembly.asl actually does -->
+          <goal id="order_received"           ds="Receive order from customer" />
+          <goal id="parts_contracted"         ds="Contract all required parts with suppliers" />
+          <goal id="parts_delivered"          ds="Receive all parts in the plant" />
+          <goal id="workstations_allocated"   ds="Allocate workstations for all operations" />
+          <goal id="parts_assembled"          ds="Execute operations in the correct order" />
+          <goal id="quality_checked"          ds="Perform quality control" />
+        </plan>
+      </goal>
+
+      <!-- Missions: who is responsible for which goal(s)? -->
+
+      <!-- Assembly agent drives the full process -->
+      <mission id="manage_assembly" min="1" max="1">
+        <goal id="skateboard_assembled" />
+      </mission>
+
+      <!-- Customer sends orders -->
+      <mission id="send_order" min="1" max="1">
+        <goal id="order_received" />
+      </mission>
+
+      <!-- Contracting and logistics with suppliers -->
+      <mission id="contract_parts" min="1" max="1">
+        <goal id="parts_contracted" />
+      </mission>
+
+      <mission id="deliver_parts" min="1" max="3">
+        <goal id="parts_delivered" />
+      </mission>
+
+      <!-- Workstation allocation and execution -->
+      <mission id="allocate_workstations" min="1" max="1">
+        <goal id="workstations_allocated" />
+      </mission>
+
+      <mission id="assemble_parts" min="1" max="5">
+        <goal id="parts_assembled" />
+      </mission>
+
+      <mission id="perform_quality_control" min="1" max="2">
+        <goal id="quality_checked" />
+      </mission>
+
+    </scheme>
+  </functional-specification>
+
+  <!-- ==============================
+       3) NORMATIVE SPECIFICATION
+       ============================== -->
+  <normative-specification>
+
+    <!-- Who must accomplish which missions? -->
+
+    <!-- Assembly agent is responsible for managing the whole scheme -->
+    <norm id="n1" type="obligation"
+          role="assembly_agent"
+          mission="manage_assembly" />
+
+    <!-- Customer must send an order -->
+    <norm id="n2" type="obligation"
+          role="customer"
+          mission="send_order" />
+
+    <!-- Assembly agent handles contracting and allocation -->
+    <norm id="n3" type="obligation"
+          role="assembly_agent"
+          mission="contract_parts" />
+
+    <norm id="n4" type="obligation"
+          role="assembly_agent"
+          mission="allocate_workstations" />
+
+    <!-- Suppliers deliver parts -->
+    <norm id="n5" type="obligation"
+          role="supplier"
+          mission="deliver_parts" />
+
+    <!-- Workstation roles handle assembly and QC -->
+    <norm id="n6" type="obligation"
+          role="ws_trunks"
+          mission="assemble_parts" />
+
+    <norm id="n7" type="obligation"
+          role="ws_wheels"
+          mission="assemble_parts" />
+
+    <norm id="n8" type="obligation"
+          role="ws_rails"
+          mission="assemble_parts" />
+
+    <norm id="n9" type="obligation"
+          role="ws_conn"
+          mission="assemble_parts" />
+
+    <norm id="n10" type="obligation"
+          role="ws_qc"
+          mission="perform_quality_control" />
+
+  </normative-specification>
+
+</organisational-specification>

@@ -1,0 +1,442 @@
+{
+  "query": "Show me all obligations",
+  "query_type": "overview",
+  "relevant_agents": [
+    {
+      "agent_id": "Moise",
+      "inferred_role": null,
+      "role_confidence": "unknown",
+      "total_actions": 6,
+      "unique_actions": 3,
+      "action_summary": {
+        "OrgBoard skate_org created": 2,
+        "scheme created: sk_scheme: assemble_skateboard_sch using artifact SchemeBoard": 2,
+        "group created: sk_group: skateboard_group using artifact ora4mas.nopl.GroupBoard": 2
+      },
+      "applicable_norms": [],
+      "compliance_status": {},
+      "first_appearance": 4,
+      "last_appearance": 199
+    },
+    {
+      "agent_id": "wa_trunks1",
+      "inferred_role": null,
+      "role_confidence": "unknown",
+      "total_actions": 12,
+      "unique_actions": 6,
+      "action_summary": {
+        "Initializing..": 2,
+        "Ready for trunks assembly": 2,
+        "CFP for assemble_trunks in order sk2 -> energy=8, time=4": 2,
+        "I don't support operation assemble_wheels (order sk2), ignoring CFP": 2,
+        "I don't support operation assemble_rails (order sk2), ignoring CFP": 2,
+        "I don't support operation assemble_connectivity_box (order sk2), ignoring CFP": 2
+      },
+      "applicable_norms": [],
+      "compliance_status": {},
+      "first_appearance": 35,
+      "last_appearance": 477
+    },
+    {
+      "agent_id": "inspector",
+      "inferred_role": null,
+      "role_confidence": "unknown",
+      "total_actions": 2,
+      "unique_actions": 1,
+      "action_summary": {
+        "is running at http://127.0.1.1:3272": 2
+      },
+      "applicable_norms": [],
+      "compliance_status": {},
+      "first_appearance": 1,
+      "last_appearance": 194
+    },
+    {
+      "agent_id": "(RTS)",
+      "inferred_role": null,
+      "role_confidence": "unknown",
+      "total_actions": 1,
+      "unique_actions": 1,
+      "action_summary": {
+        "is running at 127.0.1.1:37657": 1
+      },
+      "applicable_norms": [],
+      "compliance_status": {},
+      "first_appearance": 0,
+      "last_appearance": 0
+    },
+    {
+      "agent_id": "supplier2",
+      "inferred_role": "supplier",
+      "role_confidence": "substring",
+      "total_actions": 34,
+      "unique_actions": 17,
+      "action_summary": {
+        "Ready to supply parts": 2,
+        "Received auction announcement: auc_sk2_board for part: board": 2,
+        "Bid placed for auc_sk2_board: cost=80, time=4": 2,
+        "Received auction announcement: auc_sk2_trunks for part: trunks": 2,
+        "Bid placed for auc_sk2_trunks: cost=45, time=7": 2,
+        "Received auction announcement: auc_sk2_wheels for part: wheels": 2,
+        "Bid placed for auc_sk2_wheels: cost=65, time=5": 2,
+        "Received auction announcement: auc_sk2_rails for part: rails": 2,
+        "Bid placed for auc_sk2_rails: cost=60, time=4": 2,
+        "Received auction announcement: auc_sk2_connectivity_box for part: connectivity_box": 2
+      },
+      "applicable_norms": [
+        "n5"
+      ],
+      "compliance_status": {
+        "n5": "fulfilled"
+      },
+      "first_appearance": 27,
+      "last_appearance": 366
+    },
+    {
+      "agent_id": "AuctionSkateArt",
+      "inferred_role": null,
+      "role_confidence": "unknown",
+      "total_actions": 58,
+      "unique_actions": 29,
+      "action_summary": {
+        "Initialized": 2,
+        "Started auction auc_sk2_board for part: board": 2,
+        "Bid from supplier2 for auc_sk2_board: cost=80, time=4": 2,
+        "New best bid from supplier2 for auc_sk2_board: cost=80": 2,
+        "Bid from supplier1 for auc_sk2_board: cost=60, time=5": 2,
+        "New best bid from supplier1 for auc_sk2_board: cost=60": 2,
+        "Closed auction auc_sk2_board: winner=supplier1, cost=60, time=5": 2,
+        "Started auction auc_sk2_trunks for part: trunks": 2,
+        "Bid from supplier2 for auc_sk2_trunks: cost=45, time=7": 2,
+        "New best bid from supplier2 for auc_sk2_trunks: cost=45": 2
+      },
+      "applicable_norms": [],
+      "compliance_status": {},
+      "first_appearance": 16,
+      "last_appearance": 337
+    },
+    {
+      "agent_id": "WorkstationArt",
+      "inferred_role": null,
+      "role_confidence": "unknown",
+      "total_actions": 14,
+      "unique_actions": 7,
+      "action_summary": {
+        "Initialized for op=assemble_trunks energy=5 time=5": 2,
+        "Initialized for op=assemble_rails energy=6 time=4": 2,
+        "Initialized for op=assemble_wheels energy=4 time=4": 2,
+        "Initialized for op=assemble_wheels energy=7 time=3": 2,
+        "Initialized for op=assemble_connectivity_box energy=9 time=5": 2,
+        "Initialized for op=quality_control energy=6 time=6": 2,
+        "Initialized for op=assemble_trunks energy=8 time=4": 2
+      },
+      "applicable_norms": [],
+      "compliance_status": {},
+      "first_appearance": 8,
+      "last_appearance": 217
+    },
+    {
+      "agent_id": "wa_rails1",
+      "inferred_role": null,
+      "role_confidence": "unknown",
+      "total_actions": 14,
+      "unique_actions": 8,
+      "action_summary": {
+        "Initializing..": 2,
+        "Ready for rails assembly": 2,
+        "I don't support operation assemble_trunks, ignoring": 2,
+        "CFP for assemble_rails -> energy=6, time=4": 2,
+        "I don't support operation assemble_connectivity_box, ignoring": 2,
+        "Performing assemble_rails for rails": 2,
+        "I don't support operation assemble_wheRuntime Services (RTS) is running at 127.0.1.1:37657": 1,
+        "I don't support operation assemble_wheels, ignoring": 1
+      },
+      "applicable_norms": [],
+      "compliance_status": {},
+      "first_appearance": 34,
+      "last_appearance": 505
+    },
+    {
+      "agent_id": "supplier1",
+      "inferred_role": "supplier",
+      "role_confidence": "substring",
+      "total_actions": 30,
+      "unique_actions": 15,
+      "action_summary": {
+        "Ready to supply parts": 2,
+        "Received auction announcement: auc_sk2_board for part: board": 2,
+        "Bid placed for auc_sk2_board: cost=60, time=5": 2,
+        "Received auction announcement: auc_sk2_trunks for part: trunks": 2,
+        "Bid placed for auc_sk2_trunks: cost=50, time=6": 2,
+        "Received auction announcement: auc_sk2_wheels for part: wheels": 2,
+        "Bid placed for auc_sk2_wheels: cost=70, time=4": 2,
+        "Received auction announcement: auc_sk2_rails for part: rails": 2,
+        "Bid placed for auc_sk2_rails: cost=55, time=5": 2,
+        "Received auction announcement: auc_sk2_connectivity_box for part: connectivity_box": 2
+      },
+      "applicable_norms": [
+        "n5"
+      ],
+      "compliance_status": {
+        "n5": "fulfilled"
+      },
+      "first_appearance": 26,
+      "last_appearance": 362
+    },
+    {
+      "agent_id": "els,",
+      "inferred_role": "ws_wheels",
+      "role_confidence": "substring_reverse",
+      "total_actions": 1,
+      "unique_actions": 1,
+      "action_summary": {
+        "ignoring": 1
+      },
+      "applicable_norms": [
+        "n7"
+      ],
+      "compliance_status": {
+        "n7": "violated"
+      },
+      "first_appearance": 455,
+      "last_appearance": 455
+    }
+  ],
+  "relevant_norms": [
+    {
+      "norm_id": "n1",
+      "norm_type": "obligation",
+      "role": "assembly_agent",
+      "mission": "manage_assembly",
+      "condition": null,
+      "action": null,
+      "metadata": {}
+    },
+    {
+      "norm_id": "n2",
+      "norm_type": "obligation",
+      "role": "customer",
+      "mission": "send_order",
+      "condition": null,
+      "action": null,
+      "metadata": {}
+    },
+    {
+      "norm_id": "n3",
+      "norm_type": "obligation",
+      "role": "assembly_agent",
+      "mission": "contract_parts",
+      "condition": null,
+      "action": null,
+      "metadata": {}
+    },
+    {
+      "norm_id": "n4",
+      "norm_type": "obligation",
+      "role": "assembly_agent",
+      "mission": "allocate_workstations",
+      "condition": null,
+      "action": null,
+      "metadata": {}
+    },
+    {
+      "norm_id": "n5",
+      "norm_type": "obligation",
+      "role": "supplier",
+      "mission": "deliver_parts",
+      "condition": null,
+      "action": null,
+      "metadata": {}
+    },
+    {
+      "norm_id": "n6",
+      "norm_type": "obligation",
+      "role": "ws_trunks",
+      "mission": "assemble_parts",
+      "condition": null,
+      "action": null,
+      "metadata": {}
+    },
+    {
+      "norm_id": "n7",
+      "norm_type": "obligation",
+      "role": "ws_wheels",
+      "mission": "assemble_parts",
+      "condition": null,
+      "action": null,
+      "metadata": {}
+    },
+    {
+      "norm_id": "n8",
+      "norm_type": "obligation",
+      "role": "ws_rails",
+      "mission": "assemble_parts",
+      "condition": null,
+      "action": null,
+      "metadata": {}
+    },
+    {
+      "norm_id": "n9",
+      "norm_type": "obligation",
+      "role": "ws_conn",
+      "mission": "assemble_parts",
+      "condition": null,
+      "action": null,
+      "metadata": {}
+    },
+    {
+      "norm_id": "n10",
+      "norm_type": "obligation",
+      "role": "ws_qc",
+      "mission": "perform_quality_control",
+      "condition": null,
+      "action": null,
+      "metadata": {}
+    }
+  ],
+  "relevant_missions": [
+    {
+      "mission_name": "manage_assembly",
+      "required_roles": [
+        "assembly_agent"
+      ],
+      "associated_norms": [
+        "n1"
+      ],
+      "agents_assigned": [
+        "assembly"
+      ],
+      "fulfillment_status": {
+        "assembly": "fulfilled"
+      }
+    },
+    {
+      "mission_name": "send_order",
+      "required_roles": [
+        "customer"
+      ],
+      "associated_norms": [
+        "n2"
+      ],
+      "agents_assigned": [
+        "customer"
+      ],
+      "fulfillment_status": {
+        "customer": "fulfilled"
+      }
+    },
+    {
+      "mission_name": "contract_parts",
+      "required_roles": [
+        "assembly_agent"
+      ],
+      "associated_norms": [
+        "n3"
+      ],
+      "agents_assigned": [
+        "assembly"
+      ],
+      "fulfillment_status": {
+        "assembly": "fulfilled"
+      }
+    },
+    {
+      "mission_name": "allocate_workstations",
+      "required_roles": [
+        "assembly_agent"
+      ],
+      "associated_norms": [
+        "n4"
+      ],
+      "agents_assigned": [
+        "assembly"
+      ],
+      "fulfillment_status": {
+        "assembly": "fulfilled"
+      }
+    },
+    {
+      "mission_name": "deliver_parts",
+      "required_roles": [
+        "supplier"
+      ],
+      "associated_norms": [
+        "n5"
+      ],
+      "agents_assigned": [
+        "supplier1",
+        "supplier2"
+      ],
+      "fulfillment_status": {
+        "supplier1": "fulfilled",
+        "supplier2": "fulfilled"
+      }
+    },
+    {
+      "mission_name": "assemble_parts",
+      "required_roles": [
+        "ws_trunks",
+        "ws_wheels",
+        "ws_rails",
+        "ws_conn"
+      ],
+      "associated_norms": [
+        "n6",
+        "n7",
+        "n8",
+        "n9"
+      ],
+      "agents_assigned": [
+        "els,"
+      ],
+      "fulfillment_status": {
+        "els,": "violated"
+      }
+    },
+    {
+      "mission_name": "perform_quality_control",
+      "required_roles": [
+        "ws_qc"
+      ],
+      "associated_norms": [
+        "n10"
+      ],
+      "agents_assigned": [],
+      "fulfillment_status": {}
+    }
+  ],
+  "relevant_log_entries": [],
+  "relevant_compliance": [],
+  "relevant_interactions": [],
+  "system_overview": {
+    "total_agents": 20,
+    "total_norms": 10,
+    "total_missions": 7,
+    "total_events": 524,
+    "roles": {
+      "supplier": [
+        "supplier2",
+        "supplier1"
+      ],
+      "ws_wheels": [
+        "els,"
+      ],
+      "assembly_agent": [
+        "assembly"
+      ],
+      "customer": [
+        "customer"
+      ]
+    },
+    "norms_by_type": {
+      "obligation": 10
+    },
+    "compliance_summary": {
+      "not_applicable": 193,
+      "fulfilled": 6,
+      "violated": 1
+    }
+  },
+  "retrieval_strategy": "System overview retrieval",
+  "total_items_retrieved": 27
+}

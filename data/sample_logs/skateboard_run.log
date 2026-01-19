@@ -1,0 +1,524 @@
+Runtime Services (RTS) is running at 127.0.1.1:37657
+Agent mind inspector is running at http://127.0.1.1:3272
+CArtAgO Http Server running on http://127.0.1.1:3273
+Moise Http Server running on http://127.0.1.1:3271
+[Moise] OrgBoard skate_org created.
+[Moise] scheme created: sk_scheme: assemble_skateboard_sch using artifact SchemeBoard
+[Moise] group created: sk_group: skateboard_group using artifact ora4mas.nopl.GroupBoard
+[Cartago] Workspace plant created.
+[WorkstationArt] Initialized for op=assemble_trunks energy=5 time=5
+[Cartago] artifact ws_trunks2: tools.WorkstationArt("assemble_trunks",5,5) at plant created.
+[WorkstationArt] Initialized for op=assemble_rails energy=6 time=4
+[Cartago] artifact ws_rails1: tools.WorkstationArt("assemble_rails",6,4) at plant created.
+[WorkstationArt] Initialized for op=assemble_wheels energy=4 time=4
+[Cartago] artifact ws_wheels2: tools.WorkstationArt("assemble_wheels",4,4) at plant created.
+[WorkstationArt] Initialized for op=assemble_wheels energy=7 time=3
+[Cartago] artifact ws_wheels1: tools.WorkstationArt("assemble_wheels",7,3) at plant created.
+[AuctionSkateArt] Initialized
+[Cartago] artifact auction_skate: tools.AuctionSkateArt() at plant created.
+[WorkstationRegistry] Initialized
+[Cartago] artifact ws_registry: tools.WorkstationRegistry() at plant created.
+[WorkstationArt] Initialized for op=assemble_connectivity_box energy=9 time=5
+[Cartago] artifact ws_conn1: tools.WorkstationArt("assemble_connectivity_box",9,5) at plant created.
+[WorkstationArt] Initialized for op=quality_control energy=6 time=6
+[Cartago] artifact ws_qc1: tools.WorkstationArt("quality_control",6,6) at plant created.
+[WorkstationArt] Initialized for op=assemble_trunks energy=8 time=4
+[Cartago] artifact ws_trunks1: tools.WorkstationArt("assemble_trunks",8,4) at plant created.
+[supplier1] [supplier] Ready to supply parts.
+[supplier2] [supplier] Ready to supply parts.
+[wa_wheels1] [wa_wheels1] Initializing...
+[wa_qc1] [wa_qc1] Initializing...
+[wa_wheels2] [wa_wheels2] Initializing...
+[wa_conn1] [wa_conn1] Initializing...
+[wa_trunks2] [wa_trunks2] Initializing...
+[assembly] [assembly] Ready to receive orders.
+[wa_rails1] [wa_rails1] Initializing...
+[wa_trunks1] [wa_trunks1] Initializing...
+[assembly] [assembly] Total workstations registered: 0
+[assembly] [assembly] Available workstations: 0
+[assembly] [assembly] Workstation wa_wheels1 registered for assemble_wheels (energy=7, time=3)
+[WorkstationRegistry] Registered wa_wheels1 for operation: assemble_wheels (energy=7, time=3)
+[WorkstationRegistry] Registered wa_qc1 for operation: quality_control (energy=6, time=6)
+[assembly] [assembly] Total workstations registered: 1
+[WorkstationRegistry] Registered wa_wheels2 for operation: assemble_wheels (energy=4, time=4)
+[wa_wheels1] [wa_wheels1] Ready for wheels assembly.
+[wa_wheels2] [wa_wheels2] Ready for wheels assembly.
+[WorkstationRegistry] Registered wa_conn1 for operation: assemble_connectivity_box (energy=9, time=5)
+[wa_qc1] [wa_qc1] Ready for quality control.
+[WorkstationRegistry] Registered wa_rails1 for operation: assemble_rails (energy=6, time=4)
+[wa_conn1] [wa_conn1] Ready for connectivity box installation.
+[WorkstationRegistry] Registered wa_trunks1 for operation: assemble_trunks (energy=8, time=4)
+[wa_rails1] [wa_rails1] Ready for rails assembly.
+[wa_trunks1] [wa_trunks1] Ready for trunks assembly.
+[assembly] [assembly] Available workstations: 1
+[assembly] [assembly] Subscribed to workstation registry updates
+[assembly] [assembly] Workstation wa_qc1 registered for quality_control (energy=6, time=6)
+[assembly] [assembly] Total workstations registered: 2
+[assembly] [assembly] Available workstations: 2
+[assembly] [assembly] Workstation wa_wheels2 registered for assemble_wheels (energy=4, time=4)
+[assembly] [assembly] Total workstations registered: 3
+[assembly] [assembly] Available workstations: 3
+[assembly] [assembly] Workstation wa_conn1 registered for assemble_connectivity_box (energy=9, time=5)
+[assembly] [assembly] Total workstations registered: 4
+[assembly] [assembly] Available workstations: 4
+[assembly] [assembly] Workstation wa_rails1 registered for assemble_rails (energy=6, time=4)
+[assembly] [assembly] Total workstations registered: 5
+[assembly] [assembly] Available workstations: 5
+[assembly] [assembly] Workstation wa_trunks1 registered for assemble_trunks (energy=8, time=4)
+[assembly] [assembly] Total workstations registered: 6
+[assembly] [assembly] Available workstations: 6
+[WorkstationRegistry] Registered wa_trunks2 for operation: assemble_trunks (energy=5, time=5)
+[wa_trunks2] [wa_trunks2] Ready for trunks assembly.
+[assembly] [assembly] Workstation wa_trunks2 registered for assemble_trunks (energy=5, time=5)
+[assembly] [assembly] Total workstations registered: 7
+[assembly] [assembly] Available workstations: 7
+[customer] [customer] Sending order sk2 to assembly...
+[customer] [customer] Order sk2 sent to assembly
+[assembly] [assembly] Received order sk2
+[assembly]    Parts: [board,trunks,wheels,rails,connectivity_box]
+[assembly]    Options: options([])
+[assembly]    Preferences: preferences(max_cost(300),max_time(10),max_energy(low))
+[assembly] [assembly] (AUCTION) Opening auction auc_sk2_board for part board
+[AuctionSkateArt] Started auction auc_sk2_board for part: board
+[supplier2] [supplier] Received auction announcement: auc_sk2_board for part: board
+[supplier1] [supplier] Received auction announcement: auc_sk2_board for part: board
+[AuctionSkateArt] Bid from supplier2 for auc_sk2_board: cost=80, time=4
+[AuctionSkateArt] New best bid from supplier2 for auc_sk2_board: cost=80
+[AuctionSkateArt] Bid from supplier1 for auc_sk2_board: cost=60, time=5
+[AuctionSkateArt] New best bid from supplier1 for auc_sk2_board: cost=60
+[supplier2] [supplier] Bid placed for auc_sk2_board: cost=80, time=4
+[supplier1] [supplier] Bid placed for auc_sk2_board: cost=60, time=5
+[AuctionSkateArt] Closed auction auc_sk2_board: winner=supplier1, cost=60, time=5
+[assembly] [assembly] (AUCTION) Closed auc_sk2_board winner=supplier1 cost=60 time=5
+[assembly] [assembly] Winner supplier1 has reputation: 0.8
+[assembly] [assembly] (AUCTION) Opening auction auc_sk2_trunks for part trunks
+[assembly] [assembly] Contracted supplier1 for part board (cost=60, reputation=0.8)
+[AuctionSkateArt] Started auction auc_sk2_trunks for part: trunks
+[supplier2] [supplier] Received auction announcement: auc_sk2_trunks for part: trunks
+[AuctionSkateArt] Bid from supplier2 for auc_sk2_trunks: cost=45, time=7
+[AuctionSkateArt] New best bid from supplier2 for auc_sk2_trunks: cost=45
+[supplier2] [supplier] Bid placed for auc_sk2_trunks: cost=45, time=7
+[supplier1] [supplier] Received auction announcement: auc_sk2_trunks for part: trunks
+[AuctionSkateArt] Bid from supplier1 for auc_sk2_trunks: cost=50, time=6
+[supplier1] [supplier] Bid placed for auc_sk2_trunks: cost=50, time=6
+[AuctionSkateArt] Closed auction auc_sk2_trunks: winner=supplier2, cost=45, time=7
+[assembly] [assembly] (AUCTION) Closed auc_sk2_trunks winner=supplier2 cost=45 time=7
+[assembly] [assembly] Winner supplier2 has reputation: 0.6
+[assembly] [assembly] (AUCTION) Opening auction auc_sk2_wheels for part wheels
+[assembly] [assembly] Contracted supplier2 for part trunks (cost=45, reputation=0.6)
+[AuctionSkateArt] Started auction auc_sk2_wheels for part: wheels
+[supplier2] [supplier] Received auction announcement: auc_sk2_wheels for part: wheels
+[supplier1] [supplier] Received auction announcement: auc_sk2_wheels for part: wheels
+[AuctionSkateArt] Bid from supplier2 for auc_sk2_wheels: cost=65, time=5
+[AuctionSkateArt] New best bid from supplier2 for auc_sk2_wheels: cost=65
+[AuctionSkateArt] Bid from supplier1 for auc_sk2_wheels: cost=70, time=4
+[supplier2] [supplier] Bid placed for auc_sk2_wheels: cost=65, time=5
+[supplier1] [supplier] Bid placed for auc_sk2_wheels: cost=70, time=4
+[AuctionSkateArt] Closed auction auc_sk2_wheels: winner=supplier2, cost=65, time=5
+[assembly] [assembly] (AUCTION) Closed auc_sk2_wheels winner=supplier2 cost=65 time=5
+[assembly] [assembly] Winner supplier2 has reputation: 0.6
+[assembly] [assembly] (AUCTION) Opening auction auc_sk2_rails for part rails
+[assembly] [assembly] Contracted supplier2 for part wheels (cost=65, reputation=0.6)
+[AuctionSkateArt] Started auction auc_sk2_rails for part: rails
+[supplier2] [supplier] Received auction announcement: auc_sk2_rails for part: rails
+[supplier1] [supplier] Received auction announcement: auc_sk2_rails for part: rails
+[AuctionSkateArt] Bid from supplier2 for auc_sk2_rails: cost=60, time=4
+[AuctionSkateArt] New best bid from supplier2 for auc_sk2_rails: cost=60
+[AuctionSkateArt] Bid from supplier1 for auc_sk2_rails: cost=55, time=5
+[AuctionSkateArt] New best bid from supplier1 for auc_sk2_rails: cost=55
+[supplier2] [supplier] Bid placed for auc_sk2_rails: cost=60, time=4
+[supplier1] [supplier] Bid placed for auc_sk2_rails: cost=55, time=5
+[AuctionSkateArt] Closed auction auc_sk2_rails: winner=supplier1, cost=55, time=5
+[assembly] [assembly] (AUCTION) Closed auc_sk2_rails winner=supplier1 cost=55 time=5
+[assembly] [assembly] Winner supplier1 has reputation: 0.8
+[assembly] [assembly] (AUCTION) Opening auction auc_sk2_connectivity_box for part connectivity_box
+[assembly] [assembly] Contracted supplier1 for part rails (cost=55, reputation=0.8)
+[AuctionSkateArt] Started auction auc_sk2_connectivity_box for part: connectivity_box
+[supplier1] [supplier] Received auction announcement: auc_sk2_connectivity_box for part: connectivity_box
+[supplier2] [supplier] Received auction announcement: auc_sk2_connectivity_box for part: connectivity_box
+[AuctionSkateArt] Bid from supplier1 for auc_sk2_connectivity_box: cost=80, time=6
+[AuctionSkateArt] New best bid from supplier1 for auc_sk2_connectivity_box: cost=80
+[AuctionSkateArt] Bid from supplier2 for auc_sk2_connectivity_box: cost=75, time=7
+[AuctionSkateArt] New best bid from supplier2 for auc_sk2_connectivity_box: cost=75
+[supplier1] [supplier] Bid placed for auc_sk2_connectivity_box: cost=80, time=6
+[supplier2] [supplier] Bid placed for auc_sk2_connectivity_box: cost=75, time=7
+[AuctionSkateArt] Closed auction auc_sk2_connectivity_box: winner=supplier2, cost=75, time=7
+[assembly] [assembly] (AUCTION) Closed auc_sk2_connectivity_box winner=supplier2 cost=75 time=7
+[assembly] [assembly] Winner supplier2 has reputation: 0.6
+[assembly] [assembly] Contracted supplier2 for part connectivity_box (cost=75, reputation=0.6)
+[assembly] [assembly] Waiting auction result for board (auc_sk2_board)...
+[assembly] [assembly] Waiting auction result for trunks (auc_sk2_trunks)...
+[assembly] [assembly] Waiting auction result for wheels (auc_sk2_wheels)...
+[assembly] [assembly] Waiting auction result for rails (auc_sk2_rails)...
+[assembly] [assembly] Waiting auction result for connectivity_box (auc_sk2_connectivity_box)...
+[assembly] [assembly] All auctions closed for sk2
+[assembly] [assembly] Requesting all deliveries for sk2
+[assembly] [assembly] Requesting delivery of board from supplier1
+[assembly] [assembly] Requesting delivery of trunks from supplier2
+[supplier1] [supplier] Delivering part board for order sk2...
+[supplier2] [supplier] Delivering part trunks for order sk2...
+[assembly] [assembly] Requesting delivery of wheels from supplier2
+[supplier2] [supplier] Delivering part wheels for order sk2...
+[assembly] [assembly] Requesting delivery of rails from supplier1
+[assembly] [assembly] Requesting delivery of connectivity_box from supplier2
+[supplier1] [supplier] Delivering part rails for order sk2...
+[supplier2] [supplier] Delivering part connectivity_box for order sk2...
+[supplier2] [supplier] Part wheels delivered for order sk2
+[supplier1] [supplier] Part board delivered for order sk2
+[assembly] [assembly] Part board delivered by supplier1
+[assembly] [assembly] Part wheels delivered by supplier2
+[supplier1] [supplier] Part rails delivered for order sk2
+[assembly] [assembly] Part rails delivered by supplier1
+[supplier2] [supplier] Part trunks delivered for order sk2
+[assembly] [assembly] Part trunks delivered by supplier2
+[supplier2] [supplier] Part connectivity_box delivered for order sk2
+[assembly] [assembly] Part connectivity_box delivered by supplier2
+[assembly] [assembly] All parts delivered for order sk2
+[assembly] [assembly] Starting workstation allocation for sk2
+[assembly] [assembly] Part board needs no assembly operation
+[assembly] [assembly] Sending CFP for operation assemble_trunks (part trunks)
+[wa_rails1] [wa_rails1] I don't support operation assemble_trunks, ignoring.
+[wa_wheels1] [wa_wheels1] I don't support operation assemble_trunks, ignoring.
+[wa_trunks1] [wa_trunks1] CFP for assemble_trunks in order sk2 -> energy=8, time=4
+[wa_conn1] [wa_conn1] I don't support operation assemble_trunks, ignoring.
+[wa_wheels2] [wa_wheels2] I don't support operation assemble_trunks, ignoring.
+[wa_qc1] [wa_qc1] I don't support operation assemble_trunks, ignoring.
+[wa_trunks2] [wa_trunks2] CFP for assemble_trunks in order sk2 -> energy=5, time=5
+[assembly] [assembly] Proposal from wa_trunks1 for assemble_trunks: energy=8, time=4
+[assembly] [assembly] Proposal from wa_trunks2 for assemble_trunks: energy=5, time=5
+[assembly] [assembly] Selected wa_trunks2 for assemble_trunks (part trunks): energy=5
+[assembly] [assembly] Sending CFP for operation assemble_wheels (part wheels)
+[wa_trunks2] [wa_trunks2] I don't support operation assemble_wheels (order sk2), ignoring CFP.
+[wa_conn1] [wa_conn1] I don't support operation assemble_wheels, ignoring.
+[wa_wheels2] [wa_wheels2] CFP for assemble_wheels -> energy=4, time=4
+[wa_rails1] [wa_rails1] I don't support operation assemble_wheRuntime Services (RTS) is running at 127.0.1.1:37657
+Agent mind inspector is running at http://127.0.1.1:3272
+CArtAgO Http Server running on http://127.0.1.1:3273
+Moise Http Server running on http://127.0.1.1:3271
+[Moise] OrgBoard skate_org created.
+[Moise] scheme created: sk_scheme: assemble_skateboard_sch using artifact SchemeBoard
+[Moise] group created: sk_group: skateboard_group using artifact ora4mas.nopl.GroupBoard
+[Cartago] Workspace plant created.
+[WorkstationArt] Initialized for op=assemble_trunks energy=5 time=5
+[Cartago] artifact ws_trunks2: tools.WorkstationArt("assemble_trunks",5,5) at plant created.
+[WorkstationArt] Initialized for op=assemble_rails energy=6 time=4
+[Cartago] artifact ws_rails1: tools.WorkstationArt("assemble_rails",6,4) at plant created.
+[WorkstationArt] Initialized for op=assemble_wheels energy=4 time=4
+[Cartago] artifact ws_wheels2: tools.WorkstationArt("assemble_wheels",4,4) at plant created.
+[WorkstationArt] Initialized for op=assemble_wheels energy=7 time=3
+[Cartago] artifact ws_wheels1: tools.WorkstationArt("assemble_wheels",7,3) at plant created.
+[AuctionSkateArt] Initialized
+[Cartago] artifact auction_skate: tools.AuctionSkateArt() at plant created.
+[WorkstationRegistry] Initialized
+[Cartago] artifact ws_registry: tools.WorkstationRegistry() at plant created.
+[WorkstationArt] Initialized for op=assemble_connectivity_box energy=9 time=5
+[Cartago] artifact ws_conn1: tools.WorkstationArt("assemble_connectivity_box",9,5) at plant created.
+[WorkstationArt] Initialized for op=quality_control energy=6 time=6
+[Cartago] artifact ws_qc1: tools.WorkstationArt("quality_control",6,6) at plant created.
+[WorkstationArt] Initialized for op=assemble_trunks energy=8 time=4
+[Cartago] artifact ws_trunks1: tools.WorkstationArt("assemble_trunks",8,4) at plant created.
+[supplier1] [supplier] Ready to supply parts.
+[supplier2] [supplier] Ready to supply parts.
+[wa_wheels1] [wa_wheels1] Initializing...
+[wa_qc1] [wa_qc1] Initializing...
+[wa_wheels2] [wa_wheels2] Initializing...
+[wa_conn1] [wa_conn1] Initializing...
+[wa_trunks2] [wa_trunks2] Initializing...
+[assembly] [assembly] Ready to receive orders.
+[wa_rails1] [wa_rails1] Initializing...
+[wa_trunks1] [wa_trunks1] Initializing...
+[assembly] [assembly] Total workstations registered: 0
+[assembly] [assembly] Available workstations: 0
+[assembly] [assembly] Workstation wa_wheels1 registered for assemble_wheels (energy=7, time=3)
+[WorkstationRegistry] Registered wa_wheels1 for operation: assemble_wheels (energy=7, time=3)
+[WorkstationRegistry] Registered wa_qc1 for operation: quality_control (energy=6, time=6)
+[assembly] [assembly] Total workstations registered: 1
+[WorkstationRegistry] Registered wa_wheels2 for operation: assemble_wheels (energy=4, time=4)
+[wa_wheels1] [wa_wheels1] Ready for wheels assembly.
+[wa_wheels2] [wa_wheels2] Ready for wheels assembly.
+[WorkstationRegistry] Registered wa_conn1 for operation: assemble_connectivity_box (energy=9, time=5)
+[wa_qc1] [wa_qc1] Ready for quality control.
+[WorkstationRegistry] Registered wa_rails1 for operation: assemble_rails (energy=6, time=4)
+[wa_conn1] [wa_conn1] Ready for connectivity box installation.
+[WorkstationRegistry] Registered wa_trunks1 for operation: assemble_trunks (energy=8, time=4)
+[wa_rails1] [wa_rails1] Ready for rails assembly.
+[wa_trunks1] [wa_trunks1] Ready for trunks assembly.
+[assembly] [assembly] Available workstations: 1
+[assembly] [assembly] Subscribed to workstation registry updates
+[assembly] [assembly] Workstation wa_qc1 registered for quality_control (energy=6, time=6)
+[assembly] [assembly] Total workstations registered: 2
+[assembly] [assembly] Available workstations: 2
+[assembly] [assembly] Workstation wa_wheels2 registered for assemble_wheels (energy=4, time=4)
+[assembly] [assembly] Total workstations registered: 3
+[assembly] [assembly] Available workstations: 3
+[assembly] [assembly] Workstation wa_conn1 registered for assemble_connectivity_box (energy=9, time=5)
+[assembly] [assembly] Total workstations registered: 4
+[assembly] [assembly] Available workstations: 4
+[assembly] [assembly] Workstation wa_rails1 registered for assemble_rails (energy=6, time=4)
+[assembly] [assembly] Total workstations registered: 5
+[assembly] [assembly] Available workstations: 5
+[assembly] [assembly] Workstation wa_trunks1 registered for assemble_trunks (energy=8, time=4)
+[assembly] [assembly] Total workstations registered: 6
+[assembly] [assembly] Available workstations: 6
+[WorkstationRegistry] Registered wa_trunks2 for operation: assemble_trunks (energy=5, time=5)
+[wa_trunks2] [wa_trunks2] Ready for trunks assembly.
+[assembly] [assembly] Workstation wa_trunks2 registered for assemble_trunks (energy=5, time=5)
+[assembly] [assembly] Total workstations registered: 7
+[assembly] [assembly] Available workstations: 7
+[customer] [customer] Sending order sk2 to assembly...
+[customer] [customer] Order sk2 sent to assembly
+[assembly] [assembly] Received order sk2
+[assembly]    Parts: [board,trunks,wheels,rails,connectivity_box]
+[assembly]    Options: options([])
+[assembly]    Preferences: preferences(max_cost(300),max_time(10),max_energy(low))
+[assembly] [assembly] (AUCTION) Opening auction auc_sk2_board for part board
+[AuctionSkateArt] Started auction auc_sk2_board for part: board
+[supplier2] [supplier] Received auction announcement: auc_sk2_board for part: board
+[supplier1] [supplier] Received auction announcement: auc_sk2_board for part: board
+[AuctionSkateArt] Bid from supplier2 for auc_sk2_board: cost=80, time=4
+[AuctionSkateArt] New best bid from supplier2 for auc_sk2_board: cost=80
+[AuctionSkateArt] Bid from supplier1 for auc_sk2_board: cost=60, time=5
+[AuctionSkateArt] New best bid from supplier1 for auc_sk2_board: cost=60
+[supplier2] [supplier] Bid placed for auc_sk2_board: cost=80, time=4
+[supplier1] [supplier] Bid placed for auc_sk2_board: cost=60, time=5
+[AuctionSkateArt] Closed auction auc_sk2_board: winner=supplier1, cost=60, time=5
+[assembly] [assembly] (AUCTION) Closed auc_sk2_board winner=supplier1 cost=60 time=5
+[assembly] [assembly] Winner supplier1 has reputation: 0.8
+[assembly] [assembly] (AUCTION) Opening auction auc_sk2_trunks for part trunks
+[assembly] [assembly] Contracted supplier1 for part board (cost=60, reputation=0.8)
+[AuctionSkateArt] Started auction auc_sk2_trunks for part: trunks
+[supplier2] [supplier] Received auction announcement: auc_sk2_trunks for part: trunks
+[AuctionSkateArt] Bid from supplier2 for auc_sk2_trunks: cost=45, time=7
+[AuctionSkateArt] New best bid from supplier2 for auc_sk2_trunks: cost=45
+[supplier2] [supplier] Bid placed for auc_sk2_trunks: cost=45, time=7
+[supplier1] [supplier] Received auction announcement: auc_sk2_trunks for part: trunks
+[AuctionSkateArt] Bid from supplier1 for auc_sk2_trunks: cost=50, time=6
+[supplier1] [supplier] Bid placed for auc_sk2_trunks: cost=50, time=6
+[AuctionSkateArt] Closed auction auc_sk2_trunks: winner=supplier2, cost=45, time=7
+[assembly] [assembly] (AUCTION) Closed auc_sk2_trunks winner=supplier2 cost=45 time=7
+[assembly] [assembly] Winner supplier2 has reputation: 0.6
+[assembly] [assembly] (AUCTION) Opening auction auc_sk2_wheels for part wheels
+[assembly] [assembly] Contracted supplier2 for part trunks (cost=45, reputation=0.6)
+[AuctionSkateArt] Started auction auc_sk2_wheels for part: wheels
+[supplier2] [supplier] Received auction announcement: auc_sk2_wheels for part: wheels
+[supplier1] [supplier] Received auction announcement: auc_sk2_wheels for part: wheels
+[AuctionSkateArt] Bid from supplier2 for auc_sk2_wheels: cost=65, time=5
+[AuctionSkateArt] New best bid from supplier2 for auc_sk2_wheels: cost=65
+[AuctionSkateArt] Bid from supplier1 for auc_sk2_wheels: cost=70, time=4
+[supplier2] [supplier] Bid placed for auc_sk2_wheels: cost=65, time=5
+[supplier1] [supplier] Bid placed for auc_sk2_wheels: cost=70, time=4
+[AuctionSkateArt] Closed auction auc_sk2_wheels: winner=supplier2, cost=65, time=5
+[assembly] [assembly] (AUCTION) Closed auc_sk2_wheels winner=supplier2 cost=65 time=5
+[assembly] [assembly] Winner supplier2 has reputation: 0.6
+[assembly] [assembly] (AUCTION) Opening auction auc_sk2_rails for part rails
+[assembly] [assembly] Contracted supplier2 for part wheels (cost=65, reputation=0.6)
+[AuctionSkateArt] Started auction auc_sk2_rails for part: rails
+[supplier2] [supplier] Received auction announcement: auc_sk2_rails for part: rails
+[supplier1] [supplier] Received auction announcement: auc_sk2_rails for part: rails
+[AuctionSkateArt] Bid from supplier2 for auc_sk2_rails: cost=60, time=4
+[AuctionSkateArt] New best bid from supplier2 for auc_sk2_rails: cost=60
+[AuctionSkateArt] Bid from supplier1 for auc_sk2_rails: cost=55, time=5
+[AuctionSkateArt] New best bid from supplier1 for auc_sk2_rails: cost=55
+[supplier2] [supplier] Bid placed for auc_sk2_rails: cost=60, time=4
+[supplier1] [supplier] Bid placed for auc_sk2_rails: cost=55, time=5
+[AuctionSkateArt] Closed auction auc_sk2_rails: winner=supplier1, cost=55, time=5
+[assembly] [assembly] (AUCTION) Closed auc_sk2_rails winner=supplier1 cost=55 time=5
+[assembly] [assembly] Winner supplier1 has reputation: 0.8
+[assembly] [assembly] (AUCTION) Opening auction auc_sk2_connectivity_box for part connectivity_box
+[assembly] [assembly] Contracted supplier1 for part rails (cost=55, reputation=0.8)
+[AuctionSkateArt] Started auction auc_sk2_connectivity_box for part: connectivity_box
+[supplier1] [supplier] Received auction announcement: auc_sk2_connectivity_box for part: connectivity_box
+[supplier2] [supplier] Received auction announcement: auc_sk2_connectivity_box for part: connectivity_box
+[AuctionSkateArt] Bid from supplier1 for auc_sk2_connectivity_box: cost=80, time=6
+[AuctionSkateArt] New best bid from supplier1 for auc_sk2_connectivity_box: cost=80
+[AuctionSkateArt] Bid from supplier2 for auc_sk2_connectivity_box: cost=75, time=7
+[AuctionSkateArt] New best bid from supplier2 for auc_sk2_connectivity_box: cost=75
+[supplier1] [supplier] Bid placed for auc_sk2_connectivity_box: cost=80, time=6
+[supplier2] [supplier] Bid placed for auc_sk2_connectivity_box: cost=75, time=7
+[AuctionSkateArt] Closed auction auc_sk2_connectivity_box: winner=supplier2, cost=75, time=7
+[assembly] [assembly] (AUCTION) Closed auc_sk2_connectivity_box winner=supplier2 cost=75 time=7
+[assembly] [assembly] Winner supplier2 has reputation: 0.6
+[assembly] [assembly] Contracted supplier2 for part connectivity_box (cost=75, reputation=0.6)
+[assembly] [assembly] Waiting auction result for board (auc_sk2_board)...
+[assembly] [assembly] Waiting auction result for trunks (auc_sk2_trunks)...
+[assembly] [assembly] Waiting auction result for wheels (auc_sk2_wheels)...
+[assembly] [assembly] Waiting auction result for rails (auc_sk2_rails)...
+[assembly] [assembly] Waiting auction result for connectivity_box (auc_sk2_connectivity_box)...
+[assembly] [assembly] All auctions closed for sk2
+[assembly] [assembly] Requesting all deliveries for sk2
+[assembly] [assembly] Requesting delivery of board from supplier1
+[assembly] [assembly] Requesting delivery of trunks from supplier2
+[supplier1] [supplier] Delivering part board for order sk2...
+[supplier2] [supplier] Delivering part trunks for order sk2...
+[assembly] [assembly] Requesting delivery of wheels from supplier2
+[supplier2] [supplier] Delivering part wheels for order sk2...
+[assembly] [assembly] Requesting delivery of rails from supplier1
+[assembly] [assembly] Requesting delivery of connectivity_box from supplier2
+[supplier1] [supplier] Delivering part rails for order sk2...
+[supplier2] [supplier] Delivering part connectivity_box for order sk2...
+[supplier2] [supplier] Part wheels delivered for order sk2
+[supplier1] [supplier] Part board delivered for order sk2
+[assembly] [assembly] Part board delivered by supplier1
+[assembly] [assembly] Part wheels delivered by supplier2
+[supplier1] [supplier] Part rails delivered for order sk2
+[assembly] [assembly] Part rails delivered by supplier1
+[supplier2] [supplier] Part trunks delivered for order sk2
+[assembly] [assembly] Part trunks delivered by supplier2
+[supplier2] [supplier] Part connectivity_box delivered for order sk2
+[assembly] [assembly] Part connectivity_box delivered by supplier2
+[assembly] [assembly] All parts delivered for order sk2
+[assembly] [assembly] Starting workstation allocation for sk2
+[assembly] [assembly] Part board needs no assembly operation
+[assembly] [assembly] Sending CFP for operation assemble_trunks (part trunks)
+[wa_rails1] [wa_rails1] I don't support operation assemble_trunks, ignoring.
+[wa_wheels1] [wa_wheels1] I don't support operation assemble_trunks, ignoring.
+[wa_trunks1] [wa_trunks1] CFP for assemble_trunks in order sk2 -> energy=8, time=4
+[wa_conn1] [wa_conn1] I don't support operation assemble_trunks, ignoring.
+[wa_wheels2] [wa_wheels2] I don't support operation assemble_trunks, ignoring.
+[wa_qc1] [wa_qc1] I don't support operation assemble_trunks, ignoring.
+[wa_trunks2] [wa_trunks2] CFP for assemble_trunks in order sk2 -> energy=5, time=5
+[assembly] [assembly] Proposal from wa_trunks1 for assemble_trunks: energy=8, time=4
+[assembly] [assembly] Proposal from wa_trunks2 for assemble_trunks: energy=5, time=5
+[assembly] [assembly] Selected wa_trunks2 for assemble_trunks (part trunks): energy=5
+[assembly] [assembly] Sending CFP for operation assemble_wheels (part wheels)
+[wa_trunks2] [wa_trunks2] I don't support operation assemble_wheels (order sk2), ignoring CFP.
+[wa_conn1] [wa_conn1] I don't support operation assemble_wheels, ignoring.
+[wa_wheels2] [wa_wheels2] CFP for assemble_wheels -> energy=4, time=4
+[wa_rails1] [wa_rails1] I don't support operation assemble_wheels, ignoring.
+[wa_qc1] [wa_qc1] I don't support operation assemble_wheels, ignoring.
+[wa_wheels1] [wa_wheels1] CFP for assemble_wheels -> energy=7, time=3
+[wa_trunks1] [wa_trunks1] I don't support operation assemble_wheels (order sk2), ignoring CFP.
+[assembly] [assembly] Proposal from wa_wheels2 for assemble_wheels: energy=4, time=4
+[assembly] [assembly] Proposal from wa_wheels1 for assemble_wheels: energy=7, time=3
+[assembly] [assembly] Selected wa_wheels2 for assemble_wheels (part wheels): energy=4
+[assembly] [assembly] Sending CFP for operation assemble_rails (part rails)
+[wa_trunks2] [wa_trunks2] I don't support operation assemble_rails (order sk2), ignoring CFP.
+[wa_trunks1] [wa_trunks1] I don't support operation assemble_rails (order sk2), ignoring CFP.
+[wa_qc1] [wa_qc1] I don't support operation assemble_rails, ignoring.
+[wa_wheels2] [wa_wheels2] I don't support operation assemble_rails, ignoring.
+[wa_conn1] [wa_conn1] I don't support operation assemble_rails, ignoring.
+[wa_rails1] [wa_rails1] CFP for assemble_rails -> energy=6, time=4
+[wa_wheels1] [wa_wheels1] I don't support operation assemble_rails, ignoring.
+[assembly] [assembly] Proposal from wa_rails1 for assemble_rails: energy=6, time=4
+[assembly] [assembly] Selected wa_rails1 for assemble_rails (part rails): energy=6
+[assembly] [assembly] Sending CFP for operation assemble_connectivity_box (part connectivity_box)
+[wa_trunks2] [wa_trunks2] I don't support operation assemble_connectivity_box (order sk2), ignoring CFP.
+[wa_wheels1] [wa_wheels1] I don't support operation assemble_connectivity_box, ignoring.
+[wa_rails1] [wa_rails1] I don't support operation assemble_connectivity_box, ignoring.
+[wa_qc1] [wa_qc1] I don't support operation assemble_connectivity_box, ignoring.
+[wa_trunks1] [wa_trunks1] I don't support operation assemble_connectivity_box (order sk2), ignoring CFP.
+[wa_wheels2] [wa_wheels2] I don't support operation assemble_connectivity_box, ignoring.
+[wa_conn1] [wa_conn1] CFP for assemble_connectivity_box -> energy=9, time=5
+[assembly] [assembly] Proposal from wa_conn1 for assemble_connectivity_box: energy=9, time=5
+[assembly] [assembly] Selected wa_conn1 for assemble_connectivity_box (part connectivity_box): energy=9
+[assembly] [assembly] All workstations allocated for order sk2
+[assembly] [assembly] Starting assembly of skateboard sk2
+[assembly] [assembly] Part board needs no assembly operation, skipping.
+[assembly] [assembly] Running operation assemble_trunks for part trunks on wa_trunks2
+[WorkstationRegistry] wa_trunks2 is now busy
+[wa_trunks2] [wa_trunks2] Performing assemble_trunks for part trunks of order sk2
+[assembly] [assembly] Workstation wa_trunks2 (assemble_trunks) is now BUSY
+[assembly] [assembly] Available workstations: 6
+[WorkstationRegistry] wa_trunks2 is now available
+[assembly] [assembly] Workstation wa_trunks2 (assemble_trunks) is now AVAILABLE
+[assembly] [assembly] Available workstations: 7
+[assembly] [assembly] Operation assemble_trunks for part trunks finished on wa_trunks2 (order sk2)
+[assembly] [assembly] Running operation assemble_wheels for part wheels on wa_wheels2
+[WorkstationRegistry] wa_wheels2 is now busy
+[wa_wheels2] [wa_wheels2] Performing assemble_wheels for wheels
+[assembly] [assembly] Workstation wa_wheels2 (assemble_wheels) is now BUSY
+[assembly] [assembly] Available workstations: 6
+[WorkstationRegistry] wa_wheels2 is now available
+[assembly] [assembly] Operation assemble_wheels for part wheels finished on wa_wheels2 (order sk2)
+[assembly] [assembly] Available workstations: 7
+[assembly] [assembly] Workstation wa_wheels2 (assemble_wheels) is now AVAILABLE
+[assembly] [assembly] Running operation assemble_rails for part rails on wa_rails1
+[WorkstationRegistry] wa_rails1 is now busy
+[wa_rails1] [wa_rails1] Performing assemble_rails for rails
+[assembly] [assembly] Workstation wa_rails1 (assemble_rails) is now BUSY
+[assembly] [assembly] Available workstations: 6
+[WorkstationRegistry] wa_rails1 is now available
+[assembly] [assembly] Operation assemble_rails for part rails finished on wa_rails1 (order sk2)
+[assembly] [assembly] Available workstations: 7
+[assembly] [assembly] Workstation wa_rails1 (assemble_rails) is now AVAILABLE
+[assembly] [assembly] Running operation assemble_connectivity_box for part connectivity_box on wa_conn1
+[WorkstationRegistry] wa_conn1 is now busy
+[wa_conn1] [wa_conn1] Performing assemble_connectivity_box for connectivity_box
+[assembly] [assembly] Workstation wa_conn1 (assemble_connectivity_box) is now BUSY
+[assembly] [assembly] Available workstations: 6
+[WorkstationRegistry] wa_conn1 is now available
+[assembly] [assembly] Operation assemble_connectivity_box for part connectivity_box finished on wa_conn1 (order sk2)
+[assembly] [assembly] Available workstations: 7
+[assembly] [assembly] Workstation wa_conn1 (assemble_connectivity_box) is now AVAILABLE
+[assembly] [assembly] Skateboard sk2 fully assembled
+[assembly] [assembly] Sent result to customer for order sk2
+[customer] [customer] Final result for sk2: Skateboard assembled successfully
+els, ignoring.
+[wa_qc1] [wa_qc1] I don't support operation assemble_wheels, ignoring.
+[wa_wheels1] [wa_wheels1] CFP for assemble_wheels -> energy=7, time=3
+[wa_trunks1] [wa_trunks1] I don't support operation assemble_wheels (order sk2), ignoring CFP.
+[assembly] [assembly] Proposal from wa_wheels2 for assemble_wheels: energy=4, time=4
+[assembly] [assembly] Proposal from wa_wheels1 for assemble_wheels: energy=7, time=3
+[assembly] [assembly] Selected wa_wheels2 for assemble_wheels (part wheels): energy=4
+[assembly] [assembly] Sending CFP for operation assemble_rails (part rails)
+[wa_trunks2] [wa_trunks2] I don't support operation assemble_rails (order sk2), ignoring CFP.
+[wa_trunks1] [wa_trunks1] I don't support operation assemble_rails (order sk2), ignoring CFP.
+[wa_qc1] [wa_qc1] I don't support operation assemble_rails, ignoring.
+[wa_wheels2] [wa_wheels2] I don't support operation assemble_rails, ignoring.
+[wa_conn1] [wa_conn1] I don't support operation assemble_rails, ignoring.
+[wa_rails1] [wa_rails1] CFP for assemble_rails -> energy=6, time=4
+[wa_wheels1] [wa_wheels1] I don't support operation assemble_rails, ignoring.
+[assembly] [assembly] Proposal from wa_rails1 for assemble_rails: energy=6, time=4
+[assembly] [assembly] Selected wa_rails1 for assemble_rails (part rails): energy=6
+[assembly] [assembly] Sending CFP for operation assemble_connectivity_box (part connectivity_box)
+[wa_trunks2] [wa_trunks2] I don't support operation assemble_connectivity_box (order sk2), ignoring CFP.
+[wa_wheels1] [wa_wheels1] I don't support operation assemble_connectivity_box, ignoring.
+[wa_rails1] [wa_rails1] I don't support operation assemble_connectivity_box, ignoring.
+[wa_qc1] [wa_qc1] I don't support operation assemble_connectivity_box, ignoring.
+[wa_trunks1] [wa_trunks1] I don't support operation assemble_connectivity_box (order sk2), ignoring CFP.
+[wa_wheels2] [wa_wheels2] I don't support operation assemble_connectivity_box, ignoring.
+[wa_conn1] [wa_conn1] CFP for assemble_connectivity_box -> energy=9, time=5
+[assembly] [assembly] Proposal from wa_conn1 for assemble_connectivity_box: energy=9, time=5
+[assembly] [assembly] Selected wa_conn1 for assemble_connectivity_box (part connectivity_box): energy=9
+[assembly] [assembly] All workstations allocated for order sk2
+[assembly] [assembly] Starting assembly of skateboard sk2
+[assembly] [assembly] Part board needs no assembly operation, skipping.
+[assembly] [assembly] Running operation assemble_trunks for part trunks on wa_trunks2
+[WorkstationRegistry] wa_trunks2 is now busy
+[wa_trunks2] [wa_trunks2] Performing assemble_trunks for part trunks of order sk2
+[assembly] [assembly] Workstation wa_trunks2 (assemble_trunks) is now BUSY
+[assembly] [assembly] Available workstations: 6
+[WorkstationRegistry] wa_trunks2 is now available
+[assembly] [assembly] Workstation wa_trunks2 (assemble_trunks) is now AVAILABLE
+[assembly] [assembly] Available workstations: 7
+[assembly] [assembly] Operation assemble_trunks for part trunks finished on wa_trunks2 (order sk2)
+[assembly] [assembly] Running operation assemble_wheels for part wheels on wa_wheels2
+[WorkstationRegistry] wa_wheels2 is now busy
+[wa_wheels2] [wa_wheels2] Performing assemble_wheels for wheels
+[assembly] [assembly] Workstation wa_wheels2 (assemble_wheels) is now BUSY
+[assembly] [assembly] Available workstations: 6
+[WorkstationRegistry] wa_wheels2 is now available
+[assembly] [assembly] Operation assemble_wheels for part wheels finished on wa_wheels2 (order sk2)
+[assembly] [assembly] Available workstations: 7
+[assembly] [assembly] Workstation wa_wheels2 (assemble_wheels) is now AVAILABLE
+[assembly] [assembly] Running operation assemble_rails for part rails on wa_rails1
+[WorkstationRegistry] wa_rails1 is now busy
+[wa_rails1] [wa_rails1] Performing assemble_rails for rails
+[assembly] [assembly] Workstation wa_rails1 (assemble_rails) is now BUSY
+[assembly] [assembly] Available workstations: 6
+[WorkstationRegistry] wa_rails1 is now available
+[assembly] [assembly] Operation assemble_rails for part rails finished on wa_rails1 (order sk2)
+[assembly] [assembly] Available workstations: 7
+[assembly] [assembly] Workstation wa_rails1 (assemble_rails) is now AVAILABLE
+[assembly] [assembly] Running operation assemble_connectivity_box for part connectivity_box on wa_conn1
+[WorkstationRegistry] wa_conn1 is now busy
+[wa_conn1] [wa_conn1] Performing assemble_connectivity_box for connectivity_box
+[assembly] [assembly] Workstation wa_conn1 (assemble_connectivity_box) is now BUSY
+[assembly] [assembly] Available workstations: 6
+[WorkstationRegistry] wa_conn1 is now available
+[assembly] [assembly] Operation assemble_connectivity_box for part connectivity_box finished on wa_conn1 (order sk2)
+[assembly] [assembly] Available workstations: 7
+[assembly] [assembly] Workstation wa_conn1 (assemble_connectivity_box) is now AVAILABLE
+[assembly] [assembly] Skateboard sk2 fully assembled
+[assembly] [assembly] Sent result to customer for order sk2
+[customer] [customer] Final result for sk2: Skateboard assembled successfully

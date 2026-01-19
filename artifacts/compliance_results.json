@@ -1,0 +1,3006 @@
+{
+  "role_mapping": {
+    "Moise": {
+      "agent_id": "Moise",
+      "inferred_role": null,
+      "confidence": "unknown",
+      "evidence": "No role match found for 'Moise'"
+    },
+    "wa_wheels1": {
+      "agent_id": "wa_wheels1",
+      "inferred_role": null,
+      "confidence": "unknown",
+      "evidence": "No role match found for 'wa_wheels1'"
+    },
+    "assembly": {
+      "agent_id": "assembly",
+      "inferred_role": "assembly_agent",
+      "confidence": "substring_reverse",
+      "evidence": "Matched 'assembly' to role 'assembly_agent' via substring_reverse"
+    },
+    "wa_conn1": {
+      "agent_id": "wa_conn1",
+      "inferred_role": null,
+      "confidence": "unknown",
+      "evidence": "No role match found for 'wa_conn1'"
+    },
+    "Cartago": {
+      "agent_id": "Cartago",
+      "inferred_role": null,
+      "confidence": "unknown",
+      "evidence": "No role match found for 'Cartago'"
+    },
+    "WorkstationRegistry": {
+      "agent_id": "WorkstationRegistry",
+      "inferred_role": null,
+      "confidence": "unknown",
+      "evidence": "No role match found for 'WorkstationRegistry'"
+    },
+    "supplier1": {
+      "agent_id": "supplier1",
+      "inferred_role": "supplier",
+      "confidence": "substring",
+      "evidence": "Matched 'supplier1' to role 'supplier' via substring"
+    },
+    "supplier2": {
+      "agent_id": "supplier2",
+      "inferred_role": "supplier",
+      "confidence": "substring",
+      "evidence": "Matched 'supplier2' to role 'supplier' via substring"
+    },
+    "wa_trunks1": {
+      "agent_id": "wa_trunks1",
+      "inferred_role": null,
+      "confidence": "unknown",
+      "evidence": "No role match found for 'wa_trunks1'"
+    },
+    "wa_rails1": {
+      "agent_id": "wa_rails1",
+      "inferred_role": null,
+      "confidence": "unknown",
+      "evidence": "No role match found for 'wa_rails1'"
+    },
+    "inspector": {
+      "agent_id": "inspector",
+      "inferred_role": null,
+      "confidence": "unknown",
+      "evidence": "No role match found for 'inspector'"
+    },
+    "wa_qc1": {
+      "agent_id": "wa_qc1",
+      "inferred_role": null,
+      "confidence": "unknown",
+      "evidence": "No role match found for 'wa_qc1'"
+    },
+    "wa_trunks2": {
+      "agent_id": "wa_trunks2",
+      "inferred_role": null,
+      "confidence": "unknown",
+      "evidence": "No role match found for 'wa_trunks2'"
+    },
+    "WorkstationArt": {
+      "agent_id": "WorkstationArt",
+      "inferred_role": null,
+      "confidence": "unknown",
+      "evidence": "No role match found for 'WorkstationArt'"
+    },
+    "els,": {
+      "agent_id": "els,",
+      "inferred_role": "ws_wheels",
+      "confidence": "substring_reverse",
+      "evidence": "Matched 'els,' to role 'ws_wheels' via substring_reverse"
+    },
+    "customer": {
+      "agent_id": "customer",
+      "inferred_role": "customer",
+      "confidence": "exact",
+      "evidence": "Matched 'customer' to role 'customer' via exact"
+    },
+    "Server": {
+      "agent_id": "Server",
+      "inferred_role": null,
+      "confidence": "unknown",
+      "evidence": "No role match found for 'Server'"
+    },
+    "AuctionSkateArt": {
+      "agent_id": "AuctionSkateArt",
+      "inferred_role": null,
+      "confidence": "unknown",
+      "evidence": "No role match found for 'AuctionSkateArt'"
+    },
+    "(RTS)": {
+      "agent_id": "(RTS)",
+      "inferred_role": null,
+      "confidence": "unknown",
+      "evidence": "No role match found for '(RTS)'"
+    },
+    "wa_wheels2": {
+      "agent_id": "wa_wheels2",
+      "inferred_role": null,
+      "confidence": "unknown",
+      "evidence": "No role match found for 'wa_wheels2'"
+    }
+  },
+  "applicability_matrix": [
+    {
+      "norm_id": "n1",
+      "agent_id": "Moise",
+      "applies": false,
+      "reason": "Agent role 'None' does not match norm requirement 'assembly_agent'"
+    },
+    {
+      "norm_id": "n1",
+      "agent_id": "wa_wheels1",
+      "applies": false,
+      "reason": "Agent role 'None' does not match norm requirement 'assembly_agent'"
+    },
+    {
+      "norm_id": "n1",
+      "agent_id": "assembly",
+      "applies": true,
+      "reason": "Agent role 'assembly_agent' matches norm requirement 'assembly_agent' (substring_reverse)"
+    },
+    {
+      "norm_id": "n1",
+      "agent_id": "wa_conn1",
+      "applies": false,
+      "reason": "Agent role 'None' does not match norm requirement 'assembly_agent'"
+    },
+    {
+      "norm_id": "n1",
+      "agent_id": "Cartago",
+      "applies": false,
+      "reason": "Agent role 'None' does not match norm requirement 'assembly_agent'"
+    },
+    {
+      "norm_id": "n1",
+      "agent_id": "WorkstationRegistry",
+      "applies": false,
+      "reason": "Agent role 'None' does not match norm requirement 'assembly_agent'"
+    },
+    {
+      "norm_id": "n1",
+      "agent_id": "supplier1",
+      "applies": false,
+      "reason": "Agent role 'supplier' does not match norm requirement 'assembly_agent'"
+    },
+    {
+      "norm_id": "n1",
+      "agent_id": "supplier2",
+      "applies": false,
+      "reason": "Agent role 'supplier' does not match norm requirement 'assembly_agent'"
+    },
+    {
+      "norm_id": "n1",
+      "agent_id": "wa_trunks1",
+      "applies": false,
+      "reason": "Agent role 'None' does not match norm requirement 'assembly_agent'"
+    },
+    {
+      "norm_id": "n1",
+      "agent_id": "wa_rails1",
+      "applies": false,
+      "reason": "Agent role 'None' does not match norm requirement 'assembly_agent'"
+    },
+    {
+      "norm_id": "n1",
+      "agent_id": "inspector",
+      "applies": false,
+      "reason": "Agent role 'None' does not match norm requirement 'assembly_agent'"
+    },
+    {
+      "norm_id": "n1",
+      "agent_id": "wa_qc1",
+      "applies": false,
+      "reason": "Agent role 'None' does not match norm requirement 'assembly_agent'"
+    },
+    {
+      "norm_id": "n1",
+      "agent_id": "wa_trunks2",
+      "applies": false,
+      "reason": "Agent role 'None' does not match norm requirement 'assembly_agent'"
+    },
+    {
+      "norm_id": "n1",
+      "agent_id": "WorkstationArt",
+      "applies": false,
+      "reason": "Agent role 'None' does not match norm requirement 'assembly_agent'"
+    },
+    {
+      "norm_id": "n1",
+      "agent_id": "els,",
+      "applies": false,
+      "reason": "Agent role 'ws_wheels' does not match norm requirement 'assembly_agent'"
+    },
+    {
+      "norm_id": "n1",
+      "agent_id": "customer",
+      "applies": false,
+      "reason": "Agent role 'customer' does not match norm requirement 'assembly_agent'"
+    },
+    {
+      "norm_id": "n1",
+      "agent_id": "Server",
+      "applies": false,
+      "reason": "Agent role 'None' does not match norm requirement 'assembly_agent'"
+    },
+    {
+      "norm_id": "n1",
+      "agent_id": "AuctionSkateArt",
+      "applies": false,
+      "reason": "Agent role 'None' does not match norm requirement 'assembly_agent'"
+    },
+    {
+      "norm_id": "n1",
+      "agent_id": "(RTS)",
+      "applies": false,
+      "reason": "Agent role 'None' does not match norm requirement 'assembly_agent'"
+    },
+    {
+      "norm_id": "n1",
+      "agent_id": "wa_wheels2",
+      "applies": false,
+      "reason": "Agent role 'None' does not match norm requirement 'assembly_agent'"
+    },
+    {
+      "norm_id": "n2",
+      "agent_id": "Moise",
+      "applies": false,
+      "reason": "Agent role 'None' does not match norm requirement 'customer'"
+    },
+    {
+      "norm_id": "n2",
+      "agent_id": "wa_wheels1",
+      "applies": false,
+      "reason": "Agent role 'None' does not match norm requirement 'customer'"
+    },
+    {
+      "norm_id": "n2",
+      "agent_id": "assembly",
+      "applies": false,
+      "reason": "Agent role 'assembly_agent' does not match norm requirement 'customer'"
+    },
+    {
+      "norm_id": "n2",
+      "agent_id": "wa_conn1",
+      "applies": false,
+      "reason": "Agent role 'None' does not match norm requirement 'customer'"
+    },
+    {
+      "norm_id": "n2",
+      "agent_id": "Cartago",
+      "applies": false,
+      "reason": "Agent role 'None' does not match norm requirement 'customer'"
+    },
+    {
+      "norm_id": "n2",
+      "agent_id": "WorkstationRegistry",
+      "applies": false,
+      "reason": "Agent role 'None' does not match norm requirement 'customer'"
+    },
+    {
+      "norm_id": "n2",
+      "agent_id": "supplier1",
+      "applies": false,
+      "reason": "Agent role 'supplier' does not match norm requirement 'customer'"
+    },
+    {
+      "norm_id": "n2",
+      "agent_id": "supplier2",
+      "applies": false,
+      "reason": "Agent role 'supplier' does not match norm requirement 'customer'"
+    },
+    {
+      "norm_id": "n2",
+      "agent_id": "wa_trunks1",
+      "applies": false,
+      "reason": "Agent role 'None' does not match norm requirement 'customer'"
+    },
+    {
+      "norm_id": "n2",
+      "agent_id": "wa_rails1",
+      "applies": false,
+      "reason": "Agent role 'None' does not match norm requirement 'customer'"
+    },
+    {
+      "norm_id": "n2",
+      "agent_id": "inspector",
+      "applies": false,
+      "reason": "Agent role 'None' does not match norm requirement 'customer'"
+    },
+    {
+      "norm_id": "n2",
+      "agent_id": "wa_qc1",
+      "applies": false,
+      "reason": "Agent role 'None' does not match norm requirement 'customer'"
+    },
+    {
+      "norm_id": "n2",
+      "agent_id": "wa_trunks2",
+      "applies": false,
+      "reason": "Agent role 'None' does not match norm requirement 'customer'"
+    },
+    {
+      "norm_id": "n2",
+      "agent_id": "WorkstationArt",
+      "applies": false,
+      "reason": "Agent role 'None' does not match norm requirement 'customer'"
+    },
+    {
+      "norm_id": "n2",
+      "agent_id": "els,",
+      "applies": false,
+      "reason": "Agent role 'ws_wheels' does not match norm requirement 'customer'"
+    },
+    {
+      "norm_id": "n2",
+      "agent_id": "customer",
+      "applies": true,
+      "reason": "Agent role 'customer' matches norm requirement 'customer' (exact)"
+    },
+    {
+      "norm_id": "n2",
+      "agent_id": "Server",
+      "applies": false,
+      "reason": "Agent role 'None' does not match norm requirement 'customer'"
+    },
+    {
+      "norm_id": "n2",
+      "agent_id": "AuctionSkateArt",
+      "applies": false,
+      "reason": "Agent role 'None' does not match norm requirement 'customer'"
+    },
+    {
+      "norm_id": "n2",
+      "agent_id": "(RTS)",
+      "applies": false,
+      "reason": "Agent role 'None' does not match norm requirement 'customer'"
+    },
+    {
+      "norm_id": "n2",
+      "agent_id": "wa_wheels2",
+      "applies": false,
+      "reason": "Agent role 'None' does not match norm requirement 'customer'"
+    },
+    {
+      "norm_id": "n3",
+      "agent_id": "Moise",
+      "applies": false,
+      "reason": "Agent role 'None' does not match norm requirement 'assembly_agent'"
+    },
+    {
+      "norm_id": "n3",
+      "agent_id": "wa_wheels1",
+      "applies": false,
+      "reason": "Agent role 'None' does not match norm requirement 'assembly_agent'"
+    },
+    {
+      "norm_id": "n3",
+      "agent_id": "assembly",
+      "applies": true,
+      "reason": "Agent role 'assembly_agent' matches norm requirement 'assembly_agent' (substring_reverse)"
+    },
+    {
+      "norm_id": "n3",
+      "agent_id": "wa_conn1",
+      "applies": false,
+      "reason": "Agent role 'None' does not match norm requirement 'assembly_agent'"
+    },
+    {
+      "norm_id": "n3",
+      "agent_id": "Cartago",
+      "applies": false,
+      "reason": "Agent role 'None' does not match norm requirement 'assembly_agent'"
+    },
+    {
+      "norm_id": "n3",
+      "agent_id": "WorkstationRegistry",
+      "applies": false,
+      "reason": "Agent role 'None' does not match norm requirement 'assembly_agent'"
+    },
+    {
+      "norm_id": "n3",
+      "agent_id": "supplier1",
+      "applies": false,
+      "reason": "Agent role 'supplier' does not match norm requirement 'assembly_agent'"
+    },
+    {
+      "norm_id": "n3",
+      "agent_id": "supplier2",
+      "applies": false,
+      "reason": "Agent role 'supplier' does not match norm requirement 'assembly_agent'"
+    },
+    {
+      "norm_id": "n3",
+      "agent_id": "wa_trunks1",
+      "applies": false,
+      "reason": "Agent role 'None' does not match norm requirement 'assembly_agent'"
+    },
+    {
+      "norm_id": "n3",
+      "agent_id": "wa_rails1",
+      "applies": false,
+      "reason": "Agent role 'None' does not match norm requirement 'assembly_agent'"
+    },
+    {
+      "norm_id": "n3",
+      "agent_id": "inspector",
+      "applies": false,
+      "reason": "Agent role 'None' does not match norm requirement 'assembly_agent'"
+    },
+    {
+      "norm_id": "n3",
+      "agent_id": "wa_qc1",
+      "applies": false,
+      "reason": "Agent role 'None' does not match norm requirement 'assembly_agent'"
+    },
+    {
+      "norm_id": "n3",
+      "agent_id": "wa_trunks2",
+      "applies": false,
+      "reason": "Agent role 'None' does not match norm requirement 'assembly_agent'"
+    },
+    {
+      "norm_id": "n3",
+      "agent_id": "WorkstationArt",
+      "applies": false,
+      "reason": "Agent role 'None' does not match norm requirement 'assembly_agent'"
+    },
+    {
+      "norm_id": "n3",
+      "agent_id": "els,",
+      "applies": false,
+      "reason": "Agent role 'ws_wheels' does not match norm requirement 'assembly_agent'"
+    },
+    {
+      "norm_id": "n3",
+      "agent_id": "customer",
+      "applies": false,
+      "reason": "Agent role 'customer' does not match norm requirement 'assembly_agent'"
+    },
+    {
+      "norm_id": "n3",
+      "agent_id": "Server",
+      "applies": false,
+      "reason": "Agent role 'None' does not match norm requirement 'assembly_agent'"
+    },
+    {
+      "norm_id": "n3",
+      "agent_id": "AuctionSkateArt",
+      "applies": false,
+      "reason": "Agent role 'None' does not match norm requirement 'assembly_agent'"
+    },
+    {
+      "norm_id": "n3",
+      "agent_id": "(RTS)",
+      "applies": false,
+      "reason": "Agent role 'None' does not match norm requirement 'assembly_agent'"
+    },
+    {
+      "norm_id": "n3",
+      "agent_id": "wa_wheels2",
+      "applies": false,
+      "reason": "Agent role 'None' does not match norm requirement 'assembly_agent'"
+    },
+    {
+      "norm_id": "n4",
+      "agent_id": "Moise",
+      "applies": false,
+      "reason": "Agent role 'None' does not match norm requirement 'assembly_agent'"
+    },
+    {
+      "norm_id": "n4",
+      "agent_id": "wa_wheels1",
+      "applies": false,
+      "reason": "Agent role 'None' does not match norm requirement 'assembly_agent'"
+    },
+    {
+      "norm_id": "n4",
+      "agent_id": "assembly",
+      "applies": true,
+      "reason": "Agent role 'assembly_agent' matches norm requirement 'assembly_agent' (substring_reverse)"
+    },
+    {
+      "norm_id": "n4",
+      "agent_id": "wa_conn1",
+      "applies": false,
+      "reason": "Agent role 'None' does not match norm requirement 'assembly_agent'"
+    },
+    {
+      "norm_id": "n4",
+      "agent_id": "Cartago",
+      "applies": false,
+      "reason": "Agent role 'None' does not match norm requirement 'assembly_agent'"
+    },
+    {
+      "norm_id": "n4",
+      "agent_id": "WorkstationRegistry",
+      "applies": false,
+      "reason": "Agent role 'None' does not match norm requirement 'assembly_agent'"
+    },
+    {
+      "norm_id": "n4",
+      "agent_id": "supplier1",
+      "applies": false,
+      "reason": "Agent role 'supplier' does not match norm requirement 'assembly_agent'"
+    },
+    {
+      "norm_id": "n4",
+      "agent_id": "supplier2",
+      "applies": false,
+      "reason": "Agent role 'supplier' does not match norm requirement 'assembly_agent'"
+    },
+    {
+      "norm_id": "n4",
+      "agent_id": "wa_trunks1",
+      "applies": false,
+      "reason": "Agent role 'None' does not match norm requirement 'assembly_agent'"
+    },
+    {
+      "norm_id": "n4",
+      "agent_id": "wa_rails1",
+      "applies": false,
+      "reason": "Agent role 'None' does not match norm requirement 'assembly_agent'"
+    },
+    {
+      "norm_id": "n4",
+      "agent_id": "inspector",
+      "applies": false,
+      "reason": "Agent role 'None' does not match norm requirement 'assembly_agent'"
+    },
+    {
+      "norm_id": "n4",
+      "agent_id": "wa_qc1",
+      "applies": false,
+      "reason": "Agent role 'None' does not match norm requirement 'assembly_agent'"
+    },
+    {
+      "norm_id": "n4",
+      "agent_id": "wa_trunks2",
+      "applies": false,
+      "reason": "Agent role 'None' does not match norm requirement 'assembly_agent'"
+    },
+    {
+      "norm_id": "n4",
+      "agent_id": "WorkstationArt",
+      "applies": false,
+      "reason": "Agent role 'None' does not match norm requirement 'assembly_agent'"
+    },
+    {
+      "norm_id": "n4",
+      "agent_id": "els,",
+      "applies": false,
+      "reason": "Agent role 'ws_wheels' does not match norm requirement 'assembly_agent'"
+    },
+    {
+      "norm_id": "n4",
+      "agent_id": "customer",
+      "applies": false,
+      "reason": "Agent role 'customer' does not match norm requirement 'assembly_agent'"
+    },
+    {
+      "norm_id": "n4",
+      "agent_id": "Server",
+      "applies": false,
+      "reason": "Agent role 'None' does not match norm requirement 'assembly_agent'"
+    },
+    {
+      "norm_id": "n4",
+      "agent_id": "AuctionSkateArt",
+      "applies": false,
+      "reason": "Agent role 'None' does not match norm requirement 'assembly_agent'"
+    },
+    {
+      "norm_id": "n4",
+      "agent_id": "(RTS)",
+      "applies": false,
+      "reason": "Agent role 'None' does not match norm requirement 'assembly_agent'"
+    },
+    {
+      "norm_id": "n4",
+      "agent_id": "wa_wheels2",
+      "applies": false,
+      "reason": "Agent role 'None' does not match norm requirement 'assembly_agent'"
+    },
+    {
+      "norm_id": "n5",
+      "agent_id": "Moise",
+      "applies": false,
+      "reason": "Agent role 'None' does not match norm requirement 'supplier'"
+    },
+    {
+      "norm_id": "n5",
+      "agent_id": "wa_wheels1",
+      "applies": false,
+      "reason": "Agent role 'None' does not match norm requirement 'supplier'"
+    },
+    {
+      "norm_id": "n5",
+      "agent_id": "assembly",
+      "applies": false,
+      "reason": "Agent role 'assembly_agent' does not match norm requirement 'supplier'"
+    },
+    {
+      "norm_id": "n5",
+      "agent_id": "wa_conn1",
+      "applies": false,
+      "reason": "Agent role 'None' does not match norm requirement 'supplier'"
+    },
+    {
+      "norm_id": "n5",
+      "agent_id": "Cartago",
+      "applies": false,
+      "reason": "Agent role 'None' does not match norm requirement 'supplier'"
+    },
+    {
+      "norm_id": "n5",
+      "agent_id": "WorkstationRegistry",
+      "applies": false,
+      "reason": "Agent role 'None' does not match norm requirement 'supplier'"
+    },
+    {
+      "norm_id": "n5",
+      "agent_id": "supplier1",
+      "applies": true,
+      "reason": "Agent role 'supplier' matches norm requirement 'supplier' (substring)"
+    },
+    {
+      "norm_id": "n5",
+      "agent_id": "supplier2",
+      "applies": true,
+      "reason": "Agent role 'supplier' matches norm requirement 'supplier' (substring)"
+    },
+    {
+      "norm_id": "n5",
+      "agent_id": "wa_trunks1",
+      "applies": false,
+      "reason": "Agent role 'None' does not match norm requirement 'supplier'"
+    },
+    {
+      "norm_id": "n5",
+      "agent_id": "wa_rails1",
+      "applies": false,
+      "reason": "Agent role 'None' does not match norm requirement 'supplier'"
+    },
+    {
+      "norm_id": "n5",
+      "agent_id": "inspector",
+      "applies": false,
+      "reason": "Agent role 'None' does not match norm requirement 'supplier'"
+    },
+    {
+      "norm_id": "n5",
+      "agent_id": "wa_qc1",
+      "applies": false,
+      "reason": "Agent role 'None' does not match norm requirement 'supplier'"
+    },
+    {
+      "norm_id": "n5",
+      "agent_id": "wa_trunks2",
+      "applies": false,
+      "reason": "Agent role 'None' does not match norm requirement 'supplier'"
+    },
+    {
+      "norm_id": "n5",
+      "agent_id": "WorkstationArt",
+      "applies": false,
+      "reason": "Agent role 'None' does not match norm requirement 'supplier'"
+    },
+    {
+      "norm_id": "n5",
+      "agent_id": "els,",
+      "applies": false,
+      "reason": "Agent role 'ws_wheels' does not match norm requirement 'supplier'"
+    },
+    {
+      "norm_id": "n5",
+      "agent_id": "customer",
+      "applies": false,
+      "reason": "Agent role 'customer' does not match norm requirement 'supplier'"
+    },
+    {
+      "norm_id": "n5",
+      "agent_id": "Server",
+      "applies": false,
+      "reason": "Agent role 'None' does not match norm requirement 'supplier'"
+    },
+    {
+      "norm_id": "n5",
+      "agent_id": "AuctionSkateArt",
+      "applies": false,
+      "reason": "Agent role 'None' does not match norm requirement 'supplier'"
+    },
+    {
+      "norm_id": "n5",
+      "agent_id": "(RTS)",
+      "applies": false,
+      "reason": "Agent role 'None' does not match norm requirement 'supplier'"
+    },
+    {
+      "norm_id": "n5",
+      "agent_id": "wa_wheels2",
+      "applies": false,
+      "reason": "Agent role 'None' does not match norm requirement 'supplier'"
+    },
+    {
+      "norm_id": "n6",
+      "agent_id": "Moise",
+      "applies": false,
+      "reason": "Agent role 'None' does not match norm requirement 'ws_trunks'"
+    },
+    {
+      "norm_id": "n6",
+      "agent_id": "wa_wheels1",
+      "applies": false,
+      "reason": "Agent role 'None' does not match norm requirement 'ws_trunks'"
+    },
+    {
+      "norm_id": "n6",
+      "agent_id": "assembly",
+      "applies": false,
+      "reason": "Agent role 'assembly_agent' does not match norm requirement 'ws_trunks'"
+    },
+    {
+      "norm_id": "n6",
+      "agent_id": "wa_conn1",
+      "applies": false,
+      "reason": "Agent role 'None' does not match norm requirement 'ws_trunks'"
+    },
+    {
+      "norm_id": "n6",
+      "agent_id": "Cartago",
+      "applies": false,
+      "reason": "Agent role 'None' does not match norm requirement 'ws_trunks'"
+    },
+    {
+      "norm_id": "n6",
+      "agent_id": "WorkstationRegistry",
+      "applies": false,
+      "reason": "Agent role 'None' does not match norm requirement 'ws_trunks'"
+    },
+    {
+      "norm_id": "n6",
+      "agent_id": "supplier1",
+      "applies": false,
+      "reason": "Agent role 'supplier' does not match norm requirement 'ws_trunks'"
+    },
+    {
+      "norm_id": "n6",
+      "agent_id": "supplier2",
+      "applies": false,
+      "reason": "Agent role 'supplier' does not match norm requirement 'ws_trunks'"
+    },
+    {
+      "norm_id": "n6",
+      "agent_id": "wa_trunks1",
+      "applies": false,
+      "reason": "Agent role 'None' does not match norm requirement 'ws_trunks'"
+    },
+    {
+      "norm_id": "n6",
+      "agent_id": "wa_rails1",
+      "applies": false,
+      "reason": "Agent role 'None' does not match norm requirement 'ws_trunks'"
+    },
+    {
+      "norm_id": "n6",
+      "agent_id": "inspector",
+      "applies": false,
+      "reason": "Agent role 'None' does not match norm requirement 'ws_trunks'"
+    },
+    {
+      "norm_id": "n6",
+      "agent_id": "wa_qc1",
+      "applies": false,
+      "reason": "Agent role 'None' does not match norm requirement 'ws_trunks'"
+    },
+    {
+      "norm_id": "n6",
+      "agent_id": "wa_trunks2",
+      "applies": false,
+      "reason": "Agent role 'None' does not match norm requirement 'ws_trunks'"
+    },
+    {
+      "norm_id": "n6",
+      "agent_id": "WorkstationArt",
+      "applies": false,
+      "reason": "Agent role 'None' does not match norm requirement 'ws_trunks'"
+    },
+    {
+      "norm_id": "n6",
+      "agent_id": "els,",
+      "applies": false,
+      "reason": "Agent role 'ws_wheels' does not match norm requirement 'ws_trunks'"
+    },
+    {
+      "norm_id": "n6",
+      "agent_id": "customer",
+      "applies": false,
+      "reason": "Agent role 'customer' does not match norm requirement 'ws_trunks'"
+    },
+    {
+      "norm_id": "n6",
+      "agent_id": "Server",
+      "applies": false,
+      "reason": "Agent role 'None' does not match norm requirement 'ws_trunks'"
+    },
+    {
+      "norm_id": "n6",
+      "agent_id": "AuctionSkateArt",
+      "applies": false,
+      "reason": "Agent role 'None' does not match norm requirement 'ws_trunks'"
+    },
+    {
+      "norm_id": "n6",
+      "agent_id": "(RTS)",
+      "applies": false,
+      "reason": "Agent role 'None' does not match norm requirement 'ws_trunks'"
+    },
+    {
+      "norm_id": "n6",
+      "agent_id": "wa_wheels2",
+      "applies": false,
+      "reason": "Agent role 'None' does not match norm requirement 'ws_trunks'"
+    },
+    {
+      "norm_id": "n7",
+      "agent_id": "Moise",
+      "applies": false,
+      "reason": "Agent role 'None' does not match norm requirement 'ws_wheels'"
+    },
+    {
+      "norm_id": "n7",
+      "agent_id": "wa_wheels1",
+      "applies": false,
+      "reason": "Agent role 'None' does not match norm requirement 'ws_wheels'"
+    },
+    {
+      "norm_id": "n7",
+      "agent_id": "assembly",
+      "applies": false,
+      "reason": "Agent role 'assembly_agent' does not match norm requirement 'ws_wheels'"
+    },
+    {
+      "norm_id": "n7",
+      "agent_id": "wa_conn1",
+      "applies": false,
+      "reason": "Agent role 'None' does not match norm requirement 'ws_wheels'"
+    },
+    {
+      "norm_id": "n7",
+      "agent_id": "Cartago",
+      "applies": false,
+      "reason": "Agent role 'None' does not match norm requirement 'ws_wheels'"
+    },
+    {
+      "norm_id": "n7",
+      "agent_id": "WorkstationRegistry",
+      "applies": false,
+      "reason": "Agent role 'None' does not match norm requirement 'ws_wheels'"
+    },
+    {
+      "norm_id": "n7",
+      "agent_id": "supplier1",
+      "applies": false,
+      "reason": "Agent role 'supplier' does not match norm requirement 'ws_wheels'"
+    },
+    {
+      "norm_id": "n7",
+      "agent_id": "supplier2",
+      "applies": false,
+      "reason": "Agent role 'supplier' does not match norm requirement 'ws_wheels'"
+    },
+    {
+      "norm_id": "n7",
+      "agent_id": "wa_trunks1",
+      "applies": false,
+      "reason": "Agent role 'None' does not match norm requirement 'ws_wheels'"
+    },
+    {
+      "norm_id": "n7",
+      "agent_id": "wa_rails1",
+      "applies": false,
+      "reason": "Agent role 'None' does not match norm requirement 'ws_wheels'"
+    },
+    {
+      "norm_id": "n7",
+      "agent_id": "inspector",
+      "applies": false,
+      "reason": "Agent role 'None' does not match norm requirement 'ws_wheels'"
+    },
+    {
+      "norm_id": "n7",
+      "agent_id": "wa_qc1",
+      "applies": false,
+      "reason": "Agent role 'None' does not match norm requirement 'ws_wheels'"
+    },
+    {
+      "norm_id": "n7",
+      "agent_id": "wa_trunks2",
+      "applies": false,
+      "reason": "Agent role 'None' does not match norm requirement 'ws_wheels'"
+    },
+    {
+      "norm_id": "n7",
+      "agent_id": "WorkstationArt",
+      "applies": false,
+      "reason": "Agent role 'None' does not match norm requirement 'ws_wheels'"
+    },
+    {
+      "norm_id": "n7",
+      "agent_id": "els,",
+      "applies": true,
+      "reason": "Agent role 'ws_wheels' matches norm requirement 'ws_wheels' (substring_reverse)"
+    },
+    {
+      "norm_id": "n7",
+      "agent_id": "customer",
+      "applies": false,
+      "reason": "Agent role 'customer' does not match norm requirement 'ws_wheels'"
+    },
+    {
+      "norm_id": "n7",
+      "agent_id": "Server",
+      "applies": false,
+      "reason": "Agent role 'None' does not match norm requirement 'ws_wheels'"
+    },
+    {
+      "norm_id": "n7",
+      "agent_id": "AuctionSkateArt",
+      "applies": false,
+      "reason": "Agent role 'None' does not match norm requirement 'ws_wheels'"
+    },
+    {
+      "norm_id": "n7",
+      "agent_id": "(RTS)",
+      "applies": false,
+      "reason": "Agent role 'None' does not match norm requirement 'ws_wheels'"
+    },
+    {
+      "norm_id": "n7",
+      "agent_id": "wa_wheels2",
+      "applies": false,
+      "reason": "Agent role 'None' does not match norm requirement 'ws_wheels'"
+    },
+    {
+      "norm_id": "n8",
+      "agent_id": "Moise",
+      "applies": false,
+      "reason": "Agent role 'None' does not match norm requirement 'ws_rails'"
+    },
+    {
+      "norm_id": "n8",
+      "agent_id": "wa_wheels1",
+      "applies": false,
+      "reason": "Agent role 'None' does not match norm requirement 'ws_rails'"
+    },
+    {
+      "norm_id": "n8",
+      "agent_id": "assembly",
+      "applies": false,
+      "reason": "Agent role 'assembly_agent' does not match norm requirement 'ws_rails'"
+    },
+    {
+      "norm_id": "n8",
+      "agent_id": "wa_conn1",
+      "applies": false,
+      "reason": "Agent role 'None' does not match norm requirement 'ws_rails'"
+    },
+    {
+      "norm_id": "n8",
+      "agent_id": "Cartago",
+      "applies": false,
+      "reason": "Agent role 'None' does not match norm requirement 'ws_rails'"
+    },
+    {
+      "norm_id": "n8",
+      "agent_id": "WorkstationRegistry",
+      "applies": false,
+      "reason": "Agent role 'None' does not match norm requirement 'ws_rails'"
+    },
+    {
+      "norm_id": "n8",
+      "agent_id": "supplier1",
+      "applies": false,
+      "reason": "Agent role 'supplier' does not match norm requirement 'ws_rails'"
+    },
+    {
+      "norm_id": "n8",
+      "agent_id": "supplier2",
+      "applies": false,
+      "reason": "Agent role 'supplier' does not match norm requirement 'ws_rails'"
+    },
+    {
+      "norm_id": "n8",
+      "agent_id": "wa_trunks1",
+      "applies": false,
+      "reason": "Agent role 'None' does not match norm requirement 'ws_rails'"
+    },
+    {
+      "norm_id": "n8",
+      "agent_id": "wa_rails1",
+      "applies": false,
+      "reason": "Agent role 'None' does not match norm requirement 'ws_rails'"
+    },
+    {
+      "norm_id": "n8",
+      "agent_id": "inspector",
+      "applies": false,
+      "reason": "Agent role 'None' does not match norm requirement 'ws_rails'"
+    },
+    {
+      "norm_id": "n8",
+      "agent_id": "wa_qc1",
+      "applies": false,
+      "reason": "Agent role 'None' does not match norm requirement 'ws_rails'"
+    },
+    {
+      "norm_id": "n8",
+      "agent_id": "wa_trunks2",
+      "applies": false,
+      "reason": "Agent role 'None' does not match norm requirement 'ws_rails'"
+    },
+    {
+      "norm_id": "n8",
+      "agent_id": "WorkstationArt",
+      "applies": false,
+      "reason": "Agent role 'None' does not match norm requirement 'ws_rails'"
+    },
+    {
+      "norm_id": "n8",
+      "agent_id": "els,",
+      "applies": false,
+      "reason": "Agent role 'ws_wheels' does not match norm requirement 'ws_rails'"
+    },
+    {
+      "norm_id": "n8",
+      "agent_id": "customer",
+      "applies": false,
+      "reason": "Agent role 'customer' does not match norm requirement 'ws_rails'"
+    },
+    {
+      "norm_id": "n8",
+      "agent_id": "Server",
+      "applies": false,
+      "reason": "Agent role 'None' does not match norm requirement 'ws_rails'"
+    },
+    {
+      "norm_id": "n8",
+      "agent_id": "AuctionSkateArt",
+      "applies": false,
+      "reason": "Agent role 'None' does not match norm requirement 'ws_rails'"
+    },
+    {
+      "norm_id": "n8",
+      "agent_id": "(RTS)",
+      "applies": false,
+      "reason": "Agent role 'None' does not match norm requirement 'ws_rails'"
+    },
+    {
+      "norm_id": "n8",
+      "agent_id": "wa_wheels2",
+      "applies": false,
+      "reason": "Agent role 'None' does not match norm requirement 'ws_rails'"
+    },
+    {
+      "norm_id": "n9",
+      "agent_id": "Moise",
+      "applies": false,
+      "reason": "Agent role 'None' does not match norm requirement 'ws_conn'"
+    },
+    {
+      "norm_id": "n9",
+      "agent_id": "wa_wheels1",
+      "applies": false,
+      "reason": "Agent role 'None' does not match norm requirement 'ws_conn'"
+    },
+    {
+      "norm_id": "n9",
+      "agent_id": "assembly",
+      "applies": false,
+      "reason": "Agent role 'assembly_agent' does not match norm requirement 'ws_conn'"
+    },
+    {
+      "norm_id": "n9",
+      "agent_id": "wa_conn1",
+      "applies": false,
+      "reason": "Agent role 'None' does not match norm requirement 'ws_conn'"
+    },
+    {
+      "norm_id": "n9",
+      "agent_id": "Cartago",
+      "applies": false,
+      "reason": "Agent role 'None' does not match norm requirement 'ws_conn'"
+    },
+    {
+      "norm_id": "n9",
+      "agent_id": "WorkstationRegistry",
+      "applies": false,
+      "reason": "Agent role 'None' does not match norm requirement 'ws_conn'"
+    },
+    {
+      "norm_id": "n9",
+      "agent_id": "supplier1",
+      "applies": false,
+      "reason": "Agent role 'supplier' does not match norm requirement 'ws_conn'"
+    },
+    {
+      "norm_id": "n9",
+      "agent_id": "supplier2",
+      "applies": false,
+      "reason": "Agent role 'supplier' does not match norm requirement 'ws_conn'"
+    },
+    {
+      "norm_id": "n9",
+      "agent_id": "wa_trunks1",
+      "applies": false,
+      "reason": "Agent role 'None' does not match norm requirement 'ws_conn'"
+    },
+    {
+      "norm_id": "n9",
+      "agent_id": "wa_rails1",
+      "applies": false,
+      "reason": "Agent role 'None' does not match norm requirement 'ws_conn'"
+    },
+    {
+      "norm_id": "n9",
+      "agent_id": "inspector",
+      "applies": false,
+      "reason": "Agent role 'None' does not match norm requirement 'ws_conn'"
+    },
+    {
+      "norm_id": "n9",
+      "agent_id": "wa_qc1",
+      "applies": false,
+      "reason": "Agent role 'None' does not match norm requirement 'ws_conn'"
+    },
+    {
+      "norm_id": "n9",
+      "agent_id": "wa_trunks2",
+      "applies": false,
+      "reason": "Agent role 'None' does not match norm requirement 'ws_conn'"
+    },
+    {
+      "norm_id": "n9",
+      "agent_id": "WorkstationArt",
+      "applies": false,
+      "reason": "Agent role 'None' does not match norm requirement 'ws_conn'"
+    },
+    {
+      "norm_id": "n9",
+      "agent_id": "els,",
+      "applies": false,
+      "reason": "Agent role 'ws_wheels' does not match norm requirement 'ws_conn'"
+    },
+    {
+      "norm_id": "n9",
+      "agent_id": "customer",
+      "applies": false,
+      "reason": "Agent role 'customer' does not match norm requirement 'ws_conn'"
+    },
+    {
+      "norm_id": "n9",
+      "agent_id": "Server",
+      "applies": false,
+      "reason": "Agent role 'None' does not match norm requirement 'ws_conn'"
+    },
+    {
+      "norm_id": "n9",
+      "agent_id": "AuctionSkateArt",
+      "applies": false,
+      "reason": "Agent role 'None' does not match norm requirement 'ws_conn'"
+    },
+    {
+      "norm_id": "n9",
+      "agent_id": "(RTS)",
+      "applies": false,
+      "reason": "Agent role 'None' does not match norm requirement 'ws_conn'"
+    },
+    {
+      "norm_id": "n9",
+      "agent_id": "wa_wheels2",
+      "applies": false,
+      "reason": "Agent role 'None' does not match norm requirement 'ws_conn'"
+    },
+    {
+      "norm_id": "n10",
+      "agent_id": "Moise",
+      "applies": false,
+      "reason": "Agent role 'None' does not match norm requirement 'ws_qc'"
+    },
+    {
+      "norm_id": "n10",
+      "agent_id": "wa_wheels1",
+      "applies": false,
+      "reason": "Agent role 'None' does not match norm requirement 'ws_qc'"
+    },
+    {
+      "norm_id": "n10",
+      "agent_id": "assembly",
+      "applies": false,
+      "reason": "Agent role 'assembly_agent' does not match norm requirement 'ws_qc'"
+    },
+    {
+      "norm_id": "n10",
+      "agent_id": "wa_conn1",
+      "applies": false,
+      "reason": "Agent role 'None' does not match norm requirement 'ws_qc'"
+    },
+    {
+      "norm_id": "n10",
+      "agent_id": "Cartago",
+      "applies": false,
+      "reason": "Agent role 'None' does not match norm requirement 'ws_qc'"
+    },
+    {
+      "norm_id": "n10",
+      "agent_id": "WorkstationRegistry",
+      "applies": false,
+      "reason": "Agent role 'None' does not match norm requirement 'ws_qc'"
+    },
+    {
+      "norm_id": "n10",
+      "agent_id": "supplier1",
+      "applies": false,
+      "reason": "Agent role 'supplier' does not match norm requirement 'ws_qc'"
+    },
+    {
+      "norm_id": "n10",
+      "agent_id": "supplier2",
+      "applies": false,
+      "reason": "Agent role 'supplier' does not match norm requirement 'ws_qc'"
+    },
+    {
+      "norm_id": "n10",
+      "agent_id": "wa_trunks1",
+      "applies": false,
+      "reason": "Agent role 'None' does not match norm requirement 'ws_qc'"
+    },
+    {
+      "norm_id": "n10",
+      "agent_id": "wa_rails1",
+      "applies": false,
+      "reason": "Agent role 'None' does not match norm requirement 'ws_qc'"
+    },
+    {
+      "norm_id": "n10",
+      "agent_id": "inspector",
+      "applies": false,
+      "reason": "Agent role 'None' does not match norm requirement 'ws_qc'"
+    },
+    {
+      "norm_id": "n10",
+      "agent_id": "wa_qc1",
+      "applies": false,
+      "reason": "Agent role 'None' does not match norm requirement 'ws_qc'"
+    },
+    {
+      "norm_id": "n10",
+      "agent_id": "wa_trunks2",
+      "applies": false,
+      "reason": "Agent role 'None' does not match norm requirement 'ws_qc'"
+    },
+    {
+      "norm_id": "n10",
+      "agent_id": "WorkstationArt",
+      "applies": false,
+      "reason": "Agent role 'None' does not match norm requirement 'ws_qc'"
+    },
+    {
+      "norm_id": "n10",
+      "agent_id": "els,",
+      "applies": false,
+      "reason": "Agent role 'ws_wheels' does not match norm requirement 'ws_qc'"
+    },
+    {
+      "norm_id": "n10",
+      "agent_id": "customer",
+      "applies": false,
+      "reason": "Agent role 'customer' does not match norm requirement 'ws_qc'"
+    },
+    {
+      "norm_id": "n10",
+      "agent_id": "Server",
+      "applies": false,
+      "reason": "Agent role 'None' does not match norm requirement 'ws_qc'"
+    },
+    {
+      "norm_id": "n10",
+      "agent_id": "AuctionSkateArt",
+      "applies": false,
+      "reason": "Agent role 'None' does not match norm requirement 'ws_qc'"
+    },
+    {
+      "norm_id": "n10",
+      "agent_id": "(RTS)",
+      "applies": false,
+      "reason": "Agent role 'None' does not match norm requirement 'ws_qc'"
+    },
+    {
+      "norm_id": "n10",
+      "agent_id": "wa_wheels2",
+      "applies": false,
+      "reason": "Agent role 'None' does not match norm requirement 'ws_qc'"
+    }
+  ],
+  "compliance_results": [
+    {
+      "norm_id": "n1",
+      "agent_id": "(RTS)",
+      "status": "not_applicable",
+      "evidence": [],
+      "reasoning": "Norm does not apply to agent (RTS)"
+    },
+    {
+      "norm_id": "n1",
+      "agent_id": "inspector",
+      "status": "not_applicable",
+      "evidence": [],
+      "reasoning": "Norm does not apply to agent inspector"
+    },
+    {
+      "norm_id": "n1",
+      "agent_id": "Server",
+      "status": "not_applicable",
+      "evidence": [],
+      "reasoning": "Norm does not apply to agent Server"
+    },
+    {
+      "norm_id": "n1",
+      "agent_id": "Moise",
+      "status": "not_applicable",
+      "evidence": [],
+      "reasoning": "Norm does not apply to agent Moise"
+    },
+    {
+      "norm_id": "n1",
+      "agent_id": "Cartago",
+      "status": "not_applicable",
+      "evidence": [],
+      "reasoning": "Norm does not apply to agent Cartago"
+    },
+    {
+      "norm_id": "n1",
+      "agent_id": "WorkstationArt",
+      "status": "not_applicable",
+      "evidence": [],
+      "reasoning": "Norm does not apply to agent WorkstationArt"
+    },
+    {
+      "norm_id": "n1",
+      "agent_id": "AuctionSkateArt",
+      "status": "not_applicable",
+      "evidence": [],
+      "reasoning": "Norm does not apply to agent AuctionSkateArt"
+    },
+    {
+      "norm_id": "n1",
+      "agent_id": "WorkstationRegistry",
+      "status": "not_applicable",
+      "evidence": [],
+      "reasoning": "Norm does not apply to agent WorkstationRegistry"
+    },
+    {
+      "norm_id": "n1",
+      "agent_id": "supplier1",
+      "status": "not_applicable",
+      "evidence": [],
+      "reasoning": "Norm does not apply to agent supplier1"
+    },
+    {
+      "norm_id": "n1",
+      "agent_id": "supplier2",
+      "status": "not_applicable",
+      "evidence": [],
+      "reasoning": "Norm does not apply to agent supplier2"
+    },
+    {
+      "norm_id": "n1",
+      "agent_id": "wa_wheels1",
+      "status": "not_applicable",
+      "evidence": [],
+      "reasoning": "Norm does not apply to agent wa_wheels1"
+    },
+    {
+      "norm_id": "n1",
+      "agent_id": "wa_qc1",
+      "status": "not_applicable",
+      "evidence": [],
+      "reasoning": "Norm does not apply to agent wa_qc1"
+    },
+    {
+      "norm_id": "n1",
+      "agent_id": "wa_wheels2",
+      "status": "not_applicable",
+      "evidence": [],
+      "reasoning": "Norm does not apply to agent wa_wheels2"
+    },
+    {
+      "norm_id": "n1",
+      "agent_id": "wa_conn1",
+      "status": "not_applicable",
+      "evidence": [],
+      "reasoning": "Norm does not apply to agent wa_conn1"
+    },
+    {
+      "norm_id": "n1",
+      "agent_id": "wa_trunks2",
+      "status": "not_applicable",
+      "evidence": [],
+      "reasoning": "Norm does not apply to agent wa_trunks2"
+    },
+    {
+      "norm_id": "n1",
+      "agent_id": "assembly",
+      "status": "fulfilled",
+      "evidence": [
+        {
+          "entry_id": "entry_177",
+          "action": "Part board needs no assembly operation",
+          "match_type": "keyword_overlap",
+          "matched_to": "manage_assembly",
+          "timestamp": null,
+          "sequence_number": 177
+        },
+        {
+          "entry_id": "entry_370",
+          "action": "Part board needs no assembly operation",
+          "match_type": "keyword_overlap",
+          "matched_to": "manage_assembly",
+          "timestamp": null,
+          "sequence_number": 370
+        },
+        {
+          "entry_id": "entry_414",
+          "action": "Starting assembly of skateboard sk2",
+          "match_type": "keyword_overlap",
+          "matched_to": "manage_assembly",
+          "timestamp": null,
+          "sequence_number": 414
+        },
+        {
+          "entry_id": "entry_415",
+          "action": "Part board needs no assembly operation, skipping",
+          "match_type": "keyword_overlap",
+          "matched_to": "manage_assembly",
+          "timestamp": null,
+          "sequence_number": 415
+        },
+        {
+          "entry_id": "entry_483",
+          "action": "Starting assembly of skateboard sk2",
+          "match_type": "keyword_overlap",
+          "matched_to": "manage_assembly",
+          "timestamp": null,
+          "sequence_number": 483
+        },
+        {
+          "entry_id": "entry_484",
+          "action": "Part board needs no assembly operation, skipping",
+          "match_type": "keyword_overlap",
+          "matched_to": "manage_assembly",
+          "timestamp": null,
+          "sequence_number": 484
+        }
+      ],
+      "reasoning": "Found 6 action(s) fulfilling obligation 'manage_assembly'"
+    },
+    {
+      "norm_id": "n1",
+      "agent_id": "wa_rails1",
+      "status": "not_applicable",
+      "evidence": [],
+      "reasoning": "Norm does not apply to agent wa_rails1"
+    },
+    {
+      "norm_id": "n1",
+      "agent_id": "wa_trunks1",
+      "status": "not_applicable",
+      "evidence": [],
+      "reasoning": "Norm does not apply to agent wa_trunks1"
+    },
+    {
+      "norm_id": "n1",
+      "agent_id": "customer",
+      "status": "not_applicable",
+      "evidence": [],
+      "reasoning": "Norm does not apply to agent customer"
+    },
+    {
+      "norm_id": "n1",
+      "agent_id": "els,",
+      "status": "not_applicable",
+      "evidence": [],
+      "reasoning": "Norm does not apply to agent els,"
+    },
+    {
+      "norm_id": "n2",
+      "agent_id": "(RTS)",
+      "status": "not_applicable",
+      "evidence": [],
+      "reasoning": "Norm does not apply to agent (RTS)"
+    },
+    {
+      "norm_id": "n2",
+      "agent_id": "inspector",
+      "status": "not_applicable",
+      "evidence": [],
+      "reasoning": "Norm does not apply to agent inspector"
+    },
+    {
+      "norm_id": "n2",
+      "agent_id": "Server",
+      "status": "not_applicable",
+      "evidence": [],
+      "reasoning": "Norm does not apply to agent Server"
+    },
+    {
+      "norm_id": "n2",
+      "agent_id": "Moise",
+      "status": "not_applicable",
+      "evidence": [],
+      "reasoning": "Norm does not apply to agent Moise"
+    },
+    {
+      "norm_id": "n2",
+      "agent_id": "Cartago",
+      "status": "not_applicable",
+      "evidence": [],
+      "reasoning": "Norm does not apply to agent Cartago"
+    },
+    {
+      "norm_id": "n2",
+      "agent_id": "WorkstationArt",
+      "status": "not_applicable",
+      "evidence": [],
+      "reasoning": "Norm does not apply to agent WorkstationArt"
+    },
+    {
+      "norm_id": "n2",
+      "agent_id": "AuctionSkateArt",
+      "status": "not_applicable",
+      "evidence": [],
+      "reasoning": "Norm does not apply to agent AuctionSkateArt"
+    },
+    {
+      "norm_id": "n2",
+      "agent_id": "WorkstationRegistry",
+      "status": "not_applicable",
+      "evidence": [],
+      "reasoning": "Norm does not apply to agent WorkstationRegistry"
+    },
+    {
+      "norm_id": "n2",
+      "agent_id": "supplier1",
+      "status": "not_applicable",
+      "evidence": [],
+      "reasoning": "Norm does not apply to agent supplier1"
+    },
+    {
+      "norm_id": "n2",
+      "agent_id": "supplier2",
+      "status": "not_applicable",
+      "evidence": [],
+      "reasoning": "Norm does not apply to agent supplier2"
+    },
+    {
+      "norm_id": "n2",
+      "agent_id": "wa_wheels1",
+      "status": "not_applicable",
+      "evidence": [],
+      "reasoning": "Norm does not apply to agent wa_wheels1"
+    },
+    {
+      "norm_id": "n2",
+      "agent_id": "wa_qc1",
+      "status": "not_applicable",
+      "evidence": [],
+      "reasoning": "Norm does not apply to agent wa_qc1"
+    },
+    {
+      "norm_id": "n2",
+      "agent_id": "wa_wheels2",
+      "status": "not_applicable",
+      "evidence": [],
+      "reasoning": "Norm does not apply to agent wa_wheels2"
+    },
+    {
+      "norm_id": "n2",
+      "agent_id": "wa_conn1",
+      "status": "not_applicable",
+      "evidence": [],
+      "reasoning": "Norm does not apply to agent wa_conn1"
+    },
+    {
+      "norm_id": "n2",
+      "agent_id": "wa_trunks2",
+      "status": "not_applicable",
+      "evidence": [],
+      "reasoning": "Norm does not apply to agent wa_trunks2"
+    },
+    {
+      "norm_id": "n2",
+      "agent_id": "assembly",
+      "status": "not_applicable",
+      "evidence": [],
+      "reasoning": "Norm does not apply to agent assembly"
+    },
+    {
+      "norm_id": "n2",
+      "agent_id": "wa_rails1",
+      "status": "not_applicable",
+      "evidence": [],
+      "reasoning": "Norm does not apply to agent wa_rails1"
+    },
+    {
+      "norm_id": "n2",
+      "agent_id": "wa_trunks1",
+      "status": "not_applicable",
+      "evidence": [],
+      "reasoning": "Norm does not apply to agent wa_trunks1"
+    },
+    {
+      "norm_id": "n2",
+      "agent_id": "customer",
+      "status": "fulfilled",
+      "evidence": [
+        {
+          "entry_id": "entry_74",
+          "action": "Sending order sk2 to assembly..",
+          "match_type": "keyword_overlap",
+          "matched_to": "send_order",
+          "timestamp": null,
+          "sequence_number": 74
+        },
+        {
+          "entry_id": "entry_75",
+          "action": "Order sk2 sent to assembly",
+          "match_type": "keyword_overlap",
+          "matched_to": "send_order",
+          "timestamp": null,
+          "sequence_number": 75
+        },
+        {
+          "entry_id": "entry_267",
+          "action": "Sending order sk2 to assembly..",
+          "match_type": "keyword_overlap",
+          "matched_to": "send_order",
+          "timestamp": null,
+          "sequence_number": 267
+        },
+        {
+          "entry_id": "entry_268",
+          "action": "Order sk2 sent to assembly",
+          "match_type": "keyword_overlap",
+          "matched_to": "send_order",
+          "timestamp": null,
+          "sequence_number": 268
+        }
+      ],
+      "reasoning": "Found 4 action(s) fulfilling obligation 'send_order'"
+    },
+    {
+      "norm_id": "n2",
+      "agent_id": "els,",
+      "status": "not_applicable",
+      "evidence": [],
+      "reasoning": "Norm does not apply to agent els,"
+    },
+    {
+      "norm_id": "n3",
+      "agent_id": "(RTS)",
+      "status": "not_applicable",
+      "evidence": [],
+      "reasoning": "Norm does not apply to agent (RTS)"
+    },
+    {
+      "norm_id": "n3",
+      "agent_id": "inspector",
+      "status": "not_applicable",
+      "evidence": [],
+      "reasoning": "Norm does not apply to agent inspector"
+    },
+    {
+      "norm_id": "n3",
+      "agent_id": "Server",
+      "status": "not_applicable",
+      "evidence": [],
+      "reasoning": "Norm does not apply to agent Server"
+    },
+    {
+      "norm_id": "n3",
+      "agent_id": "Moise",
+      "status": "not_applicable",
+      "evidence": [],
+      "reasoning": "Norm does not apply to agent Moise"
+    },
+    {
+      "norm_id": "n3",
+      "agent_id": "Cartago",
+      "status": "not_applicable",
+      "evidence": [],
+      "reasoning": "Norm does not apply to agent Cartago"
+    },
+    {
+      "norm_id": "n3",
+      "agent_id": "WorkstationArt",
+      "status": "not_applicable",
+      "evidence": [],
+      "reasoning": "Norm does not apply to agent WorkstationArt"
+    },
+    {
+      "norm_id": "n3",
+      "agent_id": "AuctionSkateArt",
+      "status": "not_applicable",
+      "evidence": [],
+      "reasoning": "Norm does not apply to agent AuctionSkateArt"
+    },
+    {
+      "norm_id": "n3",
+      "agent_id": "WorkstationRegistry",
+      "status": "not_applicable",
+      "evidence": [],
+      "reasoning": "Norm does not apply to agent WorkstationRegistry"
+    },
+    {
+      "norm_id": "n3",
+      "agent_id": "supplier1",
+      "status": "not_applicable",
+      "evidence": [],
+      "reasoning": "Norm does not apply to agent supplier1"
+    },
+    {
+      "norm_id": "n3",
+      "agent_id": "supplier2",
+      "status": "not_applicable",
+      "evidence": [],
+      "reasoning": "Norm does not apply to agent supplier2"
+    },
+    {
+      "norm_id": "n3",
+      "agent_id": "wa_wheels1",
+      "status": "not_applicable",
+      "evidence": [],
+      "reasoning": "Norm does not apply to agent wa_wheels1"
+    },
+    {
+      "norm_id": "n3",
+      "agent_id": "wa_qc1",
+      "status": "not_applicable",
+      "evidence": [],
+      "reasoning": "Norm does not apply to agent wa_qc1"
+    },
+    {
+      "norm_id": "n3",
+      "agent_id": "wa_wheels2",
+      "status": "not_applicable",
+      "evidence": [],
+      "reasoning": "Norm does not apply to agent wa_wheels2"
+    },
+    {
+      "norm_id": "n3",
+      "agent_id": "wa_conn1",
+      "status": "not_applicable",
+      "evidence": [],
+      "reasoning": "Norm does not apply to agent wa_conn1"
+    },
+    {
+      "norm_id": "n3",
+      "agent_id": "wa_trunks2",
+      "status": "not_applicable",
+      "evidence": [],
+      "reasoning": "Norm does not apply to agent wa_trunks2"
+    },
+    {
+      "norm_id": "n3",
+      "agent_id": "assembly",
+      "status": "fulfilled",
+      "evidence": [
+        {
+          "entry_id": "entry_175",
+          "action": "All parts delivered for order sk2",
+          "match_type": "keyword_overlap",
+          "matched_to": "contract_parts",
+          "timestamp": null,
+          "sequence_number": 175
+        },
+        {
+          "entry_id": "entry_368",
+          "action": "All parts delivered for order sk2",
+          "match_type": "keyword_overlap",
+          "matched_to": "contract_parts",
+          "timestamp": null,
+          "sequence_number": 368
+        }
+      ],
+      "reasoning": "Found 2 action(s) fulfilling obligation 'contract_parts'"
+    },
+    {
+      "norm_id": "n3",
+      "agent_id": "wa_rails1",
+      "status": "not_applicable",
+      "evidence": [],
+      "reasoning": "Norm does not apply to agent wa_rails1"
+    },
+    {
+      "norm_id": "n3",
+      "agent_id": "wa_trunks1",
+      "status": "not_applicable",
+      "evidence": [],
+      "reasoning": "Norm does not apply to agent wa_trunks1"
+    },
+    {
+      "norm_id": "n3",
+      "agent_id": "customer",
+      "status": "not_applicable",
+      "evidence": [],
+      "reasoning": "Norm does not apply to agent customer"
+    },
+    {
+      "norm_id": "n3",
+      "agent_id": "els,",
+      "status": "not_applicable",
+      "evidence": [],
+      "reasoning": "Norm does not apply to agent els,"
+    },
+    {
+      "norm_id": "n4",
+      "agent_id": "(RTS)",
+      "status": "not_applicable",
+      "evidence": [],
+      "reasoning": "Norm does not apply to agent (RTS)"
+    },
+    {
+      "norm_id": "n4",
+      "agent_id": "inspector",
+      "status": "not_applicable",
+      "evidence": [],
+      "reasoning": "Norm does not apply to agent inspector"
+    },
+    {
+      "norm_id": "n4",
+      "agent_id": "Server",
+      "status": "not_applicable",
+      "evidence": [],
+      "reasoning": "Norm does not apply to agent Server"
+    },
+    {
+      "norm_id": "n4",
+      "agent_id": "Moise",
+      "status": "not_applicable",
+      "evidence": [],
+      "reasoning": "Norm does not apply to agent Moise"
+    },
+    {
+      "norm_id": "n4",
+      "agent_id": "Cartago",
+      "status": "not_applicable",
+      "evidence": [],
+      "reasoning": "Norm does not apply to agent Cartago"
+    },
+    {
+      "norm_id": "n4",
+      "agent_id": "WorkstationArt",
+      "status": "not_applicable",
+      "evidence": [],
+      "reasoning": "Norm does not apply to agent WorkstationArt"
+    },
+    {
+      "norm_id": "n4",
+      "agent_id": "AuctionSkateArt",
+      "status": "not_applicable",
+      "evidence": [],
+      "reasoning": "Norm does not apply to agent AuctionSkateArt"
+    },
+    {
+      "norm_id": "n4",
+      "agent_id": "WorkstationRegistry",
+      "status": "not_applicable",
+      "evidence": [],
+      "reasoning": "Norm does not apply to agent WorkstationRegistry"
+    },
+    {
+      "norm_id": "n4",
+      "agent_id": "supplier1",
+      "status": "not_applicable",
+      "evidence": [],
+      "reasoning": "Norm does not apply to agent supplier1"
+    },
+    {
+      "norm_id": "n4",
+      "agent_id": "supplier2",
+      "status": "not_applicable",
+      "evidence": [],
+      "reasoning": "Norm does not apply to agent supplier2"
+    },
+    {
+      "norm_id": "n4",
+      "agent_id": "wa_wheels1",
+      "status": "not_applicable",
+      "evidence": [],
+      "reasoning": "Norm does not apply to agent wa_wheels1"
+    },
+    {
+      "norm_id": "n4",
+      "agent_id": "wa_qc1",
+      "status": "not_applicable",
+      "evidence": [],
+      "reasoning": "Norm does not apply to agent wa_qc1"
+    },
+    {
+      "norm_id": "n4",
+      "agent_id": "wa_wheels2",
+      "status": "not_applicable",
+      "evidence": [],
+      "reasoning": "Norm does not apply to agent wa_wheels2"
+    },
+    {
+      "norm_id": "n4",
+      "agent_id": "wa_conn1",
+      "status": "not_applicable",
+      "evidence": [],
+      "reasoning": "Norm does not apply to agent wa_conn1"
+    },
+    {
+      "norm_id": "n4",
+      "agent_id": "wa_trunks2",
+      "status": "not_applicable",
+      "evidence": [],
+      "reasoning": "Norm does not apply to agent wa_trunks2"
+    },
+    {
+      "norm_id": "n4",
+      "agent_id": "assembly",
+      "status": "fulfilled",
+      "evidence": [
+        {
+          "entry_id": "entry_36",
+          "action": "Total workstations registered: 0",
+          "match_type": "keyword_overlap",
+          "matched_to": "allocate_workstations",
+          "timestamp": null,
+          "sequence_number": 36
+        },
+        {
+          "entry_id": "entry_41",
+          "action": "Total workstations registered: 1",
+          "match_type": "keyword_overlap",
+          "matched_to": "allocate_workstations",
+          "timestamp": null,
+          "sequence_number": 41
+        },
+        {
+          "entry_id": "entry_55",
+          "action": "Total workstations registered: 2",
+          "match_type": "keyword_overlap",
+          "matched_to": "allocate_workstations",
+          "timestamp": null,
+          "sequence_number": 55
+        },
+        {
+          "entry_id": "entry_58",
+          "action": "Total workstations registered: 3",
+          "match_type": "keyword_overlap",
+          "matched_to": "allocate_workstations",
+          "timestamp": null,
+          "sequence_number": 58
+        },
+        {
+          "entry_id": "entry_61",
+          "action": "Total workstations registered: 4",
+          "match_type": "keyword_overlap",
+          "matched_to": "allocate_workstations",
+          "timestamp": null,
+          "sequence_number": 61
+        },
+        {
+          "entry_id": "entry_64",
+          "action": "Total workstations registered: 5",
+          "match_type": "keyword_overlap",
+          "matched_to": "allocate_workstations",
+          "timestamp": null,
+          "sequence_number": 64
+        },
+        {
+          "entry_id": "entry_67",
+          "action": "Total workstations registered: 6",
+          "match_type": "keyword_overlap",
+          "matched_to": "allocate_workstations",
+          "timestamp": null,
+          "sequence_number": 67
+        },
+        {
+          "entry_id": "entry_72",
+          "action": "Total workstations registered: 7",
+          "match_type": "keyword_overlap",
+          "matched_to": "allocate_workstations",
+          "timestamp": null,
+          "sequence_number": 72
+        },
+        {
+          "entry_id": "entry_229",
+          "action": "Total workstations registered: 0",
+          "match_type": "keyword_overlap",
+          "matched_to": "allocate_workstations",
+          "timestamp": null,
+          "sequence_number": 229
+        },
+        {
+          "entry_id": "entry_234",
+          "action": "Total workstations registered: 1",
+          "match_type": "keyword_overlap",
+          "matched_to": "allocate_workstations",
+          "timestamp": null,
+          "sequence_number": 234
+        },
+        {
+          "entry_id": "entry_248",
+          "action": "Total workstations registered: 2",
+          "match_type": "keyword_overlap",
+          "matched_to": "allocate_workstations",
+          "timestamp": null,
+          "sequence_number": 248
+        },
+        {
+          "entry_id": "entry_251",
+          "action": "Total workstations registered: 3",
+          "match_type": "keyword_overlap",
+          "matched_to": "allocate_workstations",
+          "timestamp": null,
+          "sequence_number": 251
+        },
+        {
+          "entry_id": "entry_254",
+          "action": "Total workstations registered: 4",
+          "match_type": "keyword_overlap",
+          "matched_to": "allocate_workstations",
+          "timestamp": null,
+          "sequence_number": 254
+        },
+        {
+          "entry_id": "entry_257",
+          "action": "Total workstations registered: 5",
+          "match_type": "keyword_overlap",
+          "matched_to": "allocate_workstations",
+          "timestamp": null,
+          "sequence_number": 257
+        },
+        {
+          "entry_id": "entry_260",
+          "action": "Total workstations registered: 6",
+          "match_type": "keyword_overlap",
+          "matched_to": "allocate_workstations",
+          "timestamp": null,
+          "sequence_number": 260
+        },
+        {
+          "entry_id": "entry_265",
+          "action": "Total workstations registered: 7",
+          "match_type": "keyword_overlap",
+          "matched_to": "allocate_workstations",
+          "timestamp": null,
+          "sequence_number": 265
+        },
+        {
+          "entry_id": "entry_413",
+          "action": "All workstations allocated for order sk2",
+          "match_type": "keyword_overlap",
+          "matched_to": "allocate_workstations",
+          "timestamp": null,
+          "sequence_number": 413
+        },
+        {
+          "entry_id": "entry_482",
+          "action": "All workstations allocated for order sk2",
+          "match_type": "keyword_overlap",
+          "matched_to": "allocate_workstations",
+          "timestamp": null,
+          "sequence_number": 482
+        }
+      ],
+      "reasoning": "Found 18 action(s) fulfilling obligation 'allocate_workstations'"
+    },
+    {
+      "norm_id": "n4",
+      "agent_id": "wa_rails1",
+      "status": "not_applicable",
+      "evidence": [],
+      "reasoning": "Norm does not apply to agent wa_rails1"
+    },
+    {
+      "norm_id": "n4",
+      "agent_id": "wa_trunks1",
+      "status": "not_applicable",
+      "evidence": [],
+      "reasoning": "Norm does not apply to agent wa_trunks1"
+    },
+    {
+      "norm_id": "n4",
+      "agent_id": "customer",
+      "status": "not_applicable",
+      "evidence": [],
+      "reasoning": "Norm does not apply to agent customer"
+    },
+    {
+      "norm_id": "n4",
+      "agent_id": "els,",
+      "status": "not_applicable",
+      "evidence": [],
+      "reasoning": "Norm does not apply to agent els,"
+    },
+    {
+      "norm_id": "n5",
+      "agent_id": "(RTS)",
+      "status": "not_applicable",
+      "evidence": [],
+      "reasoning": "Norm does not apply to agent (RTS)"
+    },
+    {
+      "norm_id": "n5",
+      "agent_id": "inspector",
+      "status": "not_applicable",
+      "evidence": [],
+      "reasoning": "Norm does not apply to agent inspector"
+    },
+    {
+      "norm_id": "n5",
+      "agent_id": "Server",
+      "status": "not_applicable",
+      "evidence": [],
+      "reasoning": "Norm does not apply to agent Server"
+    },
+    {
+      "norm_id": "n5",
+      "agent_id": "Moise",
+      "status": "not_applicable",
+      "evidence": [],
+      "reasoning": "Norm does not apply to agent Moise"
+    },
+    {
+      "norm_id": "n5",
+      "agent_id": "Cartago",
+      "status": "not_applicable",
+      "evidence": [],
+      "reasoning": "Norm does not apply to agent Cartago"
+    },
+    {
+      "norm_id": "n5",
+      "agent_id": "WorkstationArt",
+      "status": "not_applicable",
+      "evidence": [],
+      "reasoning": "Norm does not apply to agent WorkstationArt"
+    },
+    {
+      "norm_id": "n5",
+      "agent_id": "AuctionSkateArt",
+      "status": "not_applicable",
+      "evidence": [],
+      "reasoning": "Norm does not apply to agent AuctionSkateArt"
+    },
+    {
+      "norm_id": "n5",
+      "agent_id": "WorkstationRegistry",
+      "status": "not_applicable",
+      "evidence": [],
+      "reasoning": "Norm does not apply to agent WorkstationRegistry"
+    },
+    {
+      "norm_id": "n5",
+      "agent_id": "supplier1",
+      "status": "fulfilled",
+      "evidence": [
+        {
+          "entry_id": "entry_26",
+          "action": "Ready to supply parts",
+          "match_type": "keyword_overlap",
+          "matched_to": "deliver_parts",
+          "timestamp": null,
+          "sequence_number": 26
+        },
+        {
+          "entry_id": "entry_219",
+          "action": "Ready to supply parts",
+          "match_type": "keyword_overlap",
+          "matched_to": "deliver_parts",
+          "timestamp": null,
+          "sequence_number": 219
+        }
+      ],
+      "reasoning": "Found 2 action(s) fulfilling obligation 'deliver_parts'"
+    },
+    {
+      "norm_id": "n5",
+      "agent_id": "supplier2",
+      "status": "fulfilled",
+      "evidence": [
+        {
+          "entry_id": "entry_27",
+          "action": "Ready to supply parts",
+          "match_type": "keyword_overlap",
+          "matched_to": "deliver_parts",
+          "timestamp": null,
+          "sequence_number": 27
+        },
+        {
+          "entry_id": "entry_220",
+          "action": "Ready to supply parts",
+          "match_type": "keyword_overlap",
+          "matched_to": "deliver_parts",
+          "timestamp": null,
+          "sequence_number": 220
+        }
+      ],
+      "reasoning": "Found 2 action(s) fulfilling obligation 'deliver_parts'"
+    },
+    {
+      "norm_id": "n5",
+      "agent_id": "wa_wheels1",
+      "status": "not_applicable",
+      "evidence": [],
+      "reasoning": "Norm does not apply to agent wa_wheels1"
+    },
+    {
+      "norm_id": "n5",
+      "agent_id": "wa_qc1",
+      "status": "not_applicable",
+      "evidence": [],
+      "reasoning": "Norm does not apply to agent wa_qc1"
+    },
+    {
+      "norm_id": "n5",
+      "agent_id": "wa_wheels2",
+      "status": "not_applicable",
+      "evidence": [],
+      "reasoning": "Norm does not apply to agent wa_wheels2"
+    },
+    {
+      "norm_id": "n5",
+      "agent_id": "wa_conn1",
+      "status": "not_applicable",
+      "evidence": [],
+      "reasoning": "Norm does not apply to agent wa_conn1"
+    },
+    {
+      "norm_id": "n5",
+      "agent_id": "wa_trunks2",
+      "status": "not_applicable",
+      "evidence": [],
+      "reasoning": "Norm does not apply to agent wa_trunks2"
+    },
+    {
+      "norm_id": "n5",
+      "agent_id": "assembly",
+      "status": "not_applicable",
+      "evidence": [],
+      "reasoning": "Norm does not apply to agent assembly"
+    },
+    {
+      "norm_id": "n5",
+      "agent_id": "wa_rails1",
+      "status": "not_applicable",
+      "evidence": [],
+      "reasoning": "Norm does not apply to agent wa_rails1"
+    },
+    {
+      "norm_id": "n5",
+      "agent_id": "wa_trunks1",
+      "status": "not_applicable",
+      "evidence": [],
+      "reasoning": "Norm does not apply to agent wa_trunks1"
+    },
+    {
+      "norm_id": "n5",
+      "agent_id": "customer",
+      "status": "not_applicable",
+      "evidence": [],
+      "reasoning": "Norm does not apply to agent customer"
+    },
+    {
+      "norm_id": "n5",
+      "agent_id": "els,",
+      "status": "not_applicable",
+      "evidence": [],
+      "reasoning": "Norm does not apply to agent els,"
+    },
+    {
+      "norm_id": "n6",
+      "agent_id": "(RTS)",
+      "status": "not_applicable",
+      "evidence": [],
+      "reasoning": "Norm does not apply to agent (RTS)"
+    },
+    {
+      "norm_id": "n6",
+      "agent_id": "inspector",
+      "status": "not_applicable",
+      "evidence": [],
+      "reasoning": "Norm does not apply to agent inspector"
+    },
+    {
+      "norm_id": "n6",
+      "agent_id": "Server",
+      "status": "not_applicable",
+      "evidence": [],
+      "reasoning": "Norm does not apply to agent Server"
+    },
+    {
+      "norm_id": "n6",
+      "agent_id": "Moise",
+      "status": "not_applicable",
+      "evidence": [],
+      "reasoning": "Norm does not apply to agent Moise"
+    },
+    {
+      "norm_id": "n6",
+      "agent_id": "Cartago",
+      "status": "not_applicable",
+      "evidence": [],
+      "reasoning": "Norm does not apply to agent Cartago"
+    },
+    {
+      "norm_id": "n6",
+      "agent_id": "WorkstationArt",
+      "status": "not_applicable",
+      "evidence": [],
+      "reasoning": "Norm does not apply to agent WorkstationArt"
+    },
+    {
+      "norm_id": "n6",
+      "agent_id": "AuctionSkateArt",
+      "status": "not_applicable",
+      "evidence": [],
+      "reasoning": "Norm does not apply to agent AuctionSkateArt"
+    },
+    {
+      "norm_id": "n6",
+      "agent_id": "WorkstationRegistry",
+      "status": "not_applicable",
+      "evidence": [],
+      "reasoning": "Norm does not apply to agent WorkstationRegistry"
+    },
+    {
+      "norm_id": "n6",
+      "agent_id": "supplier1",
+      "status": "not_applicable",
+      "evidence": [],
+      "reasoning": "Norm does not apply to agent supplier1"
+    },
+    {
+      "norm_id": "n6",
+      "agent_id": "supplier2",
+      "status": "not_applicable",
+      "evidence": [],
+      "reasoning": "Norm does not apply to agent supplier2"
+    },
+    {
+      "norm_id": "n6",
+      "agent_id": "wa_wheels1",
+      "status": "not_applicable",
+      "evidence": [],
+      "reasoning": "Norm does not apply to agent wa_wheels1"
+    },
+    {
+      "norm_id": "n6",
+      "agent_id": "wa_qc1",
+      "status": "not_applicable",
+      "evidence": [],
+      "reasoning": "Norm does not apply to agent wa_qc1"
+    },
+    {
+      "norm_id": "n6",
+      "agent_id": "wa_wheels2",
+      "status": "not_applicable",
+      "evidence": [],
+      "reasoning": "Norm does not apply to agent wa_wheels2"
+    },
+    {
+      "norm_id": "n6",
+      "agent_id": "wa_conn1",
+      "status": "not_applicable",
+      "evidence": [],
+      "reasoning": "Norm does not apply to agent wa_conn1"
+    },
+    {
+      "norm_id": "n6",
+      "agent_id": "wa_trunks2",
+      "status": "not_applicable",
+      "evidence": [],
+      "reasoning": "Norm does not apply to agent wa_trunks2"
+    },
+    {
+      "norm_id": "n6",
+      "agent_id": "assembly",
+      "status": "not_applicable",
+      "evidence": [],
+      "reasoning": "Norm does not apply to agent assembly"
+    },
+    {
+      "norm_id": "n6",
+      "agent_id": "wa_rails1",
+      "status": "not_applicable",
+      "evidence": [],
+      "reasoning": "Norm does not apply to agent wa_rails1"
+    },
+    {
+      "norm_id": "n6",
+      "agent_id": "wa_trunks1",
+      "status": "not_applicable",
+      "evidence": [],
+      "reasoning": "Norm does not apply to agent wa_trunks1"
+    },
+    {
+      "norm_id": "n6",
+      "agent_id": "customer",
+      "status": "not_applicable",
+      "evidence": [],
+      "reasoning": "Norm does not apply to agent customer"
+    },
+    {
+      "norm_id": "n6",
+      "agent_id": "els,",
+      "status": "not_applicable",
+      "evidence": [],
+      "reasoning": "Norm does not apply to agent els,"
+    },
+    {
+      "norm_id": "n7",
+      "agent_id": "(RTS)",
+      "status": "not_applicable",
+      "evidence": [],
+      "reasoning": "Norm does not apply to agent (RTS)"
+    },
+    {
+      "norm_id": "n7",
+      "agent_id": "inspector",
+      "status": "not_applicable",
+      "evidence": [],
+      "reasoning": "Norm does not apply to agent inspector"
+    },
+    {
+      "norm_id": "n7",
+      "agent_id": "Server",
+      "status": "not_applicable",
+      "evidence": [],
+      "reasoning": "Norm does not apply to agent Server"
+    },
+    {
+      "norm_id": "n7",
+      "agent_id": "Moise",
+      "status": "not_applicable",
+      "evidence": [],
+      "reasoning": "Norm does not apply to agent Moise"
+    },
+    {
+      "norm_id": "n7",
+      "agent_id": "Cartago",
+      "status": "not_applicable",
+      "evidence": [],
+      "reasoning": "Norm does not apply to agent Cartago"
+    },
+    {
+      "norm_id": "n7",
+      "agent_id": "WorkstationArt",
+      "status": "not_applicable",
+      "evidence": [],
+      "reasoning": "Norm does not apply to agent WorkstationArt"
+    },
+    {
+      "norm_id": "n7",
+      "agent_id": "AuctionSkateArt",
+      "status": "not_applicable",
+      "evidence": [],
+      "reasoning": "Norm does not apply to agent AuctionSkateArt"
+    },
+    {
+      "norm_id": "n7",
+      "agent_id": "WorkstationRegistry",
+      "status": "not_applicable",
+      "evidence": [],
+      "reasoning": "Norm does not apply to agent WorkstationRegistry"
+    },
+    {
+      "norm_id": "n7",
+      "agent_id": "supplier1",
+      "status": "not_applicable",
+      "evidence": [],
+      "reasoning": "Norm does not apply to agent supplier1"
+    },
+    {
+      "norm_id": "n7",
+      "agent_id": "supplier2",
+      "status": "not_applicable",
+      "evidence": [],
+      "reasoning": "Norm does not apply to agent supplier2"
+    },
+    {
+      "norm_id": "n7",
+      "agent_id": "wa_wheels1",
+      "status": "not_applicable",
+      "evidence": [],
+      "reasoning": "Norm does not apply to agent wa_wheels1"
+    },
+    {
+      "norm_id": "n7",
+      "agent_id": "wa_qc1",
+      "status": "not_applicable",
+      "evidence": [],
+      "reasoning": "Norm does not apply to agent wa_qc1"
+    },
+    {
+      "norm_id": "n7",
+      "agent_id": "wa_wheels2",
+      "status": "not_applicable",
+      "evidence": [],
+      "reasoning": "Norm does not apply to agent wa_wheels2"
+    },
+    {
+      "norm_id": "n7",
+      "agent_id": "wa_conn1",
+      "status": "not_applicable",
+      "evidence": [],
+      "reasoning": "Norm does not apply to agent wa_conn1"
+    },
+    {
+      "norm_id": "n7",
+      "agent_id": "wa_trunks2",
+      "status": "not_applicable",
+      "evidence": [],
+      "reasoning": "Norm does not apply to agent wa_trunks2"
+    },
+    {
+      "norm_id": "n7",
+      "agent_id": "assembly",
+      "status": "not_applicable",
+      "evidence": [],
+      "reasoning": "Norm does not apply to agent assembly"
+    },
+    {
+      "norm_id": "n7",
+      "agent_id": "wa_rails1",
+      "status": "not_applicable",
+      "evidence": [],
+      "reasoning": "Norm does not apply to agent wa_rails1"
+    },
+    {
+      "norm_id": "n7",
+      "agent_id": "wa_trunks1",
+      "status": "not_applicable",
+      "evidence": [],
+      "reasoning": "Norm does not apply to agent wa_trunks1"
+    },
+    {
+      "norm_id": "n7",
+      "agent_id": "customer",
+      "status": "not_applicable",
+      "evidence": [],
+      "reasoning": "Norm does not apply to agent customer"
+    },
+    {
+      "norm_id": "n7",
+      "agent_id": "els,",
+      "status": "violated",
+      "evidence": [],
+      "reasoning": "No actions found fulfilling obligation 'assemble_parts'"
+    },
+    {
+      "norm_id": "n8",
+      "agent_id": "(RTS)",
+      "status": "not_applicable",
+      "evidence": [],
+      "reasoning": "Norm does not apply to agent (RTS)"
+    },
+    {
+      "norm_id": "n8",
+      "agent_id": "inspector",
+      "status": "not_applicable",
+      "evidence": [],
+      "reasoning": "Norm does not apply to agent inspector"
+    },
+    {
+      "norm_id": "n8",
+      "agent_id": "Server",
+      "status": "not_applicable",
+      "evidence": [],
+      "reasoning": "Norm does not apply to agent Server"
+    },
+    {
+      "norm_id": "n8",
+      "agent_id": "Moise",
+      "status": "not_applicable",
+      "evidence": [],
+      "reasoning": "Norm does not apply to agent Moise"
+    },
+    {
+      "norm_id": "n8",
+      "agent_id": "Cartago",
+      "status": "not_applicable",
+      "evidence": [],
+      "reasoning": "Norm does not apply to agent Cartago"
+    },
+    {
+      "norm_id": "n8",
+      "agent_id": "WorkstationArt",
+      "status": "not_applicable",
+      "evidence": [],
+      "reasoning": "Norm does not apply to agent WorkstationArt"
+    },
+    {
+      "norm_id": "n8",
+      "agent_id": "AuctionSkateArt",
+      "status": "not_applicable",
+      "evidence": [],
+      "reasoning": "Norm does not apply to agent AuctionSkateArt"
+    },
+    {
+      "norm_id": "n8",
+      "agent_id": "WorkstationRegistry",
+      "status": "not_applicable",
+      "evidence": [],
+      "reasoning": "Norm does not apply to agent WorkstationRegistry"
+    },
+    {
+      "norm_id": "n8",
+      "agent_id": "supplier1",
+      "status": "not_applicable",
+      "evidence": [],
+      "reasoning": "Norm does not apply to agent supplier1"
+    },
+    {
+      "norm_id": "n8",
+      "agent_id": "supplier2",
+      "status": "not_applicable",
+      "evidence": [],
+      "reasoning": "Norm does not apply to agent supplier2"
+    },
+    {
+      "norm_id": "n8",
+      "agent_id": "wa_wheels1",
+      "status": "not_applicable",
+      "evidence": [],
+      "reasoning": "Norm does not apply to agent wa_wheels1"
+    },
+    {
+      "norm_id": "n8",
+      "agent_id": "wa_qc1",
+      "status": "not_applicable",
+      "evidence": [],
+      "reasoning": "Norm does not apply to agent wa_qc1"
+    },
+    {
+      "norm_id": "n8",
+      "agent_id": "wa_wheels2",
+      "status": "not_applicable",
+      "evidence": [],
+      "reasoning": "Norm does not apply to agent wa_wheels2"
+    },
+    {
+      "norm_id": "n8",
+      "agent_id": "wa_conn1",
+      "status": "not_applicable",
+      "evidence": [],
+      "reasoning": "Norm does not apply to agent wa_conn1"
+    },
+    {
+      "norm_id": "n8",
+      "agent_id": "wa_trunks2",
+      "status": "not_applicable",
+      "evidence": [],
+      "reasoning": "Norm does not apply to agent wa_trunks2"
+    },
+    {
+      "norm_id": "n8",
+      "agent_id": "assembly",
+      "status": "not_applicable",
+      "evidence": [],
+      "reasoning": "Norm does not apply to agent assembly"
+    },
+    {
+      "norm_id": "n8",
+      "agent_id": "wa_rails1",
+      "status": "not_applicable",
+      "evidence": [],
+      "reasoning": "Norm does not apply to agent wa_rails1"
+    },
+    {
+      "norm_id": "n8",
+      "agent_id": "wa_trunks1",
+      "status": "not_applicable",
+      "evidence": [],
+      "reasoning": "Norm does not apply to agent wa_trunks1"
+    },
+    {
+      "norm_id": "n8",
+      "agent_id": "customer",
+      "status": "not_applicable",
+      "evidence": [],
+      "reasoning": "Norm does not apply to agent customer"
+    },
+    {
+      "norm_id": "n8",
+      "agent_id": "els,",
+      "status": "not_applicable",
+      "evidence": [],
+      "reasoning": "Norm does not apply to agent els,"
+    },
+    {
+      "norm_id": "n9",
+      "agent_id": "(RTS)",
+      "status": "not_applicable",
+      "evidence": [],
+      "reasoning": "Norm does not apply to agent (RTS)"
+    },
+    {
+      "norm_id": "n9",
+      "agent_id": "inspector",
+      "status": "not_applicable",
+      "evidence": [],
+      "reasoning": "Norm does not apply to agent inspector"
+    },
+    {
+      "norm_id": "n9",
+      "agent_id": "Server",
+      "status": "not_applicable",
+      "evidence": [],
+      "reasoning": "Norm does not apply to agent Server"
+    },
+    {
+      "norm_id": "n9",
+      "agent_id": "Moise",
+      "status": "not_applicable",
+      "evidence": [],
+      "reasoning": "Norm does not apply to agent Moise"
+    },
+    {
+      "norm_id": "n9",
+      "agent_id": "Cartago",
+      "status": "not_applicable",
+      "evidence": [],
+      "reasoning": "Norm does not apply to agent Cartago"
+    },
+    {
+      "norm_id": "n9",
+      "agent_id": "WorkstationArt",
+      "status": "not_applicable",
+      "evidence": [],
+      "reasoning": "Norm does not apply to agent WorkstationArt"
+    },
+    {
+      "norm_id": "n9",
+      "agent_id": "AuctionSkateArt",
+      "status": "not_applicable",
+      "evidence": [],
+      "reasoning": "Norm does not apply to agent AuctionSkateArt"
+    },
+    {
+      "norm_id": "n9",
+      "agent_id": "WorkstationRegistry",
+      "status": "not_applicable",
+      "evidence": [],
+      "reasoning": "Norm does not apply to agent WorkstationRegistry"
+    },
+    {
+      "norm_id": "n9",
+      "agent_id": "supplier1",
+      "status": "not_applicable",
+      "evidence": [],
+      "reasoning": "Norm does not apply to agent supplier1"
+    },
+    {
+      "norm_id": "n9",
+      "agent_id": "supplier2",
+      "status": "not_applicable",
+      "evidence": [],
+      "reasoning": "Norm does not apply to agent supplier2"
+    },
+    {
+      "norm_id": "n9",
+      "agent_id": "wa_wheels1",
+      "status": "not_applicable",
+      "evidence": [],
+      "reasoning": "Norm does not apply to agent wa_wheels1"
+    },
+    {
+      "norm_id": "n9",
+      "agent_id": "wa_qc1",
+      "status": "not_applicable",
+      "evidence": [],
+      "reasoning": "Norm does not apply to agent wa_qc1"
+    },
+    {
+      "norm_id": "n9",
+      "agent_id": "wa_wheels2",
+      "status": "not_applicable",
+      "evidence": [],
+      "reasoning": "Norm does not apply to agent wa_wheels2"
+    },
+    {
+      "norm_id": "n9",
+      "agent_id": "wa_conn1",
+      "status": "not_applicable",
+      "evidence": [],
+      "reasoning": "Norm does not apply to agent wa_conn1"
+    },
+    {
+      "norm_id": "n9",
+      "agent_id": "wa_trunks2",
+      "status": "not_applicable",
+      "evidence": [],
+      "reasoning": "Norm does not apply to agent wa_trunks2"
+    },
+    {
+      "norm_id": "n9",
+      "agent_id": "assembly",
+      "status": "not_applicable",
+      "evidence": [],
+      "reasoning": "Norm does not apply to agent assembly"
+    },
+    {
+      "norm_id": "n9",
+      "agent_id": "wa_rails1",
+      "status": "not_applicable",
+      "evidence": [],
+      "reasoning": "Norm does not apply to agent wa_rails1"
+    },
+    {
+      "norm_id": "n9",
+      "agent_id": "wa_trunks1",
+      "status": "not_applicable",
+      "evidence": [],
+      "reasoning": "Norm does not apply to agent wa_trunks1"
+    },
+    {
+      "norm_id": "n9",
+      "agent_id": "customer",
+      "status": "not_applicable",
+      "evidence": [],
+      "reasoning": "Norm does not apply to agent customer"
+    },
+    {
+      "norm_id": "n9",
+      "agent_id": "els,",
+      "status": "not_applicable",
+      "evidence": [],
+      "reasoning": "Norm does not apply to agent els,"
+    },
+    {
+      "norm_id": "n10",
+      "agent_id": "(RTS)",
+      "status": "not_applicable",
+      "evidence": [],
+      "reasoning": "Norm does not apply to agent (RTS)"
+    },
+    {
+      "norm_id": "n10",
+      "agent_id": "inspector",
+      "status": "not_applicable",
+      "evidence": [],
+      "reasoning": "Norm does not apply to agent inspector"
+    },
+    {
+      "norm_id": "n10",
+      "agent_id": "Server",
+      "status": "not_applicable",
+      "evidence": [],
+      "reasoning": "Norm does not apply to agent Server"
+    },
+    {
+      "norm_id": "n10",
+      "agent_id": "Moise",
+      "status": "not_applicable",
+      "evidence": [],
+      "reasoning": "Norm does not apply to agent Moise"
+    },
+    {
+      "norm_id": "n10",
+      "agent_id": "Cartago",
+      "status": "not_applicable",
+      "evidence": [],
+      "reasoning": "Norm does not apply to agent Cartago"
+    },
+    {
+      "norm_id": "n10",
+      "agent_id": "WorkstationArt",
+      "status": "not_applicable",
+      "evidence": [],
+      "reasoning": "Norm does not apply to agent WorkstationArt"
+    },
+    {
+      "norm_id": "n10",
+      "agent_id": "AuctionSkateArt",
+      "status": "not_applicable",
+      "evidence": [],
+      "reasoning": "Norm does not apply to agent AuctionSkateArt"
+    },
+    {
+      "norm_id": "n10",
+      "agent_id": "WorkstationRegistry",
+      "status": "not_applicable",
+      "evidence": [],
+      "reasoning": "Norm does not apply to agent WorkstationRegistry"
+    },
+    {
+      "norm_id": "n10",
+      "agent_id": "supplier1",
+      "status": "not_applicable",
+      "evidence": [],
+      "reasoning": "Norm does not apply to agent supplier1"
+    },
+    {
+      "norm_id": "n10",
+      "agent_id": "supplier2",
+      "status": "not_applicable",
+      "evidence": [],
+      "reasoning": "Norm does not apply to agent supplier2"
+    },
+    {
+      "norm_id": "n10",
+      "agent_id": "wa_wheels1",
+      "status": "not_applicable",
+      "evidence": [],
+      "reasoning": "Norm does not apply to agent wa_wheels1"
+    },
+    {
+      "norm_id": "n10",
+      "agent_id": "wa_qc1",
+      "status": "not_applicable",
+      "evidence": [],
+      "reasoning": "Norm does not apply to agent wa_qc1"
+    },
+    {
+      "norm_id": "n10",
+      "agent_id": "wa_wheels2",
+      "status": "not_applicable",
+      "evidence": [],
+      "reasoning": "Norm does not apply to agent wa_wheels2"
+    },
+    {
+      "norm_id": "n10",
+      "agent_id": "wa_conn1",
+      "status": "not_applicable",
+      "evidence": [],
+      "reasoning": "Norm does not apply to agent wa_conn1"
+    },
+    {
+      "norm_id": "n10",
+      "agent_id": "wa_trunks2",
+      "status": "not_applicable",
+      "evidence": [],
+      "reasoning": "Norm does not apply to agent wa_trunks2"
+    },
+    {
+      "norm_id": "n10",
+      "agent_id": "assembly",
+      "status": "not_applicable",
+      "evidence": [],
+      "reasoning": "Norm does not apply to agent assembly"
+    },
+    {
+      "norm_id": "n10",
+      "agent_id": "wa_rails1",
+      "status": "not_applicable",
+      "evidence": [],
+      "reasoning": "Norm does not apply to agent wa_rails1"
+    },
+    {
+      "norm_id": "n10",
+      "agent_id": "wa_trunks1",
+      "status": "not_applicable",
+      "evidence": [],
+      "reasoning": "Norm does not apply to agent wa_trunks1"
+    },
+    {
+      "norm_id": "n10",
+      "agent_id": "customer",
+      "status": "not_applicable",
+      "evidence": [],
+      "reasoning": "Norm does not apply to agent customer"
+    },
+    {
+      "norm_id": "n10",
+      "agent_id": "els,",
+      "status": "not_applicable",
+      "evidence": [],
+      "reasoning": "Norm does not apply to agent els,"
+    }
+  ]
+}

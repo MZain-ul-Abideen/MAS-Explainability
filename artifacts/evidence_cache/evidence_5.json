@@ -1,0 +1,39 @@
+{
+  "query": "Who is responsible for deliver_parts?",
+  "query_type": "agent",
+  "relevant_agents": [
+    {
+      "agent_id": "(RTS)",
+      "inferred_role": null,
+      "role_confidence": "unknown",
+      "total_actions": 1,
+      "unique_actions": 1,
+      "action_summary": {
+        "is running at 127.0.1.1:37657": 1
+      },
+      "applicable_norms": [],
+      "compliance_status": {},
+      "first_appearance": 0,
+      "last_appearance": 0
+    }
+  ],
+  "relevant_norms": [],
+  "relevant_missions": [],
+  "relevant_log_entries": [
+    {
+      "entry_id": "entry_0",
+      "agent_id": "(RTS)",
+      "action": "is running at 127.0.1.1:37657",
+      "timestamp": null,
+      "sequence_number": 0,
+      "metadata": {
+        "line_num": 1
+      }
+    }
+  ],
+  "relevant_compliance": [],
+  "relevant_interactions": [],
+  "system_overview": null,
+  "retrieval_strategy": "Agent-focused retrieval for: (RTS)",
+  "total_items_retrieved": 2
+}
