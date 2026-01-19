@@ -157,13 +157,9 @@ For contributions, please:
 3. Test thoroughly using the test_phaseX.py scripts
 4. Submit a pull request
 
-## License
-
-[Add your license information here]
-
 ## Contact
 
-[Add contact information here]
+muhammadzainulabideen02@gmail.com
 
 ## Acknowledgments
 
