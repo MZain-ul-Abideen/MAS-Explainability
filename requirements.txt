@@ -4,4 +4,5 @@ pyyaml>=6.0
 pytest>=7.0
 lxml>=4.9.0
 huggingface-hub>=0.20.0
-python-dotenv>=1.0.0flask>=3.0.0
+python-dotenv>=1.0.0
+flask>=3.0.0
